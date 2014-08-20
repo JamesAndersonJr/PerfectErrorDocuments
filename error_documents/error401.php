@@ -12,7 +12,7 @@ require_once(dirname(__FILE__)."/config/config.php");
   
 <title>Error - [401]&nbsp;&nbsp;Authorization Required</title>
 
-<link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon">
+<link rel="SHORTCUT ICON" href="/error_documents/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="/error_documents/css/error_pages.css"  type="text/css">
 
 </head>
