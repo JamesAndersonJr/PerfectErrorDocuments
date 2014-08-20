@@ -1,0 +1,55 @@
+﻿			body	{		
+						
+						background-color:#FFFFFF;
+						color:#676767;
+						text-align:center; 
+						font-family: Arial, Helvetica, Sans-Serif;
+						background-image:url('../images/backgrounds/wallpapers/grey-gradient-background-up.png');
+						background-repeat:repeat;
+						font-size:12pt;
+						text-shadow:1px 1px #FFFFFF;
+				
+					}
+							
+		div.dialog	{
+				
+						width: 25em;
+						padding: 0 4em;
+						margin: 4em auto 0 auto;
+						border: 1px solid #CCCCCC;
+						border-right-color: #999999;
+						border-bottom-color: #999999;
+						background-image:url('../images/backgrounds/grey-gradient-special-message-background.png');
+						background-repeat:repeat;
+				
+					}
+									
+				h1	{ 	
+		  
+						font-size: 12pt; 
+						color: #FF3737; 
+						line-height: 1.5em;
+						text-shadow:1px 1px #FFFFFF;
+		  		 
+					}
+		     
+input.sec_counter	{	
+				
+						border: 0px none transparent;
+						color:#666666; 
+						width: 21px; 
+						text-align: center; 
+						vertical-align:baseline; 
+						background-color:transparent; 
+						height:19px;
+						font-size:11pt;
+						text-shadow:1px 1px #FFFFFF;				
+				
+					}
+						
+	.centerElement	{
+						
+						display:table; 
+						margin: 0 auto;
+						
+					}
