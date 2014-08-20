@@ -13,7 +13,7 @@ require_once(dirname(__FILE__)."/config/config.php");
 <title>Error - [404]&nbsp;&nbsp;The page you were looking for doesn&#39;t exist</title>
 
 <link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon">  
-<link rel="stylesheet" href="css/error_pages.css"  type="text/css">	  
+<link rel="stylesheet" href="/error_documents/css/error_pages.css"  type="text/css">  
 
 </head>
 
