@@ -1,5 +1,5 @@
-PerfectErrorDocuments
-=====================
+Perfect Error Documents
+=======================
 
 The perfect PHP script for effectively managing most website error documents! 
 
@@ -45,9 +45,9 @@ PHP : PHP 5.2.x or Later
 
 Database : Not Required
 
-=======================================================================
-TO INSTALL:
-=======================================================================
+-----------------------------------------------------------------------
+TO INSTALL :
+-----------------------------------------------------------------------
 
 1.) Open 'config.php' located inside 'error_documents/config/' folder, with your favorite html/php code editor (Notepad++ is highly recommended).
 
