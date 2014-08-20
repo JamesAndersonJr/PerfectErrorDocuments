@@ -59,19 +59,19 @@ TO INSTALL:
 
 ###################---Specify error documents---#######################
 
-#401-Authorization Required Error
+401-Authorization Required Error
  
 ErrorDocument 401 /error_documents/error401.php
 
-#403-Forbidden Error
+403-Forbidden Error
  
 ErrorDocument 403 /error_documents/error403.php
 
-#404-File Not Found Error
+404-File Not Found Error
  
 ErrorDocument 404 /error_documents/error404.php
 
-#500-Internal Server Error
+500-Internal Server Error
  
 ErrorDocument 500 /error_documents/error500.php
 
