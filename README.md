@@ -1,8 +1,5 @@
 PerfectErrorDocuments
-
 =====================
-
-
 
 The perfect PHP script for effectively managing most website error documents! 
 
@@ -38,8 +35,15 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with the 'Perfect Error Documents' online script.  If not, see http://www.gnu.org/licenses/gpl-3.0.html.
 
+-----------------------------------------------------------------------
+SYSTEM REQUIREMENTS :
+-----------------------------------------------------------------------
 
+Web Server : Apache 2.x hosted on UNIX/Linux
 
+PHP : PHP 5.2.x or Later
+
+Database : Not Required
 
 =======================================================================
 TO INSTALL:
