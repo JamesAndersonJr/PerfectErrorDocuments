@@ -6,7 +6,7 @@
 						font-family: Arial, Helvetica, Sans-Serif;
 						background-image:url('../images/backgrounds/wallpapers/grey-gradient-background-up.png');
 						background-repeat:repeat;
-						font-size:12pt;
+						font-size:16px;
 						text-shadow:1px 1px #FFFFFF;
 				
 					}
@@ -26,7 +26,7 @@
 									
 				h1	{ 	
 		  
-						font-size: 12pt; 
+						font-size: 16px; 
 						color: #FF3737; 
 						line-height: 1.5em;
 						text-shadow:1px 1px #FFFFFF;
@@ -42,7 +42,7 @@ input.sec_counter	{
 						vertical-align:baseline; 
 						background-color:transparent; 
 						height:19px;
-						font-size:11pt;
+						font-size:15px;
 						text-shadow:1px 1px #FFFFFF;				
 				
 					}
