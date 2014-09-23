@@ -40,35 +40,39 @@ require_once(dirname(__FILE__)."/config/config.php");
 </form>	
 	
 <script type="text/JavaScript">
-//<!-- Redirect Timer script [Begin] -->
 
-//<!-- Set initial variables [Begin]
+//<!-- Redirect Timer script [BEGIN] -->
+
+//<!-- Set initial variables [BEGIN] -->
 document.getElementById('sec').value='30';
 var count=30;
-// Set initial variables [End] -->
+//<!-- Set initial variables [END] -->
 
-//<!-- Start Redirect Timer [Begin]
-
-var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
-// Start Redirect Timer [End] -->
-
+//<!-- The 'timer' function code [BEGIN] -->
 function timer()
 	{
 		count=count-1;
 		if (count < 0)
 			{
-				//counter ended, clear interval and redirect page		
+				//Counter has ended; Clear interval and redirect page.		
 				clearInterval(counter);
 				location.href = '/';
 				
 				return;
 			}
 
-		//Dsiplay the number of seconds here
+		//Display the number of seconds here.
 		document.getElementById('sec').value=count; 
-	}
-//<!-- Redirect Timer script [End] -->
-</script>	
+	};
+//<!-- The 'timer' function code [END] -->
+	
+//<!-- Start Redirect Timer [BEGIN] -->
+var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+//<!-- Start Redirect Timer [END] -->
+
+//<!-- Redirect Timer script [END] -->
+
+</script>
 	
 </body>
 </html>
