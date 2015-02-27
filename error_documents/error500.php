@@ -1,6 +1,7 @@
 <?php
 
 require_once(dirname(__FILE__)."/config/config.php");
+require_once(dirname(__FILE__)."/royalty.php");
 
 ?>
 <!DOCTYPE html>
@@ -21,9 +22,12 @@ require_once(dirname(__FILE__)."/config/config.php");
 <form name="countdown" id="countdown" action="#">
 	<div class="dialog">
 
+		<!--[if lte IE 7]>
+		<br>
+		<![endif]-->
+
 		<h1>An Internal Server Error has occured.</h1>
-		<p>Please <a href="<?php echo $webmaster_link ?>" target="_blank" style="text-decoration:underline;color:#0972DB;">report this bug to the webmaster</a> if you would like to see it resolved.
-		</p>
+		<p>Please <a href="<?php echo $webmaster_link ?>" target="_blank" style="text-decoration:underline;color:#0972DB;">report this bug to the webmaster</a> if you would like to see it resolved.</p>
 		<div id="google_translate_element">
 		</div>
 			<script type="text/javascript">
@@ -33,23 +37,22 @@ require_once(dirname(__FILE__)."/config/config.php");
 				}
 			</script>
 			<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-		<br>
 	</div>
-		<p>&nbsp;&nbsp;&nbsp; If you do nothing, you will be redirected<br>
-		to the homepage in (<input type="text" name="sec" id="sec" class="sec_counter" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.
-		</p>
+	<p>&nbsp;&nbsp;&nbsp; If you do nothing, you will be redirected<br>
+	to the homepage in (<input type="text" name="sec" id="sec" class="sec_counter" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.
+	</p>
 </form>
 
 <script type="text/JavaScript">
 
-//<!-- Redirect Timer script [BEGIN] -->
+/* Redirect Timer script [BEGIN]  */
 
-//<!-- Set initial variables [BEGIN] -->
+/* Set initial variables [BEGIN]  */
 document.getElementById('sec').value='30';
 var count=30;
-//<!-- Set initial variables [END] -->
+/* Set initial variables [END]  */
 
-//<!-- The 'timer' function code [BEGIN] -->
+/* The 'timer' function code [BEGIN]  */
 function timer()
 	{
 		count=count-1;
@@ -65,13 +68,13 @@ function timer()
 		//Display the number of seconds here.
 		document.getElementById('sec').value=count; 
 	};
-//<!-- The 'timer' function code [END] -->
+/* The 'timer' function code [END]  */
 	
-//<!-- Start Redirect Timer [BEGIN] -->
+/* Start Redirect Timer [BEGIN]  */
 var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
-//<!-- Start Redirect Timer [END] -->
+/* Start Redirect Timer [END]  */
 
-//<!-- Redirect Timer script [END] -->
+/* Redirect Timer script [END]  */
 
 </script>
 	
