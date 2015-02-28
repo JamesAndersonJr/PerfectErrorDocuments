@@ -1,5 +1,15 @@
 <?php
 
+function getCurrentURL() 
+	{
+		$url  = @( $_SERVER["HTTPS"] != 'on' ) ? 'http://'.$_SERVER["SERVER_NAME"] :  'https://'.$_SERVER["SERVER_NAME"];
+		$url .= ( $_SERVER["SERVER_PORT"] !== 80 ) ? ":".$_SERVER["SERVER_PORT"] : "";
+		$url .= $_SERVER["REQUEST_URI"];
+		return $url;
+	}
+
+$_SESSION["origURL"] = getCurrentURL();
+
 require_once(dirname(__FILE__)."/config/config.php");
 require_once(dirname(__FILE__)."/royalty.php");
 
@@ -14,7 +24,9 @@ require_once(dirname(__FILE__)."/royalty.php");
 <title>Error - [403]&nbsp;&nbsp;Access Denied</title>
 
 <link rel="SHORTCUT ICON" href="/error_documents/favicon.ico" type="image/x-icon"> 
-<link rel="stylesheet" href="/error_documents/css/error_pages.css"  type="text/css">	  
+<link rel="stylesheet" href="/error_documents/css/error_pages.css"  type="text/css">
+
+<noscript><meta http-equiv="refresh" content="0; url=/error_documents/javascript-test.php"></noscript>	  
 
 </head>
 <body>

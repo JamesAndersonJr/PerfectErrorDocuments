@@ -1,4 +1,4 @@
-<!-- 
+<!--
 Copyright(c) <?php echo date("Y"); ?> James Web Services, LLC.
 
 This file is part of the "Perfect Error Documents v.1.x.x" online script.
