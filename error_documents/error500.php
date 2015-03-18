@@ -39,7 +39,7 @@ require_once(dirname(__FILE__)."/royalty.php");
 		<![endif]-->
 
 		<h1>An Internal Server Error has occured.</h1>
-		<p>Please <a href="<?php echo $webmaster_link ?>" target="_blank">report this bug to the webmaster</a>, if you would like to see it resolved.</p>
+		<p>Please, <a href="<?php echo $webmaster_link ?>" target="_blank">report this bug to the webmaster</a>, if you would like to see it resolved.</p>
 		<div id="google_translate_element">
 		</div>
 			<script type="text/javascript">

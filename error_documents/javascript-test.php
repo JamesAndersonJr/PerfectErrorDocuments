@@ -16,7 +16,7 @@ require_once(dirname(__FILE__)."/royalty.php");
 
 <head>
 
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" >
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <script type="text/javascript">document.write("<title>JavaScript Enabled</title>");</script>
 <noscript><title>JavaScript Disabled</title></noscript>
@@ -25,67 +25,58 @@ require_once(dirname(__FILE__)."/royalty.php");
 
 <link rel="SHORTCUT ICON" href="/favicon.ico" type="image/x-icon">
 
-<style type="text/css">
+<style>
 body, html	{ 
-				background-color: #FFFFFF;
+				background-color:#FFFFFF;
 				color:#676767;
-				text-align: center;
-				font-family: Arial, Helvetica, Sans-Serif;
+				text-align:center;
+				font-family:Arial, Helvetica, Sans-Serif;
 				text-shadow:1px 1px #FFFFFF;
 				background-image:url('/error_documents/images/backgrounds/wallpapers/grey-gradient-background-up.png');
-				background-repeat: repeat !important;
+				background-repeat:repeat !important;
 				font-size:16px;
- 			}
+			}
 div.dialog	{
-		
-				width: 25em;
-				padding-top: 0em;
-				padding-right: 4em;
-				padding-bottom: 1.2em;
-				padding-left: 4em;
-				margin: 4em auto 0 auto;
-				border: 1px solid #CCCCCC;
-				border-right-color: #999999;
-				border-bottom-color: #999999;
+				width:25em;
+				padding-top:0em;
+				padding-right:4em;
+				padding-bottom:1.2em;
+				padding-left:4em;
+				margin:4em auto 0 auto;
+				border:1px solid #CCCCCC;
+				border-right-color:#999999;
+				border-bottom-color:#999999;
 				background-image:url('/error_documents/images/backgrounds/grey-gradient-special-message-background.png');
 				background-repeat:repeat;
-		
 			}
 							
 		h1	{ 	
-  
-				font-size: 16px; 
-				color: #FF3737; 
-				line-height: 1.5em;
-				text-shadow:1px 1px #FFFFFF;
-				
+				font-size:16px; 
+				color:#FF3737; 
+				line-height:1.5em;
+				text-shadow:1px 1px #FFFFFF;	
 			}
-		  		 
+				 
 	button	{
-				padding-top: 5px;
-				padding-right: 10px;
-				padding-bottom: 5px;
-				padding-left: 10px;
+				padding-top:5px;
+				padding-right:10px;
+				padding-bottom:5px;
+				padding-left:10px;
 			)
 
 	a:link	{
-
 				color:#008AED;
-
 			}
 
 a:visited	{
-
-				color: #756BE8;
-
+				color:#756BE8;
 			}
 </style>
 
 <script type="text/javascript">
 
 function goBack()
-	{
-	  
+	{  
 	  if ( (window.history.length == 0) || (window.history.length == 1) || (history.length == 0) || (history.length == 1) )
 		
 			{	
@@ -112,12 +103,8 @@ function goBack()
 										back();
 									};
 							};
-
 					};
-
-				
 			};
-  
 	};
   
 </script>
@@ -139,8 +126,7 @@ function returnToPreviousPage()
 	else
 		{
 			goBack();
-		}
-			
+		};			
 	};
 
 </script>
@@ -156,7 +142,7 @@ function returnToPreviousPage()
 		<h1 id="heading">JavaScript is Disabled in Your Web Browser.</h1>
 		
 		<p id="message" style="line-height:150%">
-		For full functionality of this website, it is necessary to <br><a href="http://www.enable-javascript.com/" target="_blank">Enable JavaScript in your Web Browser</a>.
+		For full functionality of this website, it is necessary to <br><a href="http://www.enable-javascript.com" target="_blank" style="color:#008AED;">Enable JavaScript in your Web Browser</a>.
 		</p>
 		<div id="google_translate_element">
 		</div>
