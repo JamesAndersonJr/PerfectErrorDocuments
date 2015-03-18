@@ -39,7 +39,7 @@ require_once(dirname(__FILE__)."/royalty.php");
 		<![endif]-->
 
 		<h1>An Internal Server Error has occured.</h1>
-		<p>Please <a href="<?php echo $webmaster_link ?>" target="_blank" style="text-decoration:underline;color:#0972DB;">report this bug to the webmaster</a> if you would like to see it resolved.</p>
+		<p>Please <a href="<?php echo $webmaster_link ?>" target="_blank">report this bug to the webmaster</a>, if you would like to see it resolved.</p>
 		<div id="google_translate_element">
 		</div>
 			<script type="text/javascript">
@@ -51,7 +51,7 @@ require_once(dirname(__FILE__)."/royalty.php");
 			<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	</div>
 	<p>&nbsp;&nbsp;&nbsp; If you do nothing, you will be redirected<br>
-	to the homepage in (<input type="text" name="sec" id="sec" class="sec_counter" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.
+	to the homepage in (<input type="text" name="sec" id="sec" value="30" class="sec_counter" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.
 	</p>
 </form>
 

@@ -67,6 +67,18 @@ div.dialog	{
 				padding-bottom: 5px;
 				padding-left: 10px;
 			)
+
+	a:link	{
+
+				color:#008AED;
+
+			}
+
+a:visited	{
+
+				color: #756BE8;
+
+			}
 </style>
 
 <script type="text/javascript">

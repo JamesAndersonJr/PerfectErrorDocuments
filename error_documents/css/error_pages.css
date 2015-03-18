@@ -11,6 +11,18 @@
 
 					}
 					
+			a:link	{
+
+						color:#008AED;
+
+					}
+					
+		a:visited	{
+
+						color: #756BE8;
+
+					}
+					
 				p	{
 						line-height:125%;
 					}

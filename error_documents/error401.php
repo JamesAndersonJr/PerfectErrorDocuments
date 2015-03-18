@@ -51,7 +51,7 @@ require_once(dirname(__FILE__)."/royalty.php");
 			<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	</div>
 	<p>&nbsp;&nbsp;&nbsp; If you do nothing, you will be redirected<br>
-	to the homepage in (<input type="text" name="sec" id="sec" class="sec_counter" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.
+	to the homepage in (<input type="text" name="sec" id="sec" value="30" class="sec_counter" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.
 	</p>
 </form>	
 	
