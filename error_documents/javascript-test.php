@@ -23,9 +23,11 @@ require_once(dirname(__FILE__)."/royalty.php");
 
 <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="SHORTCUT ICON" href="/favicon.ico" type="image/x-icon">
 
-<style>
+<style type="text/css" media="all">
 body, html	{ 
 				background-color:#FFFFFF;
 				color:#676767;

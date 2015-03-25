@@ -24,7 +24,9 @@ require_once(dirname(__FILE__)."/royalty.php");
 <title>Error - [404]&nbsp;&nbsp;The page you were looking for doesn&#39;t exist</title>
 
 <link rel="SHORTCUT ICON" href="/error_documents/favicon.ico" type="image/x-icon">  
-<link rel="stylesheet" href="/error_documents/css/error_pages.css"  type="text/css">  
+<link rel="stylesheet" href="/error_documents/css/error_pages.css"  type="text/css" media="all">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <noscript><meta http-equiv="refresh" content="0; url=/error_documents/javascript-test.php"></noscript>
 
