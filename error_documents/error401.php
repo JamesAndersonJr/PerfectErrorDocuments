@@ -11,15 +11,17 @@ function getCurrentURL()
 $_SESSION["origURL"] = getCurrentURL();
 
 require_once(dirname(__FILE__)."/config/config.php");
-require_once(dirname(__FILE__)."/royalty.php");
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<?php require_once(dirname(__FILE__)."/royalty.php"); ?>
   
 <title>Error - [401]&nbsp;&nbsp;Authorization Required</title>
 

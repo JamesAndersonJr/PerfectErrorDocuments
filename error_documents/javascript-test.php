@@ -8,9 +8,8 @@ $http_Ref_Address = $_SESSION["origURL"];
 
 /* Set the referral address that the visitor came from into a PHP variable to later use in a JavaScript variable [END] */
 
-require_once(dirname(__FILE__)."/royalty.php");
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,8 +17,11 @@ require_once(dirname(__FILE__)."/royalty.php");
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-<script type="text/javascript">document.write("<title>JavaScript Enabled</title>");</script>
-<noscript><title>JavaScript Disabled</title></noscript>
+<?php require_once(dirname(__FILE__)."/royalty.php"); ?>
+
+<title>JavaScript Disabled</title>
+
+<script type="text/javascript">document.title = "JavaScript Enabled";</script>
 
 <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
 
@@ -156,7 +158,7 @@ function returnToPreviousPage()
 			</script>
 			<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 		<script type="text/javascript">document.write("<br>");</script>
-		<span id="action_buttons"><a href="#" style="text-decoration:none;border-width:0px;border-style:none;border-color:transparent;" target="_self" onclick="JavaScript:window.location.replace(window.location.href);"><button>Re-Test</button></a></span>
+		<span id="action_buttons"><button onclick="JavaScript:window.location.replace(window.location.href);">Re-Test</button></span>
   	</div>
 
 <script type="text/javascript">document.getElementById("heading").innerHTML = "<span style='color:#39BF45 !important;'>JavaScript is Enabled in Your Web Browser.</span>";</script>

@@ -11,15 +11,17 @@ function getCurrentURL()
 $_SESSION["origURL"] = getCurrentURL();
 
 require_once(dirname(__FILE__)."/config/config.php");
-require_once(dirname(__FILE__)."/royalty.php");
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<?php require_once(dirname(__FILE__)."/royalty.php"); ?>
 
 <title>Error - [404]&nbsp;&nbsp;The page you were looking for doesn&#39;t exist</title>
 
