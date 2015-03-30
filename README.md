@@ -4,7 +4,7 @@ Perfect Error Documents
 The perfect PHP script for effectively managing most website error documents! 
 
 -----------------------------------------------------------------------
-Script Name: Perfect Error Documents | Version : 1.1.4
+Script Name: Perfect Error Documents | Version : 1.2.0
 -----------------------------------------------------------------------
 
 Author : James Anderson, Jr. (Email: james@jamesandersonjr.com; Web: http://www.jamesandersonjr.com)
@@ -17,7 +17,7 @@ Donation Address : http://www.perfecterrordocs.com/donate/
 Copyright :
 -----------------------------------------------------------------------
 
-Copyright(c) 2014 James Web Services, LLC.
+Copyright(c) 2015 James Web Services, LLC.
 
 
 This file is part of the "Perfect Error Documents v.1.x.x" online script.

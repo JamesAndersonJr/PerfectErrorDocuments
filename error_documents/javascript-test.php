@@ -30,7 +30,12 @@ $http_Ref_Address = $_SESSION["origURL"];
 <link rel="SHORTCUT ICON" href="/favicon.ico" type="image/x-icon">
 
 <style type="text/css" media="all">
-body, html	{ 
+	html	{
+				margin:0px;
+				padding:0px;
+			}
+
+	body	{ 
 				background-color:#FFFFFF;
 				color:#676767;
 				text-align:center;
@@ -40,6 +45,7 @@ body, html	{
 				background-repeat:repeat !important;
 				font-size:16px;
 			}
+			
 div.dialog	{
 				width:25em;
 				padding-top:0em;
@@ -66,14 +72,14 @@ div.dialog	{
 				padding-right:10px;
 				padding-bottom:5px;
 				padding-left:10px;
-			)
+			}
 
 	a:link	{
 				color:#008AED;
 			}
 
 a:visited	{
-				color:#756BE8;
+				color:#8066FF;
 			}
 </style>
 
@@ -146,7 +152,7 @@ function returnToPreviousPage()
 		<h1 id="heading">JavaScript is Disabled in Your Web Browser.</h1>
 		
 		<p id="message" style="line-height:150%">
-		For full functionality of this website, it is necessary to <br><a href="http://www.enable-javascript.com" target="_blank" style="color:#008AED;">Enable JavaScript in your Web Browser</a>.
+		For full functionality of this website, it is necessary to <br><a href="http://www.enable-javascript.com" target="_blank">Enable JavaScript in your Web Browser</a>.
 		</p>
 		<div id="google_translate_element">
 		</div>
