@@ -1,4 +1,10 @@
-<?PHP
+<?php
+
+/* Include required configuration file [BEGIN] */ 
+
+require_once(dirname(__FILE__)."/config/config.php");
+
+/* Include required configuration file [END] */ 
 
 /* Set the referral address that the visitor came from into a PHP variable to later use in a JavaScript variable [BEGIN] */
 
@@ -17,17 +23,17 @@ $http_Ref_Address = $_SESSION["origURL"];
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-<?php require_once(dirname(__FILE__)."/royalty.php"); ?>
+<?php require_once(dirname(__FILE__)."/includes/royalty.php"); ?>
 
 <title>JavaScript Disabled</title>
 
 <script type="text/javascript">document.title = "JavaScript Enabled";</script>
 
-<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+<meta name="robots" content="noindex, nofollow">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="SHORTCUT ICON" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
 <style type="text/css" media="all">
 	html	{

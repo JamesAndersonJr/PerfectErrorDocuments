@@ -1,19 +1,20 @@
 <?php
 
-function getCurrentURL() 
-	{
-		$url  = @( $_SERVER["HTTPS"] != 'on' ) ? 'http://'.$_SERVER["SERVER_NAME"] :  'https://'.$_SERVER["SERVER_NAME"];
-		$url .= ( $_SERVER["SERVER_PORT"] !== 80 ) ? ":".$_SERVER["SERVER_PORT"] : "";
-		$url .= $_SERVER["REQUEST_URI"];
-		return $url;
-	}
-
-$_SESSION["origURL"] = getCurrentURL();
+/* Include required configuration file [BEGIN] */ 
 
 require_once(dirname(__FILE__)."/config/config.php");
 
-?>
+/* Include required configuration file [END] */ 
 
+/* Include required domain-related information and variables [BEGIN] */ 
+
+require_once(dirname(__FILE__)."/includes/domain_info.php");
+
+/* Include required domain-related information and variables [END] */ 
+
+$_SESSION["origURL"] = $current_Website_Domain_Name;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,13 +22,14 @@ require_once(dirname(__FILE__)."/config/config.php");
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-<?php require_once(dirname(__FILE__)."/royalty.php"); ?>
+<?php require_once(dirname(__FILE__)."/includes/royalty.php"); ?>
 
 <title>Error - [404]&nbsp;&nbsp;The page you were looking for doesn&#39;t exist</title>
 
-<link rel="SHORTCUT ICON" href="/error_documents/favicon.ico" type="image/x-icon">  
+<link rel="shortcut icon" href="/error_documents/favicon.ico" type="image/x-icon">  
 <link rel="stylesheet" href="/error_documents/css/error_pages.css"  type="text/css" media="all">
 
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <noscript><meta http-equiv="refresh" content="0; url=/error_documents/javascript-test.php"></noscript>

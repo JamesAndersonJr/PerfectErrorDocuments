@@ -23,7 +23,7 @@
 					}
 					
 				p	{
-						line-height:125%;
+						line-height:150%;
 					}
 							
 		div.dialog	{
@@ -38,6 +38,7 @@
 						border-bottom-color:#999999;
 						background-image:url('../images/backgrounds/grey-gradient-special-message-background.png');
 						background-repeat:repeat;
+						
 					}
 									
 				h1	{
