@@ -12,7 +12,7 @@ require_once(dirname(__FILE__)."/includes/domain_info.php");
 
 /* Include required domain-related information and variables [END] */ 
 
-$_SESSION["origURL"] = $current_Website_Domain_Name;
+$_SESSION["origURL"] = $current_Webpage_Complete_URL_Address;
 
 ?>
 <!DOCTYPE html>

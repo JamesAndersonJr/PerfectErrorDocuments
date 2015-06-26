@@ -19,6 +19,8 @@ $protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' :
 
 $server_name = $_SERVER["SERVER_NAME"];
 
+$current_path = $_SERVER['REQUEST_URI'];
+
 $server_url = getDomain($protocol.$server_name);
 
 if (($server_url == "")||($server_url == false))
@@ -36,11 +38,15 @@ if (($sub_domain == "")||( $sub_domain == null ))
 /* ********************* SUBROUTINE: Find server URL (domain + TLD) ONLY, without sub-domain (e.g. google.co.uk), and assign to '$server_url' variable [END] *********************  */
 
 /* Get the full domain name of the primary website [BEGIN] */
-$primary_Website_Domain_Name = $protocol."www.".$server_url; // (e.g. http://www.payspigot.com)
+$primary_Website_Domain_Name = $protocol."www.".$server_url; // (e.g. http://www.example.com)
 /* Get the full domain name of the primary website [END] */
 
 /* Get the full domain name of the current website [BEGIN] */
 $current_Website_Domain_Name = $protocol.$sub_domain.".".$server_url;
 /* Get the full domain name of the current website [BEGIN] */
+
+/* Get the complete URL address to the current webpage, on the Internet (e.g. http://www.example.com/index.php) [BEGIN] */
+$current_Webpage_Complete_URL_Address = $current_Website_Domain_Name.$current_path;
+/* Get the complete URL address to the current webpage, on the Internet (e.g. http://www.example.com/index.php) [END] */
 
 ?>
