@@ -29,64 +29,128 @@ $http_Ref_Address = $_SESSION["origURL"];
 
 <script type="text/javascript">document.title = "JavaScript Enabled";</script>
 
-<meta name="robots" content="noindex, nofollow">
-
+<meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
 <style type="text/css" media="all">
-	html	{
-				margin:0px;
-				padding:0px;
-			}
+html
+	{
+		margin:0px;
+		padding:0px;
+	}
 
-	body	{ 
-				background-color:#FFFFFF;
-				color:#676767;
-				text-align:center;
-				font-family:Arial, Helvetica, Sans-Serif;
-				text-shadow:1px 1px #FFFFFF;
-				background-image:url('/error_documents/images/backgrounds/wallpapers/grey-gradient-background-up.png');
-				background-repeat:repeat !important;
-				font-size:16px;
-			}
-			
-div.dialog	{
-				width:25em;
-				padding-top:0em;
-				padding-right:4em;
-				padding-bottom:1.2em;
-				padding-left:4em;
-				margin:4em auto 0 auto;
-				border:1px solid #CCCCCC;
-				border-right-color:#999999;
-				border-bottom-color:#999999;
-				background-image:url('/error_documents/images/backgrounds/grey-gradient-special-message-background.png');
-				background-repeat:repeat;
-			}
-							
-		h1	{ 	
-				font-size:16px; 
-				color:#FF3737; 
-				line-height:1.5em;
-				text-shadow:1px 1px #FFFFFF;	
-			}
-				 
-	button	{
-				padding-top:5px;
-				padding-right:10px;
-				padding-bottom:5px;
-				padding-left:10px;
-			}
+body
+	{
+		background-color:#FFFFFF;
+		color:#676767;
+		text-align:center;
+		font-family:Arial, Helvetica, Sans-Serif;
+		text-shadow:1px 1px #FFFFFF;
+		background-image:url('/error_documents/images/backgrounds/wallpapers/grey-gradient-background-up.png');
+		background-repeat:repeat !important;
+		font-size:1.000em;
+		margin:0px;
+		padding:0px;
+		
+	}
 
-	a:link	{
-				color:#008AED;
-			}
+div.container
+	{
+		width:33em;
+		margin:4em auto 0px auto !important;
+		padding:0px 1.125em 0px 1em !important;
+		text-align:center;
+		border-collapse:collapse;
+	}
+	
+div.dialog
+	{
+		width:25em;
+		padding-top:0em;
+		padding-right:4em;
+		padding-bottom:1.2em;
+		padding-left:4em;
+		border:1px solid #CCCCCC;
+		border-right-color:#999999;
+		border-bottom-color:#999999;
+		background-image:url('/error_documents/images/backgrounds/grey-gradient-special-message-background.png');
+		background-repeat:repeat;
+	}
 
-a:visited	{
-				color:#8066FF;
-			}
+h1
+	{
+		font-size:1.000em;
+		color:#FF3737;
+		line-height:1.5em;
+		text-shadow:1px 1px #FFFFFF;
+	}
+
+a:link
+	{
+		color:#008AED;
+	}
+
+a:visited
+	{
+		color:#8066FF;
+	}
+	
+button, input[type="button"], input[type="submit"], input[type="reset"] 
+	{
+		color:#535353 !important;
+		font-size:0.928em !important;
+		line-height: normal !important;
+		font-weight: normal !important;
+
+		box-shadow: 0px 1px 2px rgba(159,159,159,0.5);
+		-moz-box-shadow: 0px 1px 2px rgba(159,159,159,0.5);
+		-webkit-box-shadow: 0px 1px 2px rgba(159,159,159,0.5);
+		-khtml-border-radius: 0px 1px 2px rgba(159,159,159,0.5);
+
+		padding-top:8px !important;
+		padding-right:14px !important;
+		padding-bottom:9px !important;
+		padding-left:14px !important;
+
+		border-radius: 2px;
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		-khtml-border-radius:2px;
+
+		border: 1px solid #BCBCBC;
+		background: #f0f0f0;
+		background: -moz-linear-gradient(top,  #f0f0f0 0%, #E0E0E0 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f0f0), color-stop(100%,#E0E0E0));
+		background: -webkit-linear-gradient(top,  #f0f0f0 0%,#E0E0E0 100%);
+		background: -o-linear-gradient(top,  #f0f0f0 0%,#E0E0E0 100%);
+		background: -ms-linear-gradient(top,  #f0f0f0 0%,#E0E0E0 100%);
+		background: linear-gradient(to bottom,  #f0f0f0 0%,#E0E0E0 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#E0E0E0',GradientType=0 );
+	}
+
+button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover, button:focus, input[type="button"]:focus, input[type="submit"]:focus, input[type="reset"]:focus 
+	{
+		background: #f8f8f8;
+		background: -moz-linear-gradient(top,  #f8f8f8 0%, #E1E1E1 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#E1E1E1));
+		background: -webkit-linear-gradient(top,  #f8f8f8 0%,#E1E1E1 100%);
+		background: -o-linear-gradient(top,  #f8f8f8 0%,#E1E1E1 100%);
+		background: -ms-linear-gradient(top,  #f8f8f8 0%,#E1E1E1 100%);
+		background: linear-gradient(to bottom,  #f8f8f8 0%,#E1E1E1 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#E1E1E1',GradientType=0 );
+	}
+
+button:active, input[type="button"]:active, input[type="submit"]:active, input[type="reset"]:active 
+	{
+		background: #E0E0E0;
+		box-shadow: inset 0px 1px 2px rgba(205,205,205,1);
+		-moz-box-shadow: inset 0px 1px 2px rgba(205,205,205,1);
+		-webkit-box-shadow: inset 0px 1px 2px rgba(205,205,205,1);
+		-khtml-border-radius: inset 0px 1px 2px rgba(205,205,205,1);
+		text-decoration: none!important;
+	}
 </style>
 
 <script type="text/javascript">
@@ -149,6 +213,7 @@ function returnToPreviousPage()
 
 </head>
 <body>
+<div class="container no_borders">
 	<div class="dialog">
 	
 		<!--[if lte IE 7]>
@@ -172,6 +237,7 @@ function returnToPreviousPage()
 		<script type="text/javascript">document.write("<br>");</script>
 		<span id="action_buttons"><button onclick="JavaScript:window.location.replace(window.location.href);">Re-Test</button></span>
   	</div>
+</div>
 
 <script type="text/javascript">document.getElementById("heading").innerHTML = "<span style='color:#39BF45 !important;'>JavaScript is Enabled in Your Web Browser.</span>";</script>
 <script type="text/javascript">document.getElementById("message").innerHTML = "Congratulations! JavaScript is enabled, and working properly in your web browser.";</script>

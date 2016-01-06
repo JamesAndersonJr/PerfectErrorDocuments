@@ -1,6 +1,6 @@
 <?PHP
 
-	header('Location: /error_documents/error403.php');
-	exit(0);
+header('Location: /error_documents/error403.php');
+exit(0);
 
 ?>
