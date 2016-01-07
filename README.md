@@ -28,9 +28,7 @@ Copyright(c) 2016 James Web Services, LLC.
 
 This file is part of the "Perfect Error Documents v.1.x.x" online script.
 
-'Perfect Error Documents' online script is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty 
-
-of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the full license agreement at [ http://perfecterrordocs.com/license/ ].
+'Perfect Error Documents' online script is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the full license agreement at [ http://perfecterrordocs.com/license/ ].
 
 You should have received a PDF copy of the license agreement, along with your download of 'Perfect Error Documents' online script. If not, please visit: [ http://perfecterrordocs.com/license/ ], for your free copy.
 
@@ -81,4 +79,3 @@ ErrorDocument 404 /error_documents/error404.php
 ErrorDocument 500 /error_documents/error500.php
 
 #######################################################################
-
