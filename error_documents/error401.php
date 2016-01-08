@@ -57,7 +57,7 @@ $_SESSION["origURL"] = $current_Webpage_Complete_URL_Address;
 	</div>
 	<p>
 	If you do nothing, you will be redirected<br>
-	to the sites <a href="/" target="_self">home page</a>, in (<input type="text" name="sec" id="sec" value="30" class="no_select sec_counter" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.
+	to the site&#8217;s <a href="/" target="_self">home page</a>, in (<input type="text" name="sec" id="sec" value="30" class="no_select sec_counter" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.
 	</p>
 </div>
 	

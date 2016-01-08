@@ -24,7 +24,7 @@ $_SESSION["origURL"] = $current_Webpage_Complete_URL_Address;
 
 <?php require_once(dirname(__FILE__)."/includes/royalty.php"); ?>
 
-<title>Error - [404]&nbsp;&nbsp;The page you were looking for doesn&#39;t exist</title>
+<title>Error - [404]&nbsp;&nbsp;The page you were looking for doesn&#8217;t exist</title>
 
 <link rel="shortcut icon" href="/error_documents/favicon.ico" type="image/x-icon">  
 <link rel="stylesheet" href="/error_documents/css/error_pages.css"  type="text/css" media="all">
@@ -43,7 +43,7 @@ $_SESSION["origURL"] = $current_Webpage_Complete_URL_Address;
 		<br>
 		<![endif]-->
 	
-		<h1>The page you were looking for doesn&#39;t exist.</h1>
+		<h1>The page you were looking for doesn&#8217;t exist.</h1>
 		<p>You may have mistyped the address, or the page may have moved.</p>
 		<div id="google_translate_element">
 		</div>
@@ -57,7 +57,7 @@ $_SESSION["origURL"] = $current_Webpage_Complete_URL_Address;
 	</div>
 	<p>
 	If you do nothing, you will be redirected<br>
-	to the sites <a href="/" target="_self">home page</a>, in (<input type="text" name="sec" id="sec" value="30" class="no_select sec_counter" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.
+	to the site&#8217;s <a href="/" target="_self">home page</a>, in (<input type="text" name="sec" id="sec" value="30" class="no_select sec_counter" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.
 	</p>
 </div>
 	
