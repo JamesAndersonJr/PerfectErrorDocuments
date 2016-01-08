@@ -42,7 +42,6 @@ $_SESSION["origURL"] = $current_Webpage_Complete_URL_Address;
 		<!--[if lte IE 7]>
 		<br>
 		<![endif]-->
-
 		<h1>An Internal Server Error has occured.</h1>
 		<p>Please, <a href="<?php echo $webmaster_link ?>" target="_blank">report this bug to the webmaster</a>, if you would like to see it resolved.</p>
 		<div id="google_translate_element">
@@ -55,7 +54,8 @@ $_SESSION["origURL"] = $current_Webpage_Complete_URL_Address;
 			</script>
 			<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	</div>
-	<p>&nbsp;&nbsp;&nbsp; If you do nothing, you will be redirected<br>
+	<p>
+	If you do nothing, you will be redirected<br>
 	to the sites <a href="/" target="_self">home page</a>, in (<input type="text" name="sec" id="sec" value="30" class="no_select sec_counter" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.
 	</p>
 </div>
