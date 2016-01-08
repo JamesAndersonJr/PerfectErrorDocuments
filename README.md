@@ -13,17 +13,17 @@ Co-Author : James Anderson, Jr. (Email: james@jamesandersonjr.com; Web: http://w
 
 Website : http://www.perfecterrordocs.com
 
-Donation Address : http://www.perfecterrordocs.com/donate/
-
 Download Address : http://www.perfecterrordocs.com/download/
 
 License Address : http://www.perfecterrordocs.com/license/
+
+Donation Address : http://www.perfecterrordocs.com/donate/
 
 -----------------------------------------------------------------------
 Copyright :
 -----------------------------------------------------------------------
 
-Copyright(c) 2016 James Web Services, LLC.
+Copyright © 2016 James Web Services, LLC.
 
 
 This file is part of the "Perfect Error Documents v.1.x.x" online script.
