@@ -10,7 +10,18 @@ require_once(dirname(__FILE__)."/config/config.php");
 
 session_start();
 
-$http_Ref_Address = $_SESSION["origURL"];
+if (isset($_SESSION["origURL"]))
+{
+	$http_Ref_Address = $_SESSION["origURL"];
+}
+elseif (isset($_SERVER['HTTP_REFERER']))
+{
+	$http_Ref_Address = $_SERVER['HTTP_REFERER'];
+}
+else
+{
+	$http_Ref_Address = "/";
+};
 
 /* Set the referral address that the visitor came from into a PHP variable to later use in a JavaScript variable [END] */
 
