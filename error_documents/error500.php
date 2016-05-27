@@ -15,6 +15,19 @@ require_once(dirname(__FILE__)."/includes/domain_info.php");
 $_SESSION["origURL"] = $current_Webpage_Complete_URL_Address;
 
 ?>
+<?php
+
+/* Preliminary Meta-Data [BEGIN] */
+
+$meta_Tag_Site_Name = "Error - [500]&nbsp;&nbsp;Internal Server Error";
+
+$meta_Tag_Description = "An Internal Server Error has occurred.";
+
+$meta_Tag_Key_Words = "error, document, error 500, internal, server";
+
+/* Preliminary Meta-Data [END] */
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,12 +37,15 @@ $_SESSION["origURL"] = $current_Webpage_Complete_URL_Address;
 
 <?php require_once(dirname(__FILE__)."/includes/royalty.php"); ?>
 
-<title>Error - [500]&nbsp;&nbsp;Internal Server Error</title>
+<title><?php echo $meta_Tag_Site_Name; ?></title>
 
 <link rel="shortcut icon" href="/error_documents/favicon.ico" type="image/x-icon">  
 <link rel="stylesheet" href="/error_documents/css/error_pages.css"  type="text/css" media="all">
 
+<meta name="description" content="<?php echo $meta_Tag_Description; ?>">
+<meta name="keywords" content="<?php echo $meta_Tag_Key_Words; ?>">
 <meta name="robots" content="noindex,nofollow">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <noscript><meta http-equiv="refresh" content="0; url=/error_documents/javascript-test.php"></noscript>
@@ -37,50 +53,66 @@ $_SESSION["origURL"] = $current_Webpage_Complete_URL_Address;
 </head>
 <body>
 
-<div class="container no_borders">
-	<div class="dialog">
-		<!--[if lte IE 7]>
-		<br>
-		<![endif]-->
-		<h1>An Internal Server Error has occured.</h1>
-		<p>Please, <a href="<?php echo $webmaster_link ?>" target="_blank">report this bug to the webmaster</a>, if you would like to see it resolved.</p>
-		<div id="google_translate_element">
-		</div>
+<div class="main_container_div">
+	<div class="sub_container_div">
+
+		<div class="dialog">
+		
+			<!--[if lte IE 7]>
+			<br>
+			<![endif]-->
+			
+			<h1>An Internal Server Error has occurred.</h1>
+			
+			<p>Please, <a href="<?php echo $webmaster_link ?>" target="_blank">report this bug to the webmaster</a>, if you would like to see it resolved.</p>
+			
+			<div id="google_translate_element"></div>
+			
 			<script type="text/javascript">
+			
 			function googleTranslateElementInit() 
 				{
 					new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-				}
+				};
+			
 			</script>
+			
 			<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-	</div>
-	<p>
-	If you do nothing, you will be redirected<br>
-	to the site&#8217;s <a href="/" target="_self">home page</a>, in (<input type="text" name="sec" id="sec" value="30" class="no_select sec_counter" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.
-	</p>
-</div>
+			
+		</div>
+		<p>
+		If you do nothing, you will be redirected<br>
+		to the site&#8217;s <a href="/" target="_self">home page</a>, in (<input type="text" name="sec" id="sec" value="30" class="no_select sec_counter" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.
+		</p>
 
+	</div>
+</div>
+	
 <script type="text/JavaScript">
 
 /* Redirect Timer script [BEGIN]  */
 
 /* Set initial variables [BEGIN]  */
+
 document.getElementById('sec').value='30';
+
 var count=30;
+
 /* Set initial variables [END]  */
 
 /* The 'timer' function code [BEGIN]  */
+
 function timer()
 	{
 		count=count-1;
 		if (count < 0)
 			{
-				//Counter has ended; Clear interval and redirect page.		
+				//Counter has ended. Clear interval and redirect page.				
 				clearInterval(counter);
 				location.href = '/';
 				
 				return;
-			}
+			};
 
 		//Display the number of seconds here.
 		document.getElementById('sec').value=count; 
@@ -88,7 +120,9 @@ function timer()
 /* The 'timer' function code [END]  */
 	
 /* Start Redirect Timer [BEGIN]  */
-var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+
+var counter=setInterval(timer, 1000); // 1000 will  run it every 1 second.
+
 /* Start Redirect Timer [END]  */
 
 /* Redirect Timer script [END]  */

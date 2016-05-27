@@ -26,7 +26,19 @@ else
 /* Set the referral address that the visitor came from into a PHP variable to later use in a JavaScript variable [END] */
 
 ?>
+<?php
 
+/* Preliminary Meta-Data [BEGIN] */
+
+$meta_Tag_Site_Name = "JavaScript Disabled";
+
+$meta_Tag_Description = "A simple test to verify if JavaScript is enabled in your web browser.";
+
+$meta_Tag_Key_Words = "javascript, script, test, verify, web browser";
+
+/* Preliminary Meta-Data [END] */
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,11 +48,14 @@ else
 
 <?php require_once(dirname(__FILE__)."/includes/royalty.php"); ?>
 
-<title>JavaScript Disabled</title>
+<title><?php echo $meta_Tag_Site_Name; ?></title>
 
 <script type="text/javascript">document.title = "JavaScript Enabled";</script>
 
+<meta name="description" content="<?php echo $meta_Tag_Description; ?>">
+<meta name="keywords" content="<?php echo $meta_Tag_Key_Words; ?>">
 <meta name="robots" content="noindex,nofollow">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -67,29 +82,63 @@ body
 		
 	}
 
-div.container
+.main_container_div
 	{
-		width:33em;
-		margin:4em auto 0px auto !important;
-		padding:0px 1.125em 0px 1em !important;
+		margin:0px !important;
+		width:100%;
+		height:100%;
 		text-align:center;
-		border-collapse:collapse;
+		padding-top:0px;
+		padding-right:0px;
+		padding-bottom:0px;
+		padding-left:0px;
+
+		border-width: 0px;
+		border-style: none;
+		border-color: transparent;
+		
 	}
-	
-div.dialog
+
+.sub_container_div
 	{
 		width:25em;
-		padding-top:0em;
+		vertical-align:middle;
+		text-align:center;
+		display:table;
+		margin:0px auto;
+		
+		padding-top:2.1em;
+		padding-right:2em;
+		padding-bottom:0px;
+		padding-left:2em;
+
+		border-width: 0px;
+		border-style: none;
+		border-color: transparent;
+	}
+
+div.dialog
+	{
+		width:inherit !important;
+		
+		padding-top:0.8em;
 		padding-right:4em;
-		padding-bottom:1.2em;
+		padding-bottom:1.7em;
 		padding-left:4em;
+
+		margin-top: 2.2em;
+		margin-right: auto;
+		margin-bottom: 0px;
+		margin-left: auto;
+
 		border:1px solid #CCCCCC;
+		border-collapse:collapse;
 		border-right-color:#999999;
 		border-bottom-color:#999999;
+		
 		background-image:url('/error_documents/images/backgrounds/grey-gradient-special-message-background.png');
 		background-repeat:repeat;
 	}
-
 h1
 	{
 		font-size:1.000em;
@@ -205,65 +254,82 @@ function goBack()
 var referringPage = "<?php echo $http_Ref_Address; ?>";
 
 function returnToPreviousPage()
-	{
-	
-	 if ( ( referringPage != "") && ( referringPage !=  window.location.href) ) 
-	 
+{
+	if ( ( referringPage != "") && ( referringPage !=  window.location.href) )
 		{
 			alert("Returing you to where you left off.");
 			window.location.replace(referringPage);
 		}
-	 
 	else
 		{
 			goBack();
-		};			
-	};
+		};
+};
 
 </script>
 
 </head>
 <body>
-<div class="container no_borders">
-	<div class="dialog">
-	
+
+<div class="main_container_div">
+	<div class="sub_container_div">
+
+		<div class="dialog">
+
 		<!--[if lte IE 7]>
 		<br>
 		<![endif]-->
-		
+
 		<h1 id="heading">JavaScript is Disabled in Your Web Browser.</h1>
-		
+
 		<p id="message" style="line-height:150%">
 		For full functionality of this website, it is necessary to <br><a href="http://www.enable-javascript.com" target="_blank">Enable JavaScript in your Web Browser</a>.
 		</p>
-		<div id="google_translate_element">
-		</div>
-			<script type="text/javascript">
-			function googleTranslateElementInit() 
-				{
-					new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-				}
-			</script>
-			<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		
+		<div id="google_translate_element"></div>
+		
+		<script type="text/javascript">
+		
+		function googleTranslateElementInit() 
+		{
+		new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+		};
+		
+		</script>
+		
+		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		
 		<script type="text/javascript">document.write("<br>");</script>
+		
 		<span id="action_buttons"><button onclick="JavaScript:window.location.replace(window.location.href);">Re-Test</button></span>
-  	</div>
+		
+		</div>
+
+	</div>
 </div>
 
-<script type="text/javascript">document.getElementById("heading").innerHTML = "<span style='color:#39BF45 !important;'>JavaScript is Enabled in Your Web Browser.</span>";</script>
-<script type="text/javascript">document.getElementById("message").innerHTML = "Congratulations! JavaScript is enabled, and working properly in your web browser.";</script>
-<script type="text/javascript">document.getElementById("action_buttons").innerHTML = "<button onclick='JavaScript:returnToPreviousPage();'>Close this Window ( <span id=\"counter\"></span> )</button>";</script>
+<script type="text/javascript">
+
+document.getElementById("heading").innerHTML = "<span style='color:#39BF45 !important;'>JavaScript is Enabled in Your Web Browser.</span>";
+document.getElementById("message").innerHTML = "Congratulations! JavaScript is enabled, and working properly in your web browser.";
+document.getElementById("action_buttons").innerHTML = "<button onclick='JavaScript:returnToPreviousPage();'>Close this Window ( <span id=\"counter\"></span> )</button>";
+
+</script>
 
 <script type="text/JavaScript">
 
 /* Redirect Timer script [BEGIN]  */
 
 /* Set initial variables [BEGIN]  */
+
 document.getElementById('counter').innerHTML='30';
+
 var count=30;
+
 /* Set initial variables [END]  */
 
 /* The 'timer' function code [BEGIN]  */
+
 function timer()
 	{
 		count=count-1;
@@ -274,15 +340,18 @@ function timer()
 				returnToPreviousPage();
 				
 				return;
-			}
+			};
 
 		//Display the number of seconds here.
 		document.getElementById('counter').innerHTML=count; 
 	};
+	
 /* The 'timer' function code [END]  */
 	
 /* Start Redirect Timer [BEGIN]  */
+
 var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+
 /* Start Redirect Timer [END]  */
 
 /* Redirect Timer script [END]  */
