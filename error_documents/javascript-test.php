@@ -34,7 +34,7 @@ $meta_Tag_Site_Name = "JavaScript Disabled";
 
 $meta_Tag_Description = "A simple test to verify if JavaScript is enabled in your web browser.";
 
-$meta_Tag_Key_Words = "javascript, script, test, verify, web browser";
+$meta_Tag_Key_Words = "JavaScript, script, test, verify, check, web browser";
 
 /* Preliminary Meta-Data [END] */
 
@@ -181,24 +181,24 @@ button, input[type="button"], input[type="submit"], input[type="reset"]
 
 		border: 1px solid #BCBCBC;
 		background: #f0f0f0;
-		background: -moz-linear-gradient(top,  #f0f0f0 0%, #E0E0E0 100%);
+		background: -moz-linear-gradient(top, #f0f0f0 0%, #E0E0E0 100%);
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f0f0), color-stop(100%,#E0E0E0));
-		background: -webkit-linear-gradient(top,  #f0f0f0 0%,#E0E0E0 100%);
-		background: -o-linear-gradient(top,  #f0f0f0 0%,#E0E0E0 100%);
-		background: -ms-linear-gradient(top,  #f0f0f0 0%,#E0E0E0 100%);
-		background: linear-gradient(to bottom,  #f0f0f0 0%,#E0E0E0 100%);
+		background: -webkit-linear-gradient(top, #f0f0f0 0%,#E0E0E0 100%);
+		background: -o-linear-gradient(top, #f0f0f0 0%,#E0E0E0 100%);
+		background: -ms-linear-gradient(top, #f0f0f0 0%,#E0E0E0 100%);
+		background: linear-gradient(to bottom, #f0f0f0 0%,#E0E0E0 100%);
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#E0E0E0',GradientType=0 );
 	}
 
 button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover, button:focus, input[type="button"]:focus, input[type="submit"]:focus, input[type="reset"]:focus 
 	{
 		background: #f8f8f8;
-		background: -moz-linear-gradient(top,  #f8f8f8 0%, #E1E1E1 100%);
+		background: -moz-linear-gradient(top, #f8f8f8 0%, #E1E1E1 100%);
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#E1E1E1));
-		background: -webkit-linear-gradient(top,  #f8f8f8 0%,#E1E1E1 100%);
-		background: -o-linear-gradient(top,  #f8f8f8 0%,#E1E1E1 100%);
-		background: -ms-linear-gradient(top,  #f8f8f8 0%,#E1E1E1 100%);
-		background: linear-gradient(to bottom,  #f8f8f8 0%,#E1E1E1 100%);
+		background: -webkit-linear-gradient(top, #f8f8f8 0%,#E1E1E1 100%);
+		background: -o-linear-gradient(top, #f8f8f8 0%,#E1E1E1 100%);
+		background: -ms-linear-gradient(top, #f8f8f8 0%,#E1E1E1 100%);
+		background: linear-gradient(to bottom, #f8f8f8 0%,#E1E1E1 100%);
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#E1E1E1',GradientType=0 );
 	}
 
@@ -216,37 +216,32 @@ button:active, input[type="button"]:active, input[type="submit"]:active, input[t
 <script type="text/javascript">
 
 function goBack()
-	{  
-	  if ( (window.history.length == 0) || (window.history.length == 1) || (history.length == 0) || (history.length == 1) )
-		
-			{	
-				if (!(window.close()))
-					{ 
-						
-						if (!(document.close()))
-							{
-								close();	
-							};
-					};	
-			}
-	else 	{  
-				if (!(window.history.back()))
-					{
+{
+	if ( (window.history.length == 0) || (window.history.length == 1) || (history.length == 0) || (history.length == 1) )
+		{
+			if (!(window.close()))
+				{
+					if (!(document.close()))
+						{
+							close();
+						};
+				};
+		}
+	else
+		{
+			if (!(window.history.back()))
+				{
+					if (!(history.back()))
+						{
+							if (!(history.go(-1)))
+								{
+									back();
+								};
+						};
+				};
+		};
+};
 
-						if (!(history.back()))
-
-							{
-
-								if (!(history.go(-1)))
-
-									{
-										back();
-									};
-							};
-					};
-			};
-	};
-  
 </script>
 
 <script type="text/javascript">
@@ -255,7 +250,7 @@ var referringPage = "<?php echo $http_Ref_Address; ?>";
 
 function returnToPreviousPage()
 {
-	if ( ( referringPage != "") && ( referringPage !=  window.location.href) )
+	if ( ( referringPage != "" ) && ( referringPage != window.location.href ) )
 		{
 			alert("Returing you to where you left off.");
 			window.location.replace(referringPage);
@@ -291,9 +286,9 @@ function returnToPreviousPage()
 		<script type="text/javascript">
 		
 		function googleTranslateElementInit() 
-		{
-		new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-		};
+			{
+				new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			};
 		
 		</script>
 		
@@ -318,24 +313,24 @@ document.getElementById("action_buttons").innerHTML = "<button onclick='JavaScri
 
 <script type="text/JavaScript">
 
-/* Redirect Timer script [BEGIN]  */
+/* Redirect Timer script [BEGIN] */
 
-/* Set initial variables [BEGIN]  */
+/* Set initial variables [BEGIN] */
 
-document.getElementById('counter').innerHTML='30';
+document.getElementById('sec').value='30';
 
 var count=30;
 
-/* Set initial variables [END]  */
+/* Set initial variables [END] */
 
-/* The 'timer' function code [BEGIN]  */
+/* The 'timer' function code [BEGIN] */
 
 function timer()
 	{
 		count=count-1;
 		if (count < 0)
 			{
-				//Counter has ended; Clear interval and redirect page.		
+				//Counter has ended. Clear interval and redirect page.
 				clearInterval(counter);
 				returnToPreviousPage();
 				
@@ -343,18 +338,17 @@ function timer()
 			};
 
 		//Display the number of seconds here.
-		document.getElementById('counter').innerHTML=count; 
+		document.getElementById('sec').value=count; 
 	};
+/* The 'timer' function code [END] */
 	
-/* The 'timer' function code [END]  */
-	
-/* Start Redirect Timer [BEGIN]  */
+/* Start Redirect Timer [BEGIN] */
 
-var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+var counter=setInterval(timer, 1000); // 1000 will run it every 1 second.
 
-/* Start Redirect Timer [END]  */
+/* Start Redirect Timer [END] */
 
-/* Redirect Timer script [END]  */
+/* Redirect Timer script [END] */
 
 </script>
 

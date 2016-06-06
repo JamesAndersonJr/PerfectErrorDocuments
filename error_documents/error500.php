@@ -19,11 +19,11 @@ $_SESSION["origURL"] = $current_Webpage_Complete_URL_Address;
 
 /* Preliminary Meta-Data [BEGIN] */
 
-$meta_Tag_Site_Name = "Error - [500]&nbsp;&nbsp;Internal Server Error";
+$meta_Tag_Site_Name = "Error - [500] Internal Server Error";
 
 $meta_Tag_Description = "An Internal Server Error has occurred.";
 
-$meta_Tag_Key_Words = "error, document, error 500, internal, server";
+$meta_Tag_Key_Words = "error, fault, error 500, internal, server";
 
 /* Preliminary Meta-Data [END] */
 
@@ -39,8 +39,8 @@ $meta_Tag_Key_Words = "error, document, error 500, internal, server";
 
 <title><?php echo $meta_Tag_Site_Name; ?></title>
 
-<link rel="shortcut icon" href="/error_documents/favicon.ico" type="image/x-icon">  
-<link rel="stylesheet" href="/error_documents/css/error_pages.css"  type="text/css" media="all">
+<link rel="shortcut icon" type="image/x-icon" href="/error_documents/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/error_documents/css/error_pages.css" media="all">
 
 <meta name="description" content="<?php echo $meta_Tag_Description; ?>">
 <meta name="keywords" content="<?php echo $meta_Tag_Key_Words; ?>">
@@ -90,24 +90,24 @@ $meta_Tag_Key_Words = "error, document, error 500, internal, server";
 	
 <script type="text/JavaScript">
 
-/* Redirect Timer script [BEGIN]  */
+/* Redirect Timer script [BEGIN] */
 
-/* Set initial variables [BEGIN]  */
+/* Set initial variables [BEGIN] */
 
 document.getElementById('sec').value='30';
 
 var count=30;
 
-/* Set initial variables [END]  */
+/* Set initial variables [END] */
 
-/* The 'timer' function code [BEGIN]  */
+/* The 'timer' function code [BEGIN] */
 
 function timer()
 	{
 		count=count-1;
 		if (count < 0)
 			{
-				//Counter has ended. Clear interval and redirect page.				
+				//Counter has ended. Clear interval and redirect page.
 				clearInterval(counter);
 				location.href = '/';
 				
@@ -117,15 +117,15 @@ function timer()
 		//Display the number of seconds here.
 		document.getElementById('sec').value=count; 
 	};
-/* The 'timer' function code [END]  */
+/* The 'timer' function code [END] */
 	
-/* Start Redirect Timer [BEGIN]  */
+/* Start Redirect Timer [BEGIN] */
 
-var counter=setInterval(timer, 1000); // 1000 will  run it every 1 second.
+var counter=setInterval(timer, 1000); // 1000 will run it every 1 second.
 
-/* Start Redirect Timer [END]  */
+/* Start Redirect Timer [END] */
 
-/* Redirect Timer script [END]  */
+/* Redirect Timer script [END] */
 
 </script>
 
