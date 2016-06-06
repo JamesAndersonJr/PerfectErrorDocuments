@@ -19,11 +19,11 @@ $_SESSION["origURL"] = $current_Webpage_Complete_URL_Address;
 
 /* Preliminary Meta-Data [BEGIN] */
 
-$meta_Tag_Site_Name = "Error - [403] Access Denied";
+$meta_Tag_Site_Name = "Error - [403]&nbsp;&nbsp;Access Denied";
 
-$meta_Tag_Description = "Error - [403] Access is denied.";
+$meta_Tag_Description = "Error - [403]&nbsp;&nbsp;Access Denied";
 
-$meta_Tag_Key_Words = "error, error 403, access, denied, not allowed, disallowed, prohibited";
+$meta_Tag_Key_Words = "error, document, error 403, access denied";
 
 /* Preliminary Meta-Data [END] */
 
