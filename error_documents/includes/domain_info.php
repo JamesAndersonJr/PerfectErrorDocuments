@@ -49,4 +49,8 @@ $current_Website_Domain_Name = $protocol.$sub_domain.".".$server_url;
 $current_Webpage_Complete_URL_Address = $current_Website_Domain_Name.$current_path;
 /* Get the complete URL address to the current webpage, on the Internet (e.g. http://www.example.com/index.php) [END] */
 
+/* Get the primary websites version of the current page. Used for canonical links on mobile-only sub-domains (e.g. used on http://m.example.com/about.php would produce http://www.example.com/about.php) [BEGIN] */
+$primary_Website_Version = $primary_Website_Domain_Name.$current_path;
+/* Get the primary websites version of the current page. Used for canonical links on mobile-only sub-domains (e.g. used on http://m.example.com/about.php would produce http://www.example.com/about.php) [END] */
+
 ?>

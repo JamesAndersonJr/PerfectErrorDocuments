@@ -34,7 +34,7 @@ $meta_Tag_Site_Name = "JavaScript Disabled";
 
 $meta_Tag_Description = "A simple test to verify if JavaScript is enabled in your web browser.";
 
-$meta_Tag_Key_Words = "javascript, script, test, verify, web browser";
+$meta_Tag_Key_Words = "javascript, script, test, verify, check, web browser";
 
 /* Preliminary Meta-Data [END] */
 

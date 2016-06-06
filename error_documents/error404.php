@@ -19,11 +19,11 @@ $_SESSION["origURL"] = $current_Webpage_Complete_URL_Address;
 
 /* Preliminary Meta-Data [BEGIN] */
 
-$meta_Tag_Site_Name = "Error - [404]&nbsp;&nbsp;Page Not Found";
+$meta_Tag_Site_Name = "Error - [404] Page Not Found";
 
-$meta_Tag_Description = "Error - [404]&nbsp;&nbsp;The page you were looking for doesn&#8217;t exist";
+$meta_Tag_Description = "Error - [404] The page you were looking for doesn't exist.";
 
-$meta_Tag_Key_Words = "error, document, error 401, page not found, page doesn't exist";
+$meta_Tag_Key_Words = "error, error 404, page not found, page doesn't exist, nonexistent, empty, null, void";
 
 /* Preliminary Meta-Data [END] */
 

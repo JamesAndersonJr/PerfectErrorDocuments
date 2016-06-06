@@ -2,7 +2,7 @@
 
 /* Perfect Error Documents Version. - [DO NOT EDIT BELOW] */
 
-$ped_version = "1.5.2";
+$ped_version = "1.5.4";
 
 /* Perfect Error Documents Version. - [DO NOT EDIT ABOVE] */
 

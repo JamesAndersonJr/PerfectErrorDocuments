@@ -19,11 +19,11 @@ $_SESSION["origURL"] = $current_Webpage_Complete_URL_Address;
 
 /* Preliminary Meta-Data [BEGIN] */
 
-$meta_Tag_Site_Name = "Error - [401]&nbsp;&nbsp;Authorization Required";
+$meta_Tag_Site_Name = "Error - [401] Authorization Required";
 
-$meta_Tag_Description = "Error - [401]&nbsp;&nbsp;Authorization Required";
+$meta_Tag_Description = "Error - [401] Authorization Required";
 
-$meta_Tag_Key_Words = "error, document, error 401, authorization required";
+$meta_Tag_Key_Words = "error, error 401, authorization, required, not authorized, authorize, credentials";
 
 /* Preliminary Meta-Data [END] */
 

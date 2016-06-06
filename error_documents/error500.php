@@ -19,11 +19,11 @@ $_SESSION["origURL"] = $current_Webpage_Complete_URL_Address;
 
 /* Preliminary Meta-Data [BEGIN] */
 
-$meta_Tag_Site_Name = "Error - [500]&nbsp;&nbsp;Internal Server Error";
+$meta_Tag_Site_Name = "Error - [500] Internal Server Error";
 
 $meta_Tag_Description = "An Internal Server Error has occurred.";
 
-$meta_Tag_Key_Words = "error, document, error 500, internal, server";
+$meta_Tag_Key_Words = "error, fault, error 500, internal, server";
 
 /* Preliminary Meta-Data [END] */
 
