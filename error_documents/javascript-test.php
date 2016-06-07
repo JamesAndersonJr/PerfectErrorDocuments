@@ -1,5 +1,10 @@
 <?php
 
+session_start();
+
+?>
+<?php
+
 /* Include required configuration file [BEGIN] */ 
 
 require_once(dirname(__FILE__)."/config/config.php");
@@ -7,8 +12,6 @@ require_once(dirname(__FILE__)."/config/config.php");
 /* Include required configuration file [END] */ 
 
 /* Set the referral address that the visitor came from into a PHP variable to later use in a JavaScript variable [BEGIN] */
-
-session_start();
 
 if (isset($_SESSION["origURL"]))
 {

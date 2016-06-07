@@ -1,5 +1,10 @@
 <?php
 
+session_start();
+
+?>
+<?php
+
 /* Include required configuration file [BEGIN] */ 
 
 require_once(dirname(__FILE__)."/config/config.php");
@@ -11,6 +16,10 @@ require_once(dirname(__FILE__)."/config/config.php");
 require_once(dirname(__FILE__)."/includes/domain_info.php");
 
 /* Include required domain-related information and variables [END] */ 
+
+$_SESSION["origDomain"] = $current_Website_Domain_Name;
+
+$_SESSION["origPath"] = $current_path;
 
 $_SESSION["origURL"] = $current_Webpage_Complete_URL_Address;
 
