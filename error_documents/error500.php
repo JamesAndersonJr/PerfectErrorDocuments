@@ -23,7 +23,7 @@ $meta_Tag_Site_Name = "Error - [500] Internal Server Error";
 
 $meta_Tag_Description = "An Internal Server Error has occurred.";
 
-$meta_Tag_Key_Words = "error, error 500, internal, server, fault, issue";
+$meta_Tag_Key_Words = "error, fault, error 500, internal, server";
 
 /* Preliminary Meta-Data [END] */
 

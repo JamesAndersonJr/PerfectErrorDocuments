@@ -23,7 +23,7 @@ $meta_Tag_Site_Name = "Error - [401] Authorization Required";
 
 $meta_Tag_Description = "Error - [401] Authorization Required";
 
-$meta_Tag_Key_Words = "error, error 401, authorization, required, unauthorized, authorize, credentials";
+$meta_Tag_Key_Words = "error, error 401, authorization, required, not authorized, authorize, credentials";
 
 /* Preliminary Meta-Data [END] */
 
