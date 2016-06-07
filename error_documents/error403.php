@@ -23,7 +23,7 @@ $meta_Tag_Site_Name = "Error - [403] Access Denied";
 
 $meta_Tag_Description = "Error - [403] Access is denied.";
 
-$meta_Tag_Key_Words = "error, error 403, access, denied, not allowed, disallowed, prohibited";
+$meta_Tag_Key_Words = "error, error 403, access, denied, forbidden, disallowed, prohibited";
 
 /* Preliminary Meta-Data [END] */
 
