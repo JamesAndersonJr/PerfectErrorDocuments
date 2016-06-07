@@ -23,7 +23,7 @@ $meta_Tag_Site_Name = "Error - [403] Access Denied";
 
 $meta_Tag_Description = "Error - [403] Access is denied.";
 
-$meta_Tag_Key_Words = "error, error 403, access, denied, not allowed, disallowed, prohibited";
+$meta_Tag_Key_Words = "error, error 403, access, denied, forbidden, disallowed, prohibited";
 
 /* Preliminary Meta-Data [END] */
 
@@ -107,16 +107,17 @@ function timer()
 		count=count-1;
 		if (count < 0)
 			{
-				//Counter has ended. Clear interval and redirect page.
+				// Counter has ended. Clear interval and redirect page.
 				clearInterval(counter);
 				location.href = '/';
 				
 				return;
 			};
 
-		//Display the number of seconds here.
+		// Display the number of seconds here.
 		document.getElementById('sec').value=count; 
 	};
+
 /* The 'timer' function code [END] */
 	
 /* Start Redirect Timer [BEGIN] */

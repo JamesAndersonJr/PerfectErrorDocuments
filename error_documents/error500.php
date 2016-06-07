@@ -23,7 +23,7 @@ $meta_Tag_Site_Name = "Error - [500] Internal Server Error";
 
 $meta_Tag_Description = "An Internal Server Error has occurred.";
 
-$meta_Tag_Key_Words = "error, fault, error 500, internal, server";
+$meta_Tag_Key_Words = "error, error 500, internal, server, fault, issue";
 
 /* Preliminary Meta-Data [END] */
 
@@ -107,16 +107,17 @@ function timer()
 		count=count-1;
 		if (count < 0)
 			{
-				//Counter has ended. Clear interval and redirect page.
+				// Counter has ended. Clear interval and redirect page.
 				clearInterval(counter);
 				location.href = '/';
 				
 				return;
 			};
 
-		//Display the number of seconds here.
+		// Display the number of seconds here.
 		document.getElementById('sec').value=count; 
 	};
+
 /* The 'timer' function code [END] */
 	
 /* Start Redirect Timer [BEGIN] */

@@ -23,7 +23,7 @@ $meta_Tag_Site_Name = "Error - [404] Page Not Found";
 
 $meta_Tag_Description = "Error - [404] The page you were looking for doesn't exist.";
 
-$meta_Tag_Key_Words = "error, error 404, page not found, page doesn't exist, nonexistent, empty, null, void";
+$meta_Tag_Key_Words = "error, error 404, not found, nonexistent, empty, null, void";
 
 /* Preliminary Meta-Data [END] */
 
@@ -108,16 +108,17 @@ function timer()
 		count=count-1;
 		if (count < 0)
 			{
-				//Counter has ended. Clear interval and redirect page.
+				// Counter has ended. Clear interval and redirect page.
 				clearInterval(counter);
 				location.href = '/';
 				
 				return;
 			};
 
-		//Display the number of seconds here.
+		// Display the number of seconds here.
 		document.getElementById('sec').value=count; 
 	};
+
 /* The 'timer' function code [END] */
 	
 /* Start Redirect Timer [BEGIN] */

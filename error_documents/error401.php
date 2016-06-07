@@ -23,7 +23,7 @@ $meta_Tag_Site_Name = "Error - [401] Authorization Required";
 
 $meta_Tag_Description = "Error - [401] Authorization Required";
 
-$meta_Tag_Key_Words = "error, error 401, authorization, required, not authorized, authorize, credentials";
+$meta_Tag_Key_Words = "error, error 401, authorization, required, unauthorized, authorize, credentials";
 
 /* Preliminary Meta-Data [END] */
 
@@ -109,16 +109,17 @@ function timer()
 		count=count-1;
 		if (count < 0)
 			{
-				//Counter has ended. Clear interval and redirect page.
+				// Counter has ended. Clear interval and redirect page.
 				clearInterval(counter);
 				location.href = '/';
 				
 				return;
 			};
 
-		//Display the number of seconds here.
+		// Display the number of seconds here.
 		document.getElementById('sec').value=count; 
 	};
+
 /* The 'timer' function code [END] */
 	
 /* Start Redirect Timer [BEGIN] */
