@@ -317,7 +317,7 @@ document.getElementById("action_buttons").innerHTML = "<button onclick='JavaScri
 
 /* Set initial variables [BEGIN] */
 
-document.getElementById('sec').value='30';
+document.getElementById('counter').innerHTML='30';
 
 var count=30;
 
@@ -330,7 +330,7 @@ function timer()
 		count=count-1;
 		if (count < 0)
 			{
-				// Counter has ended. Clear interval and redirect page.
+				// Counter has ended. Clear interval and redirect page.		
 				clearInterval(counter);
 				returnToPreviousPage();
 				
@@ -338,9 +338,9 @@ function timer()
 			};
 
 		// Display the number of seconds here.
-		document.getElementById('sec').value=count; 
+		document.getElementById('counter').innerHTML=count; 
 	};
-
+	
 /* The 'timer' function code [END] */
 	
 /* Start Redirect Timer [BEGIN] */
