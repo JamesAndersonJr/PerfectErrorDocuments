@@ -1,6 +1,6 @@
 <!--
 
-This web-page is part of the 'Perfect Error Documents' v.<?php echo $ped_version ?> online script.
+This web-page is part of the 'Perfect Error Documents' v.<?php echo $ped_version; ?> online script.
 
 A free copy of the 'Perfect Error Documents' online script can be found here: [ http://perfecterrordocs.com/download/ ].
 
