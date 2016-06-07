@@ -108,14 +108,14 @@ function timer()
 		count=count-1;
 		if (count < 0)
 			{
-				// Counter has ended. Clear interval and redirect page.
+				//Counter has ended. Clear interval and redirect page.
 				clearInterval(counter);
 				location.href = '/';
 				
 				return;
 			};
 
-		// Display the number of seconds here.
+		//Display the number of seconds here.
 		document.getElementById('sec').value=count; 
 	};
 /* The 'timer' function code [END] */
