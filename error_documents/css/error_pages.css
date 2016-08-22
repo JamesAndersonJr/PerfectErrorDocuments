@@ -1,21 +1,33 @@
-﻿html
+﻿@-webkit-viewport{width:720px;}
+@-moz-viewport{width:720px;}
+@-ms-viewport{width:720px;}
+@-o-viewport{width:720px;}
+@viewport{width:720px;}
+
+html
 	{
 		margin:0px;
 		padding:0px;
+		height:100% !important;
+		min-height: 100%;
 	}
 
 body
-	{
+	{	
+		margin:0px;
+		padding:0px;
+		height:100% !important;
+		min-height: 100%;
+		
 		background-color:#FFFFFF;
+		background-image:url('../images/backgrounds/wallpapers/grey-gradient-background-up.png');
+		background-repeat:repeat;
+		
 		color:#676767;
 		text-align:center;
 		font-family:Arial, Helvetica, Sans-Serif;
-		background-image:url('../images/backgrounds/wallpapers/grey-gradient-background-up.png');
-		background-repeat:repeat;
 		font-size:1.000em;
 		text-shadow:1px 1px #FFFFFF;
-		margin:0px;
-		padding:0px;
 	}
 
 a:link
@@ -47,12 +59,14 @@ p
 		border-width: 0px;
 		border-style: none;
 		border-color: transparent;
-		
 	}
 
 .sub_container_div
-	{
-		width:25em;
+	{	
+		width: 100%;
+		max-width:37em;
+		box-sizing: border-box;
+		
 		vertical-align:middle;
 		text-align:center;
 		display:table;
@@ -71,6 +85,7 @@ p
 div.dialog
 	{
 		width:inherit !important;
+		box-sizing: border-box;
 		
 		padding-top:0.8em;
 		padding-right:4em;

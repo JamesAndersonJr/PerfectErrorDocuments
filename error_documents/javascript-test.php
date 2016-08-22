@@ -59,19 +59,33 @@ $meta_Tag_Key_Words = "JavaScript, script, test, verify, check, web browser";
 <meta name="keywords" content="<?php echo $meta_Tag_Key_Words; ?>">
 <meta name="robots" content="noindex,nofollow">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=0.8">
 
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
 <style type="text/css" media="all">
+
+@-webkit-viewport{width:720px;}
+@-moz-viewport{width:720px;}
+@-ms-viewport{width:720px;}
+@-o-viewport{width:720px;}
+@viewport{width:720px;}
+
 html
 	{
 		margin:0px;
 		padding:0px;
+		height:100% !important;
+		min-height: 100%;
 	}
 
 body
 	{
+		margin:0px;
+		padding:0px;
+		height:100% !important;
+		min-height: 100%;
+		
 		background-color:#FFFFFF;
 		color:#676767;
 		text-align:center;
@@ -79,10 +93,7 @@ body
 		text-shadow:1px 1px #FFFFFF;
 		background-image:url('/error_documents/images/backgrounds/wallpapers/grey-gradient-background-up.png');
 		background-repeat:repeat !important;
-		font-size:1.000em;
-		margin:0px;
-		padding:0px;
-		
+		font-size:1.000em;	
 	}
 
 .main_container_div
@@ -104,7 +115,10 @@ body
 
 .sub_container_div
 	{
-		width:25em;
+		width: 100%;
+		max-width:37em;
+		box-sizing: border-box;
+	
 		vertical-align:middle;
 		text-align:center;
 		display:table;
@@ -123,6 +137,7 @@ body
 div.dialog
 	{
 		width:inherit !important;
+		box-sizing: border-box;
 		
 		padding-top:0.8em;
 		padding-right:4em;
@@ -215,6 +230,8 @@ button:active, input[type="button"]:active, input[type="submit"]:active, input[t
 		text-decoration: none!important;
 	}
 </style>
+
+<script type="text/javascript" src="/error_documents/js/viewport_fix.js"></script>
 
 <script type="text/javascript">
 

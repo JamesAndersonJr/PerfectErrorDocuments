@@ -48,14 +48,17 @@ $meta_Tag_Key_Words = "error, error 403, access, denied, forbidden, disallowed, 
 
 <title><?php echo $meta_Tag_Site_Name; ?></title>
 
-<link rel="shortcut icon" type="image/x-icon" href="/error_documents/favicon.ico"> 
-<link rel="stylesheet" type="text/css" href="/error_documents/css/error_pages.css" media="all">
+<link rel="shortcut icon" type="image/x-icon" href="/error_documents/favicon.ico">
 
 <meta name="description" content="<?php echo $meta_Tag_Description; ?>">
 <meta name="keywords" content="<?php echo $meta_Tag_Key_Words; ?>">
 <meta name="robots" content="noindex,nofollow">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=0.8">
+
+<link rel="stylesheet" type="text/css" href="/error_documents/css/error_pages.css" media="all">
+
+<script type="text/javascript" src="/error_documents/js/viewport_fix.js"></script>
 
 <noscript><meta http-equiv="refresh" content="0; url=/error_documents/javascript-test.php"></noscript>
 
