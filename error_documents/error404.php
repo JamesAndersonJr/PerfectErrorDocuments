@@ -2,9 +2,6 @@
 
 session_start();
 
-?>
-<?php
-
 /* Include required configuration file [BEGIN] */ 
 
 require_once(dirname(__FILE__)."/config/config.php");
@@ -22,9 +19,6 @@ $_SESSION["origDomain"] = $current_Website_Domain_Name;
 $_SESSION["origPath"] = $current_path;
 
 $_SESSION["origURL"] = $current_Webpage_Complete_URL_Address;
-
-?>
-<?php
 
 /* Preliminary Meta-Data [BEGIN] */
 
@@ -92,7 +86,6 @@ $meta_Tag_Key_Words = "error, error 404, not found, nonexistent, empty, null, vo
 		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 		
 		</div>
-
 		<p>
 		If you do nothing, you will be redirected<br>
 		to the site&#8217;s <a href="/" target="_self">home page</a>, in (<input type="text" name="sec" id="sec" value="30" class="no_select sec_counter" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.
@@ -120,14 +113,14 @@ function timer()
 		count=count-1;
 		if (count < 0)
 			{
-				// Counter has ended. Clear interval and redirect page.
+				/* Counter has ended. Clear interval and redirect page. */
 				clearInterval(counter);
 				location.href = '/';
 				
 				return;
 			};
 
-		// Display the number of seconds here.
+		/* Display the number of seconds here. */
 		document.getElementById('sec').value=count; 
 	};
 
@@ -135,7 +128,7 @@ function timer()
 	
 /* Start Redirect Timer [BEGIN] */
 
-var counter=setInterval(timer, 1000); // 1000 will run it every 1 second.
+var counter=setInterval(timer, 1000); /* 1000 will run it every 1 second. */
 
 /* Start Redirect Timer [END] */
 

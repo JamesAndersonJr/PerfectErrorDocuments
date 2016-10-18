@@ -43,7 +43,7 @@ $primary_Website_Domain_Name = $protocol."www.".$server_url; // (e.g. http://www
 
 /* Get the full domain name of the current website [BEGIN] */
 $current_Website_Domain_Name = $protocol.$sub_domain.".".$server_url;
-/* Get the full domain name of the current website [BEGIN] */
+/* Get the full domain name of the current website [END] */
 
 /* Get the complete URL address to the current webpage, on the Internet (e.g. http://www.example.com/index.php) [BEGIN] */
 $current_Webpage_Complete_URL_Address = $current_Website_Domain_Name.$current_path;

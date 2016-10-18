@@ -2,9 +2,6 @@
 
 session_start();
 
-?>
-<?php
-
 /* Include required configuration file [BEGIN] */ 
 
 require_once(dirname(__FILE__)."/config/config.php");
@@ -27,9 +24,6 @@ else
 };
 
 /* Set the referral address that the visitor came from into a PHP variable to later use in a JavaScript variable [END] */
-
-?>
-<?php
 
 /* Preliminary Meta-Data [BEGIN] */
 
@@ -333,13 +327,12 @@ function returnToPreviousPage()
 		</script>
 		
 		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-		
 		<script type="text/javascript">document.write("<br>");</script>
 		
 		<span id="action_buttons"><button onclick="JavaScript:window.location.replace(window.location.href);">Re-Test</button></span>
 		
 		</div>
-
+		
 	</div>
 </div>
 
@@ -370,14 +363,14 @@ function timer()
 		count=count-1;
 		if (count < 0)
 			{
-				// Counter has ended. Clear interval and redirect page.		
+				/* Counter has ended. Clear interval and redirect page.	*/	
 				clearInterval(counter);
 				returnToPreviousPage();
 				
 				return;
 			};
 
-		// Display the number of seconds here.
+		/* Display the number of seconds here. */
 		document.getElementById('counter').innerHTML=count; 
 	};
 	
@@ -385,7 +378,7 @@ function timer()
 	
 /* Start Redirect Timer [BEGIN] */
 
-var counter=setInterval(timer, 1000); // 1000 will run it every 1 second.
+var counter=setInterval(timer, 1000); /* 1000 will run it every 1 second. */
 
 /* Start Redirect Timer [END] */
 
