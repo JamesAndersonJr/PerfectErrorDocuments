@@ -32,7 +32,7 @@ $meta_Tag_Key_Words = "error, error 500, internal, server, fault, issue";
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/Action">
 
 <head>
 
@@ -49,6 +49,20 @@ $meta_Tag_Key_Words = "error, error 500, internal, server, fault, issue";
 <meta name="robots" content="noindex,nofollow">
 
 <meta name="viewport" content="width=device-width, initial-scale=0.8">
+
+<!-- Google Plus Metadata (i.e. "Structured Data") Tags [BEGIN] -->
+
+<meta itemprop="name" content="<?php echo $meta_Tag_Site_Name; ?>">
+<meta itemprop="description" content="<?php echo $meta_Tag_Description; ?>">
+
+<!-- Google Plus Metadata (i.e. "Structured Data") Tags [END] -->
+
+<!-- Facebook / Open Graph Tags [BEGIN] -->
+
+<meta property="og:title" content="<?php echo $meta_Tag_Site_Name; ?>" >
+<meta property="og:description" content="<?php echo $meta_Tag_Description; ?>" >
+
+<!-- Facebook / Open Graph Tags [END] -->
 
 <link rel="stylesheet" type="text/css" href="/error_documents/css/error_pages.css" media="all">
 
@@ -100,9 +114,9 @@ $meta_Tag_Key_Words = "error, error 500, internal, server, fault, issue";
 
 /* Set initial variables [BEGIN] */
 
-document.getElementById('sec').value='30';
+document.getElementById('sec').value = '30';
 
-var count=30;
+var count = 30;
 
 /* Set initial variables [END] */
 
@@ -110,7 +124,7 @@ var count=30;
 
 function timer()
 	{
-		count=count-1;
+		count = count - 1;
 		if (count < 0)
 			{
 				/* Counter has ended. Clear interval and redirect page. */
@@ -121,7 +135,7 @@ function timer()
 			};
 
 		/* Display the number of seconds here. */
-		document.getElementById('sec').value=count; 
+		document.getElementById('sec').value = count; 
 	};
 
 /* The 'timer' function code [END] */

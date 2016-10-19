@@ -11,17 +11,17 @@ require_once(dirname(__FILE__)."/config/config.php");
 /* Set the referral address that the visitor came from into a PHP variable to later use in a JavaScript variable [BEGIN] */
 
 if (isset($_SESSION["origURL"]))
-{
-	$http_Ref_Address = $_SESSION["origURL"];
-}
+	{
+		$http_Ref_Address = $_SESSION["origURL"];
+	}
 elseif (isset($_SERVER['HTTP_REFERER']))
-{
-	$http_Ref_Address = $_SERVER['HTTP_REFERER'];
-}
+	{
+		$http_Ref_Address = $_SERVER['HTTP_REFERER'];
+	}
 else
-{
-	$http_Ref_Address = "/";
-};
+	{
+		$http_Ref_Address = "/";
+	};
 
 /* Set the referral address that the visitor came from into a PHP variable to later use in a JavaScript variable [END] */
 
@@ -59,7 +59,10 @@ $meta_Tag_Key_Words = "JavaScript, script, test, verify, check, web browser";
 
 <style type="text/css" media="all">
 
-@-ms-viewport{width:device-width;}
+@-ms-viewport
+	{
+		width:device-width;
+	}
 
 html
 	{
@@ -350,9 +353,9 @@ document.getElementById("action_buttons").innerHTML = "<button onclick='JavaScri
 
 /* Set initial variables [BEGIN] */
 
-document.getElementById('counter').innerHTML='30';
+document.getElementById('counter').innerHTML = '30';
 
-var count=30;
+var count = 30;
 
 /* Set initial variables [END] */
 
@@ -360,7 +363,7 @@ var count=30;
 
 function timer()
 	{
-		count=count-1;
+		count = count - 1;
 		if (count < 0)
 			{
 				/* Counter has ended. Clear interval and redirect page.	*/	
@@ -371,7 +374,7 @@ function timer()
 			};
 
 		/* Display the number of seconds here. */
-		document.getElementById('counter').innerHTML=count; 
+		document.getElementById('counter').innerHTML = count; 
 	};
 	
 /* The 'timer' function code [END] */
