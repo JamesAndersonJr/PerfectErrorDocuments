@@ -381,7 +381,7 @@ function timer()
 	
 /* Start Redirect Timer [BEGIN] */
 
-var counter=setInterval(timer, 1000); /* 1000 will run it every 1 second. */
+var counter = setInterval(timer, 1000); /* 1000 will run it every 1 second. */
 
 /* Start Redirect Timer [END] */
 

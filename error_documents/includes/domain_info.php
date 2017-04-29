@@ -61,6 +61,14 @@ $current_Webpage_Complete_URL_Address = $current_Website_Domain_Name.$current_pa
 
 /* Get the complete URL address to the current web page, on the Internet (e.g. [ http://www.example.com/index.php ]). [END] */
 
+/* Get the canonical URL address to the current web page, on the Internet (e.g. [ http://www.example.com/page.php ] or [ http://www.example.com ], but NOT [ http://www.example.com/index.php ] NOR [ http://www.example.com/ ]). [BEGIN] */
+
+$current_Webpage_Canonical_URL_Address = preg_replace('/((\\index)\.[a-z]+)$/', '', $current_Webpage_Complete_URL_Address); /* Removes any known homepage path of the URL address, but NOT normal page paths. */
+
+$current_Webpage_Canonical_URL_Address = preg_replace('/\/$/', '', $current_Webpage_Canonical_URL_Address); /* Removes any trailing forward slash ("/") from the end of the URL. */
+
+/* Get the canonical URL address to the current web page, on the Internet (e.g. [ http://www.example.com/page.php ] or [ http://www.example.com ], but NOT [ http://www.example.com/index.php ] NOR [ http://www.example.com/ ]). [END] */
+
 /* Get the primary websites version of the current page (e.g. used at [ http://m.example.com/about.php ] would produce [ http://www.example.com/about.php ]). Typically used for canonical links on mobile-only sub-domains. [BEGIN] */
 
 $primary_Website_Version = $primary_Website_Domain_Name.$current_path;
