@@ -1,8 +1,6 @@
 /* DEPENDENCIES: NONE */
 
-/* USAGE INSTRUCTIONS: Keep this JavaScript file before any other script, in the head of the HTML file it's included in. */
- 
-/* Windows Phone 8 view-port recognition script. [BEGIN] */
+/* Windows Phone 8.x [ Mobile IE 10.0 ] view-port recognition script. [BEGIN] */
 
 if (navigator.userAgent.match(/IEMobile\/10\.0/)) 
 	{
@@ -11,4 +9,4 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/))
 		document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
 	};
 
-/* Windows Phone 8 view-port recognition script. [END] */
+/* Windows Phone 8.x [ Mobile IE 10.0 ] view-port recognition script. [END] */
