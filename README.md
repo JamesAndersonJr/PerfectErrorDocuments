@@ -21,7 +21,7 @@ Donation Address : http://www.perfecterrordocs.com/donate/
 Copyright :
 -----------------------------------------------------------------------
 
-Copyright © 2016 James Anderson Jr.
+Copyright © 2017 James Anderson Jr.
 
 
 This file is part of the "Perfect Error Documents v.1.x.x" online script.
