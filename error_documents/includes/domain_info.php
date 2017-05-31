@@ -19,7 +19,22 @@ function getDomain($url)
 
 /* This function [ABOVE] returns the just the domain name (SLD + TLD) (without any sub-domain, or 3LD) of a valid URL string (e.g. 'https://testing.multiple.subdomain.google.co.uk' returns just 'google.co.uk') [END] */
 
-$protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://';
+/* Default protocol */
+
+$protocol = "//";
+
+if ((!empty($_SERVER['HTTPS'])) && ($_SERVER['HTTPS'] != 'off')) 
+	{
+		/* SSL/TLS Detected. Use secure protocol. */
+
+		$protocol = 'https://';
+	}
+else
+	{
+		/* No SSL/TLS Detected. Do NOT use secure protocol. */
+
+		$protocol =  'http://';
+	};
 
 $server_name = $_SERVER["SERVER_NAME"];
 
