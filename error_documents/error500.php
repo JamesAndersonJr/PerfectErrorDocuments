@@ -71,6 +71,7 @@ $meta_Tag_Key_Words = "error, error 500, internal, server, fault, issue";
 <noscript><meta http-equiv="refresh" content="0; url=/error_documents/javascript-test.php"></noscript>
 
 </head>
+
 <body>
 
 <div class="main_container_div">
@@ -100,9 +101,11 @@ $meta_Tag_Key_Words = "error, error 500, internal, server, fault, issue";
 			<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 			
 		</div>
+		
 		<p>
 		If you do nothing, you will be redirected<br>
-		to the site&#8217;s <a href="/" target="_self">home page</a>, in (<input type="text" name="sec" id="sec" value="30" class="no_select sec_counter" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.
+		to the site&#8217;s <a href="/" target="_self">home page</a>, 
+		in (<input type="text" name="sec" id="sec" value="30" class="no_select sec_counter" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.
 		</p>
 
 	</div>
@@ -110,24 +113,25 @@ $meta_Tag_Key_Words = "error, error 500, internal, server, fault, issue";
 	
 <script type="text/JavaScript">
 
-/* Redirect Timer script [BEGIN] */
+/* Redirect Timer script. [BEGIN] */
 
-/* Set initial variables [BEGIN] */
+/* Set initial variables. [BEGIN] */
 
 document.getElementById('sec').value = '30';
 
 var count = 30;
 
-/* Set initial variables [END] */
+/* Set initial variables. [END] */
 
-/* The 'timer' function code [BEGIN] */
+/* The 'timer' function code. [BEGIN] */
 
 function timer()
 	{
 		count = count - 1;
+		
 		if (count < 0)
 			{
-				/* Counter has ended. Clear interval and redirect page. */
+				/* The counter has ended. Clear the interval, and redirect the page. */
 				clearInterval(counter);
 				location.href = '/';
 				
@@ -138,15 +142,15 @@ function timer()
 		document.getElementById('sec').value = count; 
 	};
 
-/* The 'timer' function code [END] */
+/* The 'timer' function code. [END] */
 	
-/* Start Redirect Timer [BEGIN] */
+/* Start Redirect Timer. [BEGIN] */
 
 var counter = setInterval(timer, 1000); /* 1000 will run it every 1 second. */
 
-/* Start Redirect Timer [END] */
+/* Start Redirect Timer. [END] */
 
-/* Redirect Timer script [END] */
+/* Redirect Timer script. [END] */
 
 </script>
 

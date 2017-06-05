@@ -57,6 +57,8 @@ $meta_Tag_Key_Words = "JavaScript, script, test, verify, check, web browser";
 
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
+<!-- [Internal] CSS [BEGIN] -->
+
 <style type="text/css" media="all">
 
 @-ms-viewport
@@ -66,10 +68,10 @@ $meta_Tag_Key_Words = "JavaScript, script, test, verify, check, web browser";
 
 html
 	{
-		margin:0px;
-		padding:0px;
 		height:100% !important;
 		min-height:100%;
+		margin:0px;
+		padding:0px;
 		
 		-moz-box-sizing:border-box;
 		-webkit-box-sizing:border-box;
@@ -78,103 +80,32 @@ html
 
 body
 	{
-		margin:0px;
-		padding:0px;
 		height:100% !important;
 		min-height:100%;
+		margin:0px;
+		padding:0px;
 		
 		-moz-box-sizing:border-box;
 		-webkit-box-sizing:border-box;
 		box-sizing:border-box;
 		
 		background-color:#FFFFFF;
-		color:#676767;
-		text-align:center;
-		font-family:Arial, Helvetica, Sans-Serif;
-		text-shadow:1px 1px #FFFFFF;
 		background-image:url('/error_documents/images/backgrounds/wallpapers/gray-gradient-background-up.png');
 		background-repeat:repeat !important;
-		font-size:1.000em;	
-	}
-
-.main_container_div
-	{
-		width:100%;
-		height:100%;
-
-		-moz-box-sizing:border-box;
-		-webkit-box-sizing:border-box;
-		box-sizing:border-box;
-
-		margin:0px !important;
-		text-align:center;
-
-		padding-top:0px;
-		padding-right:0px;
-		padding-bottom:0px;
-		padding-left:0px;
-
-		border-width:0px;
-		border-style:none;
-		border-color:transparent;	
-	}
-
-.sub_container_div
-	{
-		width:100%;
-		max-width:37em;
 		
-		-moz-box-sizing:border-box;
-		-webkit-box-sizing:border-box;
-		box-sizing:border-box;
+		color:#676767;
+		font-family:Arial, Helvetica, Sans-Serif;
+		text-shadow:1px 1px #FFFFFF;
+		font-size:1.000em;
+		text-align:center;
+	}
 	
-		vertical-align:middle;
-		text-align:center;
-		display:table;
-		margin:0px auto;
-		
-		padding-top:2.1em;
-		padding-right:2em;
-		padding-bottom:0px;
-		padding-left:2em;
-
-		border-width:0px;
-		border-style:none;
-		border-color:transparent;
-	}
-
-div.dialog
-	{
-		width:inherit !important;
-		
-		-moz-box-sizing:border-box;
-		-webkit-box-sizing:border-box;
-		box-sizing:border-box;
-		
-		padding-top:0.8em;
-		padding-right:4em;
-		padding-bottom:1.7em;
-		padding-left:4em;
-
-		margin-top:2.2em;
-		margin-right:auto;
-		margin-bottom:0px;
-		margin-left:auto;
-
-		border:1px solid #CCCCCC;
-		border-collapse:collapse;
-		border-right-color:#999999;
-		border-bottom-color:#999999;
-		
-		background-image:url('/error_documents/images/backgrounds/gray-gradient-special-message-background.png');
-		background-repeat:repeat;
-	}
 h1
 	{
-		font-size:1.000em;
 		color:#FF3737;
-		line-height:1.5em;
+		font-size:1.000em;
 		text-shadow:1px 1px #FFFFFF;
+		line-height:1.5em;
 	}
 
 a:link
@@ -186,34 +117,99 @@ a:visited
 	{
 		color:#8066FF;
 	}
-	
-button, input[type="button"], input[type="submit"], input[type="reset"] 
-	{
-		color:#535353 !important;
-		font-size:0.928em !important;
-		line-height:normal !important;
-		font-weight:normal !important;
 
-		-moz-box-shadow:0px 1px 2px rgba(159,159,159,0.5);
-		-webkit-box-shadow:0px 1px 2px rgba(159,159,159,0.5);
-		-khtml-box-shadow:0px 1px 2px rgba(159,159,159,0.5);
-		box-shadow:0px 1px 2px rgba(159,159,159,0.5);
-		
+.main_container_div
+	{
+		width:100%;
+		height:100%;
+		margin:0px !important;
+		padding-top:0px;
+		padding-right:0px;
+		padding-bottom:0px;
+		padding-left:0px;
+
 		-moz-box-sizing:border-box;
 		-webkit-box-sizing:border-box;
 		box-sizing:border-box;
 
+		border-width:0px;
+		border-style:none;
+		border-color:transparent;
+
+		text-align:center;
+	}
+
+.sub_container_div
+	{
+		display:table;
+		
+		width:100%;
+		max-width:37em;
+		margin:0px auto;
+		padding-top:2.1em;
+		padding-right:2em;
+		padding-bottom:0px;
+		padding-left:2em;
+		
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+	
+		border-width:0px;
+		border-style:none;
+		border-color:transparent;
+		
+		text-align:center;
+		vertical-align:middle;
+	}
+
+div.dialog
+	{
+		width:inherit !important;
+		margin-top:2.2em;
+		margin-right:auto;
+		margin-bottom:0px;
+		margin-left:auto;
+		padding-top:0.8em;
+		padding-right:4em;
+		padding-bottom:1.7em;
+		padding-left:4em;
+
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+
+		border:1px solid #CCCCCC;
+		border-collapse:collapse;
+		border-right-color:#999999;
+		border-bottom-color:#999999;
+		
+		background-image:url('/error_documents/images/backgrounds/gray-gradient-special-message-background.png');
+		background-repeat:repeat;
+	}
+	
+button, input[type="button"], input[type="submit"], input[type="reset"]
+	{
 		padding-top:8px !important;
 		padding-right:14px !important;
 		padding-bottom:9px !important;
 		padding-left:14px !important;
+		
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+		
+		-moz-box-shadow:0px 1px 2px rgba(159,159,159,0.5);
+		-webkit-box-shadow:0px 1px 2px rgba(159,159,159,0.5);
+		-khtml-box-shadow:0px 1px 2px rgba(159,159,159,0.5);
+		box-shadow:0px 1px 2px rgba(159,159,159,0.5);
 
 		-webkit-border-radius:2px;
 		-moz-border-radius:2px;
 		-khtml-border-radius:2px;
 		border-radius:2px;
-
 		border:1px solid #BCBCBC;
+		
 		background:#f0f0f0;
 		background:-moz-linear-gradient(top, #f0f0f0 0%, #E0E0E0 100%);
 		background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f0f0), color-stop(100%,#E0E0E0));
@@ -222,9 +218,14 @@ button, input[type="button"], input[type="submit"], input[type="reset"]
 		background:-ms-linear-gradient(top, #f0f0f0 0%,#E0E0E0 100%);
 		background:linear-gradient(to bottom, #f0f0f0 0%,#E0E0E0 100%);
 		filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#E0E0E0',GradientType=0 );
+		
+		color:#535353 !important;
+		font-size:0.928em !important;
+		font-weight:normal !important;
+		line-height:normal !important;
 	}
 
-button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover, button:focus, input[type="button"]:focus, input[type="submit"]:focus, input[type="reset"]:focus 
+button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover, button:focus, input[type="button"]:focus, input[type="submit"]:focus, input[type="reset"]:focus
 	{
 		background:#f8f8f8;
 		background:-moz-linear-gradient(top, #f8f8f8 0%, #E1E1E1 100%);
@@ -236,48 +237,52 @@ button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type
 		filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#E1E1E1',GradientType=0 );
 	}
 
-button:active, input[type="button"]:active, input[type="submit"]:active, input[type="reset"]:active 
+button:active, input[type="button"]:active, input[type="submit"]:active, input[type="reset"]:active
 	{
-		background:#E0E0E0;
 		-moz-box-shadow:inset 0px 1px 2px rgba(205,205,205,1);
 		-webkit-box-shadow:inset 0px 1px 2px rgba(205,205,205,1);
 		-khtml-box-shadow:inset 0px 1px 2px rgba(205,205,205,1);
 		box-shadow:inset 0px 1px 2px rgba(205,205,205,1);
+		
+		background:#E0E0E0;
+		
 		text-decoration:none !important;
 	}
 
 </style>
+
+<!-- [Internal] CSS [END] -->
 
 <script type="text/javascript" src="/error_documents/js/viewport_fix.js"></script>
 
 <script type="text/javascript">
 
 function goBack()
-{
-	if ( (window.history.length == 0) || (window.history.length == 1) || (history.length == 0) || (history.length == 1) )
-		{
-			if (!(window.close()))
-				{
-					if (!(document.close()))
-						{
-							close();
-						};
-				};
-		}
-	else
-		{
-			if (!(window.history.back()))
-				{
-					if (!(history.back()))
-						{
-							if (!(history.go(-1)))
-								{
-									back();
-								};
-						};
-				};
-		};
-};
+	{
+		if ( (window.history.length == 0) || (window.history.length == 1) || (history.length == 0) || (history.length == 1) )
+			{
+				if (!(window.close()))
+					{
+						if (!(document.close()))
+							{
+								close();
+							};
+					};
+			}
+		else
+			{
+				if (!(window.history.back()))
+					{
+						if (!(history.back()))
+							{
+								if (!(history.go(-1)))
+									{
+										back();
+									};
+							};
+					};
+			};
+	};
 
 </script>
 
@@ -286,21 +291,22 @@ function goBack()
 var referringPage = "<?php echo $http_Ref_Address; ?>";
 
 function returnToPreviousPage()
-{
-	if ( ( referringPage != "" ) && ( referringPage != window.location.href ) )
-		{
-			alert("Returing you to where you left off.");
-			window.location.replace(referringPage);
-		}
-	else
-		{
-			goBack();
-		};
-};
+	{
+		if ( ( referringPage != "" ) && ( referringPage != window.location.href ) )
+			{
+				alert("Returing you to where you left off.");
+				window.location.replace(referringPage);
+			}
+		else
+			{
+				goBack();
+			};
+	};
 
 </script>
 
 </head>
+
 <body>
 
 <div class="main_container_div">
@@ -349,24 +355,25 @@ document.getElementById("action_buttons").innerHTML = "<button onclick='JavaScri
 
 <script type="text/JavaScript">
 
-/* Redirect Timer script [BEGIN] */
+/* Redirect Timer script. [BEGIN] */
 
-/* Set initial variables [BEGIN] */
+/* Set initial variables. [BEGIN] */
 
 document.getElementById('counter').innerHTML = '30';
 
 var count = 30;
 
-/* Set initial variables [END] */
+/* Set initial variables. [END] */
 
-/* The 'timer' function code [BEGIN] */
+/* The 'timer' function code. [BEGIN] */
 
 function timer()
 	{
 		count = count - 1;
+		
 		if (count < 0)
 			{
-				/* Counter has ended. Clear interval and redirect page.	*/	
+				/* The counter has ended. Clear the interval, and redirect the page. */				
 				clearInterval(counter);
 				returnToPreviousPage();
 				
@@ -377,15 +384,15 @@ function timer()
 		document.getElementById('counter').innerHTML = count; 
 	};
 	
-/* The 'timer' function code [END] */
+/* The 'timer' function code. [END] */
 	
-/* Start Redirect Timer [BEGIN] */
+/* Start Redirect Timer. [BEGIN] */
 
 var counter = setInterval(timer, 1000); /* 1000 will run it every 1 second. */
 
-/* Start Redirect Timer [END] */
+/* Start Redirect Timer. [END] */
 
-/* Redirect Timer script [END] */
+/* Redirect Timer script. [END] */
 
 </script>
 
