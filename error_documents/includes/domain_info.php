@@ -1,8 +1,8 @@
 <?php
 
-/* * * * * * * * * * * SUBROUTINE: Find given websites domain name (SLD + TLD) ONLY, without sub-domain, or 3LD (e.g. google.co.uk), and assign to '$server_url' variable. [BEGIN] * * * * * * * * * *  */
+/* * * * * * * * * * * SUBROUTINE: Find given websites domain name (SLD + TLD) ONLY, without sub-domain, or 3LD (e.g. google.co.uk), and assign to '$server_url' variable [BEGIN] * * * * * * * * * *  */
 
-/* This function [BELOW] returns just the domain name (SLD + TLD) (without any sub-domain, or 3LD) of a valid URL string (e.g. 'https://testing.multiple.subdomain.google.co.uk' returns just 'google.co.uk'). [BEGIN] */
+/* This function [BELOW] returns the just the domain name (SLD + TLD) (without any sub-domain, or 3LD) of a valid URL string (e.g. 'https://testing.multiple.subdomain.google.co.uk' returns just 'google.co.uk') [BEGIN] */
 
 function getDomain($url) 
 	{
@@ -17,7 +17,7 @@ function getDomain($url)
 		return false;
 	};
 
-/* This function [ABOVE] returns just the domain name (SLD + TLD) (without any sub-domain, or 3LD) of a valid URL string (e.g. 'https://testing.multiple.subdomain.google.co.uk' returns just 'google.co.uk'). [END] */
+/* This function [ABOVE] returns the just the domain name (SLD + TLD) (without any sub-domain, or 3LD) of a valid URL string (e.g. 'https://testing.multiple.subdomain.google.co.uk' returns just 'google.co.uk') [END] */
 
 /* Default protocol */
 
@@ -54,7 +54,7 @@ if (($sub_domain == "")||( $sub_domain == null ))
 		$sub_domain = "www";
 	};
 
-/* * * * * * * * * * * SUBROUTINE: Find given websites domain name (SLD + TLD) ONLY, without sub-domain, or 3LD (e.g. google.co.uk), and assign to '$server_url' variable. [END] * * * * * * * * * *  */
+/* * * * * * * * * * * SUBROUTINE: Find given websites domain name (SLD + TLD) ONLY, without sub-domain, or 3LD (e.g. google.co.uk), and assign to '$server_url' variable [END] * * * * * * * * * *  */
 
 /* Declare domain-related variables. [BEGIN] */
 
@@ -64,11 +64,11 @@ $primary_Website_Domain_Name = $protocol."www.".$server_url;
 
 /* Get the full domain name of the primary website (e.g. [ http://www.example.com ]). [END] */
 
-/* Get the full domain name of the current website (e.g. [ http://current-3ld.example.com ]). [BEGIN] */
+/* Get the full domain name of the current website. (e.g. [ http://current-3ld.example.com ]). [BEGIN] */
 
 $current_Website_Domain_Name = $protocol.$sub_domain.".".$server_url;
 
-/* Get the full domain name of the current website (e.g. [ http://current-3ld.example.com ]). [END] */
+/* Get the full domain name of the current website. (e.g. [ http://current-3ld.example.com ]). [END] */
 
 /* Get the complete URL address to the current web page, on the Internet (e.g. [ http://www.example.com/index.php ]). [BEGIN] */
 
@@ -76,19 +76,19 @@ $current_Webpage_Complete_URL_Address = $current_Website_Domain_Name.$current_pa
 
 /* Get the complete URL address to the current web page, on the Internet (e.g. [ http://www.example.com/index.php ]). [END] */
 
-/* Get the canonical URL address to the current web page, on the Internet (e.g. [ http://www.example.com/page.php ], or [ http://www.example.com ], but NOT [ http://www.example.com/index.php ], NOR [ http://www.example.com/ ]). [BEGIN] */
+/* Get the canonical URL address to the current web page, on the Internet (e.g. [ http://www.example.com/page.php ] or [ http://www.example.com ], but NOT [ http://www.example.com/index.php ] NOR [ http://www.example.com/ ]). [BEGIN] */
 
 $current_Webpage_Canonical_URL_Address = preg_replace('/((\\index)\.[a-z]+)$/', '', $current_Webpage_Complete_URL_Address); /* Removes any known homepage path of the URL address, but NOT normal page paths. */
 
 $current_Webpage_Canonical_URL_Address = preg_replace('/\/$/', '', $current_Webpage_Canonical_URL_Address); /* Removes any trailing forward slash ("/") from the end of the URL. */
 
-/* Get the canonical URL address to the current web page, on the Internet (e.g. [ http://www.example.com/page.php ], or [ http://www.example.com ], but NOT [ http://www.example.com/index.php ], NOR [ http://www.example.com/ ]). [END] */
+/* Get the canonical URL address to the current web page, on the Internet (e.g. [ http://www.example.com/page.php ] or [ http://www.example.com ], but NOT [ http://www.example.com/index.php ] NOR [ http://www.example.com/ ]). [END] */
 
-/* Get the primary websites version of the current page (e.g. used at [ http://m.example.com/about.php ], would produce [ http://www.example.com/about.php ]). Typically used for canonical links on mobile-only sub-domains. [BEGIN] */
+/* Get the primary websites version of the current page (e.g. used at [ http://m.example.com/about.php ] would produce [ http://www.example.com/about.php ]). Typically used for canonical links on mobile-only sub-domains. [BEGIN] */
 
 $primary_Website_Version = $primary_Website_Domain_Name.$current_path;
 
-/* Get the primary websites version of the current page (e.g. used at [ http://m.example.com/about.php ], would produce [ http://www.example.com/about.php ]). Typically used for canonical links on mobile-only sub-domains. [END] */
+/* Get the primary websites version of the current page (e.g. used at [ http://m.example.com/about.php ] would produce [ http://www.example.com/about.php ]). Typically used for canonical links on mobile-only sub-domains. [END] */
 
 /* Declare domain-related variables. [END] */
 

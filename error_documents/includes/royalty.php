@@ -10,7 +10,7 @@ For more information, documentation, and additional download links to all future
 
 'Perfect Error Documents' online script is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty 
 
-of MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. See the full license agreement at [ http://perfecterrordocs.com/license/ ].
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the full license agreement at [ http://perfecterrordocs.com/license/ ].
 
 You should have received a PDF copy of the license agreement, along with your download of 'Perfect Error Documents' online script. If not, please visit: [ http://perfecterrordocs.com/license/ ], for your free copy.
 
