@@ -44,7 +44,7 @@ $meta_Tag_Description = "An Internal Server Error has occurred.";
 
 $meta_Tag_Site_Image = $current_Website_Domain_Name."/error_documents/php/open_graph_image.php";
 
-$meta_Tag_Key_Words = "error, error 500, exception, internal, server, fault, flaw, glitch, failure, malfunction, broken, bug, problem, defect, defective, unresolved, unresponsive, issue, not working, nonworking, dysfunctional";
+$meta_Tag_Key_Words = "error, error 500, internal, server, fault, issue";
 
 /* Preliminary Meta-Data [END] */
 
