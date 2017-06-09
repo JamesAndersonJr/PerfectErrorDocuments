@@ -4,18 +4,18 @@ Perfect Error Documents
 The perfect PHP script for effectively managing most website error documents! 
 
 -----------------------------------------------------------------------
-Script Name: Perfect Error Documents | Version : 1.7.1
+Script Name: Perfect Error Documents | Version : 1.7.2
 -----------------------------------------------------------------------
 
-Author : James Anderson Jr. (Email: james@jamesandersonjr.com; Web: http://www.jamesandersonjr.com)
+Author : James Anderson Jr. (Email: james@jamesandersonjr.com; Web: https://card.jamesandersonjr.com)
 
-Website : http://www.perfecterrordocs.com
+Website : https://www.perfecterrordocs.com
 
-Download Address : http://www.perfecterrordocs.com/download/
+Download Address : https://www.perfecterrordocs.com/download/
 
-License Address : http://www.perfecterrordocs.com/license/
+License Address : https://www.perfecterrordocs.com/license/
 
-Donation Address : http://www.perfecterrordocs.com/donate/
+Donation Address : https://www.perfecterrordocs.com/donate/
 
 -----------------------------------------------------------------------
 Copyright :
@@ -26,9 +26,9 @@ Copyright © 2017 James Anderson Jr.
 
 This file is part of the "Perfect Error Documents v.1.x.x" online script.
 
-'Perfect Error Documents' online script is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the full license agreement at [ http://perfecterrordocs.com/license/ ].
+'Perfect Error Documents' online script is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the full license agreement at [ https://perfecterrordocs.com/license/ ].
 
-You should have received a PDF copy of the license agreement, along with your download of 'Perfect Error Documents' online script. If not, please visit: [ http://perfecterrordocs.com/license/ ], for your free copy.
+You should have received a PDF copy of the license agreement, along with your download of 'Perfect Error Documents' online script. If not, please visit: [ https://perfecterrordocs.com/license/ ], for your free copy.
 
 For support, and all other inquiries, please feel free to email us at: support [at] perfecterrordocs [dot] com.
 
