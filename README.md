@@ -62,25 +62,25 @@ TO INSTALL :
 
 7.) Add the below lines in your ***'.htaccess'*** file (if you don't have one, create one) in the root of your website:
 
-
+```apache
 #######################---Specify error documents---#######################
 
-\# 401-Authorization Required Error
+# 401-Authorization Required Error
  
 ErrorDocument 401 /error_documents/error401.php
 
-\# 403-Forbidden Error
+# 403-Forbidden Error
  
 ErrorDocument 403 /error_documents/error403.php
 
-\# 404-File Not Found Error
+# 404-File Not Found Error
  
 ErrorDocument 404 /error_documents/error404.php
 
-\# 500-Internal Server Error
+# 500-Internal Server Error
  
 ErrorDocument 500 /error_documents/error500.php
 
 #####################################################################
-
+```
 8.) That's it! Enjoy your new installation of **['Perfect Error Documents'](https://www.perfecterrordocs.com "View the 'Perfect Error Documents' home page.") online script**!
