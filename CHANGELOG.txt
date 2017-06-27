@@ -1,6 +1,13 @@
 -----------------------------------------------------------------------
 Perfect Error Documents - CHANGELOG
 -----------------------------------------------------------------------
+PED v.1.7.3 - 2017-06-27 James Anderson Jr. <james@jamesandersonjr.com>
+-----------------------------------------------------------------------
+
+- Added itemprop="url" property to Google "Structured-Data" tags
+- Added "og:image:secure_url" for SSL/TLS/HTTPS secure domains
+
+-----------------------------------------------------------------------
 PED v.1.7.2 - 2017-06-08 James Anderson Jr. <james@jamesandersonjr.com>
 -----------------------------------------------------------------------
 

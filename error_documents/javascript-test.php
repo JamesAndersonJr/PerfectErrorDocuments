@@ -99,14 +99,16 @@ if ( file_exists(dirname(__FILE__)."/includes/royalty.php") )
 <meta itemprop="name" content="<?php echo $meta_Tag_Site_Name; ?>">
 <meta itemprop="image" content="<?php echo $meta_Tag_Site_Image; ?>">
 <meta itemprop="description" content="<?php echo $meta_Tag_Description; ?>">
+<meta itemprop="url" content="<?php echo $current_Webpage_Canonical_URL_Address; ?>">
 
 <!-- Google Plus Metadata (i.e. "Structured Data") Tags [END] -->
 
 <!-- Facebook / Open Graph Tags [BEGIN] -->
 
 <meta property="og:title" content="<?php echo $meta_Tag_Site_Name; ?>">
-<meta property="og:url" content="<?php echo $primary_Website_Version; ?>">
+<meta property="og:url" content="<?php echo $current_Webpage_Canonical_URL_Address; ?>">
 <meta property="og:image" content="<?php echo $meta_Tag_Site_Image; ?>">
+<meta property="og:image:secure_url" content="<?php echo preg_replace("/^http:/i", "https:", $meta_Tag_Site_Image); ?>">
 <meta property="og:description" content="<?php echo $meta_Tag_Description; ?>">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="<?php echo $og_locale; ?>">
