@@ -1,7 +1,16 @@
 -----------------------------------------------------------------------
 Perfect Error Documents - CHANGELOG
 -----------------------------------------------------------------------
-PED v.1.7.3 - 2017-06-27 James Anderson Jr. <james@jamesandersonjr.com>
+PED v.1.7.4 - 2017-06-27 James Anderson Jr. <james@jamesandersonjr.com>
+-----------------------------------------------------------------------
+
+- Added "og:image:url" for redundancy
+- Added "og:image:width"
+- Added "og:image:height"
+- Added "og:image:type"
+
+-----------------------------------------------------------------------
+PED v.1.7.3 - 2017-06-17 James Anderson Jr. <james@jamesandersonjr.com>
 -----------------------------------------------------------------------
 
 - Added itemprop="url" property to Google "Structured-Data" tags

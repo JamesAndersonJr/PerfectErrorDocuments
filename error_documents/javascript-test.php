@@ -29,6 +29,25 @@ else
 		
 		exit(0);
 	};
+	
+/* A function to test if a file exist at a remote URL (PHP's integrated function 'file_exists()' only works on server paths, on your own server. This one works on remote URL's). [BEGIN] */
+
+function doesFileExistAtURL( $fileURL )
+	{
+		$getFileHeaders = @get_headers($fileURL);
+		if (preg_match("|200|", $getFileHeaders[0])) 
+			{
+				/* The file exists. So, return 'true'. */
+				return true;
+			} 
+		else 
+			{
+				/* The file doesn't exist. So, return 'false'. */
+				return false;
+			};
+	};
+	
+/* A function to test if a file exist at a remote URL (PHP's integrated function 'file_exists()' only works on server paths, on your own server. This one works on remote URL's). [END] */
 
 /* Set the referral address that the visitor came from, into a PHP variable, to later use in a JavaScript variable. [BEGIN] */
 
@@ -108,7 +127,42 @@ if ( file_exists(dirname(__FILE__)."/includes/royalty.php") )
 <meta property="og:title" content="<?php echo $meta_Tag_Site_Name; ?>">
 <meta property="og:url" content="<?php echo $current_Webpage_Canonical_URL_Address; ?>">
 <meta property="og:image" content="<?php echo $meta_Tag_Site_Image; ?>">
+<meta property="og:image:url" content="<?php echo $meta_Tag_Site_Image; ?>">
+<?php
+
+if ($protocol == "https://")
+	{
+?>
 <meta property="og:image:secure_url" content="<?php echo preg_replace("/^http:/i", "https:", $meta_Tag_Site_Image); ?>">
+<?php 
+	};
+
+if (function_exists('doesFileExistAtURL'))
+	{
+		if (doesFileExistAtURL( $meta_Tag_Site_Image ))
+			{
+				$file_info = finfo_open();
+				$meta_Tag_Site_Image_MIME_Type = finfo_buffer($file_info, $meta_Tag_Site_Image, FILEINFO_MIME_TYPE);
+				$meta_Tag_Site_Image_Info_Array = getimagesize($meta_Tag_Site_Image);
+				list($meta_Tag_Site_Image_Width, $meta_Tag_Site_Image_Height) = $meta_Tag_Site_Image_Info_Array;
+
+				if ((!empty($meta_Tag_Site_Image_Width)) && (!empty($meta_Tag_Site_Image_Height)))
+					{
+?>
+<meta property="og:image:width" content="<?php echo $meta_Tag_Site_Image_Width; ?>">
+<meta property="og:image:height" content="<?php echo $meta_Tag_Site_Image_Height; ?>">
+<?php
+					};
+
+				if (!empty($meta_Tag_Site_Image_MIME_Type))
+					{
+?>
+<meta property="og:image:type" content="<?php echo $meta_Tag_Site_Image_MIME_Type; ?>">
+<?php
+					};
+			};
+	};
+?>
 <meta property="og:description" content="<?php echo $meta_Tag_Description; ?>">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="<?php echo $og_locale; ?>">
