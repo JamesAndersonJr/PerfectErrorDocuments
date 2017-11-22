@@ -7,6 +7,7 @@ html
 	{
 		height:100% !important;
 		min-height:100%;
+		
 		margin:0px;
 		padding:0px;
 		
@@ -19,6 +20,7 @@ body
 	{
 		height:100% !important;
 		min-height:100%;
+		
 		margin:0px;
 		padding:0px;
 		
@@ -41,8 +43,8 @@ h1
 	{
 		color:#FF3737;
 		font-size:1.000em;
-		text-shadow:1px 1px #FFFFFF;
 		line-height:1.4em;
+		text-shadow:1px 1px #FFFFFF;
 	}
 
 a:link
@@ -64,6 +66,7 @@ p
 	{	
 		width:100%;
 		height:100%;
+		
 		margin:0px !important;
 		padding-top:0px;
 		padding-right:0px;
@@ -87,6 +90,7 @@ p
 		
 		width:100%;
 		max-width:37em;
+		
 		margin:0px auto;
 		padding-top:2.1em;
 		padding-right:2em;
@@ -102,12 +106,14 @@ p
 		border-color:transparent;
 		
 		text-align:center;
+		
 		vertical-align:middle;
 	}
 
 div.dialog
 	{
 		width:inherit !important;
+		
 		margin-top:2.2em;
 		margin-right:auto;
 		margin-bottom:0px;
@@ -149,16 +155,34 @@ input.sec_counter
 		font-size:0.938em;
 		text-shadow:1px 1px #FFFFFF;
 		text-align:center;
+		
 		vertical-align:baseline;
 	}
 
 .center_element
 	{
-		display:table;
+		display:table; 
 		
-		margin:0 auto;
+		margin: 0 auto;
 	}
-			
+	
+.circle_element
+	{
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+	}
+	
+.no_wrap
+	{
+		white-space:nowrap;
+	}
+	
+.no_wrap_force
+	{
+		white-space:nowrap !important;
+	}
+	
 .no_select
 	{
 		-webkit-touch-callout:none;
@@ -169,14 +193,14 @@ input.sec_counter
 		user-select:none;
 	}
 
-.no_txt_deco
+.no_select_force
 	{
-		text-decoration:none;
-	}
-	
-.no_txt_deco_force
-	{
-		text-decoration:none !important;
+		-webkit-touch-callout:none !important;
+		-webkit-user-select:none !important;
+		-khtml-user-select:none !important;
+		-moz-user-select:none !important;
+		-ms-user-select:none !important;
+		user-select:none !important;
 	}
 
 .no_borders
@@ -191,6 +215,16 @@ input.sec_counter
 		border-width:0px !important;
 		border-style:none !important;
 		border-color:transparent !important;
+	}
+	
+.no_txt_deco
+	{
+		text-decoration:none;
+	}
+	
+.no_txt_deco_force
+	{
+		text-decoration:none !important;
 	}
 
 button, input[type="button"], input[type="submit"], input[type="reset"]
@@ -213,6 +247,7 @@ button, input[type="button"], input[type="submit"], input[type="reset"]
 		-moz-border-radius:2px;
 		-khtml-border-radius:2px;
 		border-radius:2px;
+		
 		border:1px solid #BCBCBC;
 		
 		background:#f0f0f0;

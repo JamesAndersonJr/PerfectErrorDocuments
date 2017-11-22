@@ -25,7 +25,7 @@ if ( ( file_exists(dirname(__FILE__)."/includes/domain_info.php") ) && ( file_ex
 	}
 else
 	{
-		/* Else, stop all subsequent code execution, and exit. */
+		/* Else, stop all subsequent code execution, and exit. */	
 		
 		exit(0);
 	};
@@ -35,6 +35,7 @@ else
 function doesFileExistAtURL( $fileURL )
 	{
 		$getFileHeaders = @get_headers($fileURL);
+		
 		if (preg_match("|200|", $getFileHeaders[0])) 
 			{
 				/* The file exists. So, return 'true'. */
@@ -80,7 +81,7 @@ $meta_Tag_Key_Words = "JavaScript, script, test, analysis, assess, assessment, e
 
 ?>
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="<?php echo $protocol; ?>schema.org/Action">
+<html lang="en" itemscope itemtype="<?php echo $protocol; ?>schema.org/InformAction">
 
 <head>
 
@@ -93,6 +94,10 @@ $meta_Tag_Key_Words = "JavaScript, script, test, analysis, assess, assessment, e
 if ( file_exists(dirname(__FILE__)."/includes/royalty.php") )
 	{
 		include_once(dirname(__FILE__)."/includes/royalty.php");
+	}
+else
+	{
+		echo "<meta http-equiv='refresh' content='0;url=/error_documents/error403.php'>";
 	};
 
 /* Include royalty attribution info, only if it exists on the server, in the designated location. [END] */
@@ -125,7 +130,6 @@ if ( file_exists(dirname(__FILE__)."/includes/royalty.php") )
 <!-- Facebook / Open Graph Tags [BEGIN] -->
 
 <meta property="og:title" content="<?php echo $meta_Tag_Site_Name; ?>">
-<meta property="og:url" content="<?php echo $current_Webpage_Canonical_URL_Address; ?>">
 <meta property="og:image" content="<?php echo $meta_Tag_Site_Image; ?>">
 <meta property="og:image:url" content="<?php echo $meta_Tag_Site_Image; ?>">
 <?php
@@ -144,6 +148,7 @@ if (function_exists('doesFileExistAtURL'))
 				$file_info = finfo_open();
 				$meta_Tag_Site_Image_MIME_Type = finfo_buffer($file_info, $meta_Tag_Site_Image, FILEINFO_MIME_TYPE);
 				$meta_Tag_Site_Image_Info_Array = getimagesize($meta_Tag_Site_Image);
+				
 				list($meta_Tag_Site_Image_Width, $meta_Tag_Site_Image_Height) = $meta_Tag_Site_Image_Info_Array;
 
 				if ((!empty($meta_Tag_Site_Image_Width)) && (!empty($meta_Tag_Site_Image_Height)))
@@ -151,10 +156,9 @@ if (function_exists('doesFileExistAtURL'))
 ?>
 <meta property="og:image:width" content="<?php echo $meta_Tag_Site_Image_Width; ?>">
 <meta property="og:image:height" content="<?php echo $meta_Tag_Site_Image_Height; ?>">
-<?php
-					};
+<?php				};
 
-				if (!empty($meta_Tag_Site_Image_MIME_Type))
+				if (!empty($meta_Tag_Site_Image_MIME_Type)) 
 					{
 ?>
 <meta property="og:image:type" content="<?php echo $meta_Tag_Site_Image_MIME_Type; ?>">
@@ -164,6 +168,7 @@ if (function_exists('doesFileExistAtURL'))
 	};
 ?>
 <meta property="og:description" content="<?php echo $meta_Tag_Description; ?>">
+<meta property="og:url" content="<?php echo $current_Webpage_Canonical_URL_Address; ?>">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="<?php echo $og_locale; ?>">
 <meta property="fb:app_id" content="<?php echo $facebook_app_id; ?>">
@@ -183,6 +188,7 @@ html
 	{
 		height:100% !important;
 		min-height:100%;
+		
 		margin:0px;
 		padding:0px;
 		
@@ -195,6 +201,7 @@ body
 	{
 		height:100% !important;
 		min-height:100%;
+		
 		margin:0px;
 		padding:0px;
 		
@@ -208,8 +215,8 @@ body
 		
 		color:#676767;
 		font-family:Arial, Helvetica, Sans-Serif;
-		text-shadow:1px 1px #FFFFFF;
 		font-size:1.000em;
+		text-shadow:1px 1px #FFFFFF;
 		text-align:center;
 	}
 	
@@ -235,6 +242,7 @@ a:visited
 	{
 		width:100%;
 		height:100%;
+		
 		margin:0px !important;
 		padding:0px !important;
 
@@ -255,11 +263,9 @@ a:visited
 		
 		width:100%;
 		max-width:37em;
+		
 		margin:0px auto;
-		padding-top:2.1em;
-		padding-right:2em;
-		padding-bottom:0px;
-		padding-left:2em;
+		padding:2.1em 2em 0em 2em;
 		
 		-moz-box-sizing:border-box;
 		-webkit-box-sizing:border-box;
@@ -270,12 +276,14 @@ a:visited
 		border-color:transparent;
 		
 		text-align:center;
+		
 		vertical-align:middle;
 	}
 
 div.dialog
 	{
 		width:inherit !important;
+		
 		margin-top:2.2em;
 		margin-right:auto;
 		margin-bottom:0px;
@@ -300,10 +308,7 @@ div.dialog
 	
 button, input[type="button"], input[type="submit"], input[type="reset"]
 	{
-		padding-top:8px !important;
-		padding-right:14px !important;
-		padding-bottom:9px !important;
-		padding-left:14px !important;
+		padding:8px 14px 9px 14px !important;
 		
 		-moz-box-sizing:border-box;
 		-webkit-box-sizing:border-box;
@@ -318,6 +323,7 @@ button, input[type="button"], input[type="submit"], input[type="reset"]
 		-moz-border-radius:2px;
 		-khtml-border-radius:2px;
 		border-radius:2px;
+		
 		border:1px solid #BCBCBC;
 		
 		background:#f0f0f0;
@@ -420,6 +426,7 @@ function returnToPreviousPage()
 <body>
 
 <div class="main_container_div">
+
 	<div class="sub_container_div">
 
 		<div class="dialog">
@@ -431,7 +438,9 @@ function returnToPreviousPage()
 		<h1 id="heading">JavaScript is Disabled in Your Web Browser.</h1>
 
 		<p id="message" style="line-height:150%">
-		For full functionality of this website, it is necessary to <br><a href="http://www.enable-javascript.com" target="_blank">Enable JavaScript in your Web Browser</a>.
+		For full functionality of this website, it is necessary to 
+		<br>
+		<a href="https://www.enable-javascript.com" target="_blank">Enable JavaScript in your Web Browser</a>.
 		</p>
 		
 		<div id="google_translate_element"></div>
@@ -453,6 +462,7 @@ function returnToPreviousPage()
 		</div>
 		
 	</div>
+
 </div>
 
 <script type="text/javascript">

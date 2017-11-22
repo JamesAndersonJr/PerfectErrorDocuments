@@ -35,6 +35,7 @@ else
 function doesFileExistAtURL( $fileURL )
 	{
 		$getFileHeaders = @get_headers($fileURL);
+		
 		if (preg_match("|200|", $getFileHeaders[0])) 
 			{
 				/* The file exists. So, return 'true'. */
@@ -49,11 +50,15 @@ function doesFileExistAtURL( $fileURL )
 	
 /* A function to test if a file exist at a remote URL (PHP's integrated function 'file_exists()' only works on server paths, on your own server. This one works on remote URL's). [END] */
 
+/* Save [ Location ] info into PHP session variables, to recall later, if necessary. [BEGIN] */
+
 $_SESSION["origDomain"] = $current_Website_Domain_Name;
 
 $_SESSION["origPath"] = $current_path;
 
 $_SESSION["origURL"] = $current_Webpage_Complete_URL_Address;
+
+/* Save [ Location ] info into PHP session variables, to recall later, if necessary. [END] */
 
 /* Preliminary Meta-Data [BEGIN] */
 
@@ -69,7 +74,7 @@ $meta_Tag_Key_Words = "error, error 403, exception, access, entry, denied, block
 
 ?>
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="<?php echo $protocol; ?>schema.org/Action">
+<html lang="en" itemscope itemtype="<?php echo $protocol; ?>schema.org/InformAction">
 
 <head>
 
@@ -112,7 +117,6 @@ if ( file_exists(dirname(__FILE__)."/includes/royalty.php") )
 <!-- Facebook / Open Graph Tags [BEGIN] -->
 
 <meta property="og:title" content="<?php echo $meta_Tag_Site_Name; ?>">
-<meta property="og:url" content="<?php echo $current_Webpage_Canonical_URL_Address; ?>">
 <meta property="og:image" content="<?php echo $meta_Tag_Site_Image; ?>">
 <meta property="og:image:url" content="<?php echo $meta_Tag_Site_Image; ?>">
 <?php
@@ -131,6 +135,7 @@ if (function_exists('doesFileExistAtURL'))
 				$file_info = finfo_open();
 				$meta_Tag_Site_Image_MIME_Type = finfo_buffer($file_info, $meta_Tag_Site_Image, FILEINFO_MIME_TYPE);
 				$meta_Tag_Site_Image_Info_Array = getimagesize($meta_Tag_Site_Image);
+				
 				list($meta_Tag_Site_Image_Width, $meta_Tag_Site_Image_Height) = $meta_Tag_Site_Image_Info_Array;
 
 				if ((!empty($meta_Tag_Site_Image_Width)) && (!empty($meta_Tag_Site_Image_Height)))
@@ -151,6 +156,7 @@ if (function_exists('doesFileExistAtURL'))
 	};
 ?>
 <meta property="og:description" content="<?php echo $meta_Tag_Description; ?>">
+<meta property="og:url" content="<?php echo $current_Webpage_Canonical_URL_Address; ?>">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="<?php echo $og_locale; ?>">
 <meta property="fb:app_id" content="<?php echo $facebook_app_id; ?>">
@@ -170,6 +176,7 @@ html
 	{
 		height:100% !important;
 		min-height:100%;
+		
 		margin:0px;
 		padding:0px;
 		
@@ -182,6 +189,7 @@ body
 	{
 		height:100% !important;
 		min-height:100%;
+		
 		margin:0px;
 		padding:0px;
 		
@@ -227,6 +235,7 @@ p
 	{	
 		width:100%;
 		height:100%;
+		
 		margin:0px !important;
 		padding:0px !important;
 		
@@ -247,11 +256,9 @@ p
 		
 		width:100%;
 		max-width:37em;
+		
 		margin:0px auto;
-		padding-top:2.1em;
-		padding-right:2em;
-		padding-bottom:0px;
-		padding-left:2em;
+		padding:2.1em 2em 0em 2em;
 		
 		-moz-box-sizing:border-box;
 		-webkit-box-sizing:border-box;
@@ -262,12 +269,14 @@ p
 		border-color:transparent;
 		
 		text-align:center;
+		
 		vertical-align:middle;
 	}
 
 div.dialog
 	{
 		width:inherit !important;
+		
 		margin-top:2.2em;
 		margin-right:auto;
 		margin-bottom:0px;
@@ -309,6 +318,7 @@ input.sec_counter
 		font-size:0.938em;
 		text-shadow:1px 1px #FFFFFF;
 		text-align:center;
+		
 		vertical-align:baseline;
 	}
 
@@ -355,10 +365,7 @@ input.sec_counter
 
 button, input[type="button"], input[type="submit"], input[type="reset"]
 	{	
-		padding-top:8px !important;
-		padding-right:14px !important;
-		padding-bottom:9px !important;
-		padding-left:14px !important;
+		padding:8px 14px 9px 14px !important;
 		
 		-moz-box-sizing:border-box;
 		-webkit-box-sizing:border-box;
@@ -373,6 +380,7 @@ button, input[type="button"], input[type="submit"], input[type="reset"]
 		-moz-border-radius:2px;
 		-khtml-border-radius:2px;
 		border-radius:2px;
+		
 		border:1px solid #BCBCBC;
 		
 		background:#f0f0f0;
@@ -427,6 +435,7 @@ button:active, input[type="button"]:active, input[type="submit"]:active, input[t
 <body>
 
 <div class="main_container_div">
+
 	<div class="sub_container_div">
 
 		<div class="dialog">
@@ -461,6 +470,7 @@ button:active, input[type="button"]:active, input[type="submit"]:active, input[t
 		</p>
 
 	</div>
+
 </div>
 	
 <script type="text/JavaScript">
