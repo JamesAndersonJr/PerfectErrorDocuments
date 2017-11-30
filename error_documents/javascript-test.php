@@ -110,7 +110,7 @@ else
 
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
-<script type="text/javascript">document.title = "JavaScript Enabled";</script>
+<script>document.title = "JavaScript Enabled";</script>
 
 <meta name="description" content="<?php echo $meta_Tag_Description; ?>">
 <meta name="keywords" content="<?php echo $meta_Tag_Key_Words; ?>">
@@ -177,7 +177,7 @@ if (function_exists('doesFileExistAtURL'))
 
 <!-- [Internal] CSS [BEGIN] -->
 
-<style type="text/css" media="all">
+<style media="all">
 
 @-ms-viewport
 	{
@@ -369,9 +369,9 @@ button:active, input[type="button"]:active, input[type="submit"]:active, input[t
 
 <!-- [Internal] CSS [END] -->
 
-<script type="text/javascript" src="/error_documents/js/viewport_fix.js"></script>
+<script src="/error_documents/js/viewport_fix.js"></script>
 
-<script type="text/javascript">
+<script>
 
 function goBack()
 	{
@@ -402,7 +402,7 @@ function goBack()
 
 </script>
 
-<script type="text/javascript">
+<script>
 
 var referringPage = "<?php echo $http_Ref_Address; ?>";
 
@@ -445,7 +445,7 @@ function returnToPreviousPage()
 		
 		<div id="google_translate_element"></div>
 		
-		<script type="text/javascript">
+		<script>
 		
 		function googleTranslateElementInit() 
 			{
@@ -454,8 +454,8 @@ function returnToPreviousPage()
 		
 		</script>
 		
-		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-		<script type="text/javascript">document.write("<br>");</script>
+		<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		<script>document.write("<br>");</script>
 		
 		<span id="action_buttons"><button onclick="JavaScript:window.location.replace(window.location.href);">Re-Test</button></span>
 		
@@ -465,7 +465,7 @@ function returnToPreviousPage()
 
 </div>
 
-<script type="text/javascript">
+<script>
 
 document.getElementById("heading").innerHTML = "<span style='color:#39BF45 !important;'>JavaScript is Enabled in Your Web Browser.</span>";
 document.getElementById("message").innerHTML = "Congratulations! JavaScript is enabled, and working properly in your web browser.";
@@ -473,7 +473,7 @@ document.getElementById("action_buttons").innerHTML = "<button onclick='JavaScri
 
 </script>
 
-<script type="text/JavaScript">
+<script>
 
 /* Redirect Timer script. [BEGIN] */
 

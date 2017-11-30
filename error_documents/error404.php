@@ -165,7 +165,7 @@ if (function_exists('doesFileExistAtURL'))
 
 <!-- [Internal] CSS [BEGIN] -->
 
-<style type="text/css" media="all">
+<style media="all">
 
 @-ms-viewport
 	{
@@ -426,7 +426,7 @@ button:active, input[type="button"]:active, input[type="submit"]:active, input[t
 
 <!-- [Internal] CSS [END] -->
 
-<script type="text/javascript" src="/error_documents/js/viewport_fix.js"></script>
+<script src="/error_documents/js/viewport_fix.js"></script>
 
 <noscript><meta http-equiv="refresh" content="0; url=/error_documents/javascript-test.php"></noscript>
 
@@ -450,7 +450,7 @@ button:active, input[type="button"]:active, input[type="submit"]:active, input[t
 		
 		<div id="google_translate_element"></div>
 		
-		<script type="text/javascript">
+		<script>
 		
 		function googleTranslateElementInit()
 			{
@@ -459,7 +459,7 @@ button:active, input[type="button"]:active, input[type="submit"]:active, input[t
 
 		</script>
 
-		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 		
 		</div>
 		
@@ -473,7 +473,7 @@ button:active, input[type="button"]:active, input[type="submit"]:active, input[t
 
 </div>
 	
-<script type="text/JavaScript">
+<script>
 
 /* Redirect Timer script. [BEGIN] */
 

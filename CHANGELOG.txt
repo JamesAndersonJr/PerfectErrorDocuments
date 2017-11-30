@@ -6,6 +6,7 @@ PED v.1.7.5 - 2017-11-22 James Anderson Jr. <james@jamesandersonjr.com>
 -----------------------------------------------------------------------
 
 - Changed "schema.org" type from 'Action', to 'InformAction'
+- Removed unnecessary <style>, and <script> attributes, per HTML5 spec 
 - Organized CSS into 'similar-rule' groups
 - Added concise HTML/PHP comments, to better define back-end markup
 - Updated back-end "royalty attribution" statement
