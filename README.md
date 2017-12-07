@@ -40,7 +40,7 @@ SYSTEM REQUIREMENTS :
 
 **PHP :** PHP 5.4.x or Later
 
-**Database :** Not Required
+**Database :** *Not Required*
 
 -----------------------------------------------------------------------
 TO INSTALL :
@@ -64,9 +64,9 @@ TO INSTALL :
 
  6.) Save, and close, the ***'config.php'*** file.
 
- 7.) Upload the entire ***'error_documents'*** folder into the root directory of your website (*usually the* ***'public_html'*** *directory*), **NOT** into the root directory of your *entire web server*, unless you know what you're doing!
+ 7.) Upload the entire ***'error_documents'*** folder into the root directory of your website (*usually the* ***'public_html'*** *directory*), **NOT into the root directory of your** ***entire web server***, unless you know what you're doing!
 
- 8.) Add the below lines of code, into your ***'.htaccess'*** file (if you don't have one, create one) in the root of your website (*again, the* ***'public_html'*** *directory, unless your site resides in a sub-folder, of the root directory. In that case, you will perform the preceding steps 'there', instead.*):
+ 8.) Add the below lines of code, into your ***'.htaccess'*** file (if you don't have one, create one) in the root of your website (*again, the* ***'public_html'*** *directory, unless your site resides in a sub-folder, of the root directory. In that case, you will perform *ALL* the preceding steps in *that* folder, instead.*):
 
 ```apache
 #######################---Specify error documents---#######################

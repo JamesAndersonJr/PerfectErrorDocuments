@@ -28,7 +28,7 @@ This file is part of the "Perfect Error Documents v.1.x.x" online script.
 
 'Perfect Error Documents' online script is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the full license agreement at [ https://perfecterrordocs.com/license/ ].
 
-You should have received a PDF copy of the license agreement, along with your download of the **'Perfect Error Documents'** online script. If not, please visit: [ https://perfecterrordocs.com/license/ ], for your free copy.
+You should have received a PDF copy of the license agreement, along with your download of the 'Perfect Error Documents' online script. If not, please visit: [ https://perfecterrordocs.com/license/ ], for your free copy.
 
 For support, and all other inquiries, please feel free to email us at: support [at] perfecterrordocs [dot] com.
 
@@ -66,7 +66,7 @@ TO INSTALL :
 
  7.) Upload the entire 'error_documents' folder into the root directory of your website (usually the 'public_html' directory), NOT into the root directory of your entire web server, unless you know what you're doing!
 
- 8.) Add the below lines of code, into your '.htaccess' file (if you don't have one, create one) in the root of your website (again, the 'public_html' directory, unless your site resides in a sub-folder, of the root directory. In that case, you will perform the preceding steps 'there', instead.):
+ 8.) Add the below lines of code, into your '.htaccess' file (if you don't have one, create one) in the root of your website (again, the 'public_html' directory, unless your site resides in a sub-folder, of the root directory. In that case, you will perform ALL the preceding steps in 'that' folder, instead.):
 
 
 #######################---Specify error documents---#######################
