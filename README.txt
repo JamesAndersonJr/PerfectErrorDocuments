@@ -46,20 +46,27 @@ Database : Not Required
 TO INSTALL :
 -----------------------------------------------------------------------
 
-1.) Open 'config.php' located inside 'error_documents/config/' folder, with your favorite html/php code editor (Notepad++ is highly recommended).
+ 1.) Open 'config.php' located inside 'error_documents/config/' folder, with your favorite HTML/PHP code editor (Notepad++ is highly recommended).
 
-2.) Change the line `$webmaster_link = "/contact_webmaster.php";` to the real location of your webmasters contact page (e.g. `$webmaster_link = "/contact_us.php";`).
-    Please Note: This can be a relative URL (as shown above), an absolute URL, or a '`MailTo:`' email link. Just make sure it points to the correct location of your webmasters contact info.
-    
-3.) Update the line `$facebook_app_id = "";` to include your Facebook App ID, if you have one. If not, you can get one here: [ https://developers.facebook.com ].
+ 2.) Change the line `$webmaster_link = "/contact_webmaster.php";` to the real location of your webmasters contact page (e.g. `$webmaster_link = "/contact_wm.php";`).
 
-4.) Update the line `$og_locale = "";` to include your websites current locale. Use the format: `language_TERRITORY`. For a list of valid locales, visit: [ https://fbdevwiki.com/wiki/Locales ].
+     * Please Note: This can be a relative URL, root-relative URL (as shown above), an absolute URL, or a '`MailTo:`' email link. Just make sure it points to the correct location of your webmasters contact info.
 
-5.) Save, and close, the 'config.php' file.
+ 3.) Update the line `$facebook_app_id = "";` to include your 'Facebook App ID', if you have one. If not, you can get one here: [ https://developers.facebook.com ].
 
-6.) Upload the entire 'error_documents' folder into the root directory of your website (usually the 'public_html' directory), NOT into the root directory of your entire web server, unless you know what you're doing!
+ 4.) Update the line `$facebook_page_id = "";` to include your 'Facebook Page ID', if you have a 'Facebook Page'. If not, you can create one here: [ https://www.facebook.com/pages/create/ ].
+ 
+     * Please Note: You must be signed into an active Facebook account, in order to create a new 'Facebook App', or a new 'Facebook Page'.
+	 
+     * Also Note: Both the 'Facebook App ID', and 'Facebook Page ID' will gracefully fall-back to "Perfect Error Documents' own default Facebook information, if you do not enter any override values (i.e. If you decide to leave them blank, it won't break anything).
 
-7.) Add the below lines in your '.htaccess' file (if you don't have one, create one) in the root of your website:
+ 5.) Update the line `$og_locale = "";` to include your websites current locale. Use the format: `language_TERRITORY`. For a list of valid locales, visit: [ https://fbdevwiki.com/wiki/Locales ].
+
+ 6.) Save, and close, the 'config.php' file.
+
+ 7.) Upload the entire 'error_documents' folder into the root directory of your website (usually the 'public_html' directory), NOT into the root directory of your entire web server, unless you know what you're doing!
+
+ 8.) Add the below lines of code, into your '.htaccess' file (if you don't have one, create one) in the root of your website (again, the 'public_html' directory, unless your site resides in a sub-folder, of the root directory. In that case, you will perform the preceding steps 'there', instead.):
 
 
 #######################---Specify error documents---#######################
@@ -82,4 +89,4 @@ ErrorDocument 500 /error_documents/error500.php
 
 #######################################################################
 
-8.) That's it! Enjoy your new installation of 'Perfect Error Documents' online script!
+ 9.) That's it! Enjoy your new installation of 'Perfect Error Documents' online script!
