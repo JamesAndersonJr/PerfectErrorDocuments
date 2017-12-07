@@ -4,10 +4,10 @@ Perfect Error Documents
 The perfect PHP script for effectively managing most website error documents! 
 
 -----------------------------------------------------------------------
-Script Name: Perfect Error Documents | Version : 1.7.7
+Script Name: Perfect Error Documents | Version : 1.7.5
 -----------------------------------------------------------------------
 
-Author : James Anderson Jr. (Email: [james@jamesandersonjr.com](https://www.jamesandersonjr.com/contact_james.php "Contact James Anderson Jr. via email."); Web: [https://card.jamesandersonjr.com](https://card.jamesandersonjr.com "View James Anderson Jr.'s website.")) 
+Author : James Anderson Jr. (Email: [james@jamesandersonjr.com](https://www.jamesandersonjr.com/contactjames.php "Contact James Anderson Jr. via email."); Web: [https://card.jamesandersonjr.com](https://card.jamesandersonjr.com "View James Anderson Jr.'s website.")) 
 
 Website : [https://www.perfecterrordocs.com](https://www.perfecterrordocs.com "View the 'Perfect Error Documents' home page.")
 
@@ -46,7 +46,7 @@ SYSTEM REQUIREMENTS :
 TO INSTALL :
 -----------------------------------------------------------------------
 
-1.) Open ***'config.php'*** located inside ***'error_documents/config/'*** folder, with your favorite html/php code editor ([**Notepad++**](https://notepad-plus-plus.org "Get Notepad++") is highly recommended).
+1.) Open ***'config.php'*** located inside ***'error_documents/config/'*** folder, with your favorite html/php code editor ([**Notepad++**](https://notepad-plus-plus.org/ "Get Notepad++") is highly recommended).
 
 2.) Change the line `$webmaster_link = "/contact_webmaster.php";` to the real location of your webmasters contact page (e.g. `$webmaster_link = "/contact_us.php";`).
  
@@ -54,7 +54,7 @@ TO INSTALL :
     
 3.) Update the line `$facebook_app_id = "";` to include your Facebook App ID, if you have one. If not, you can get one [here](https://developers.facebook.com "Get a Facebook App ID").
 
-4.) Update the line `$og_locale = "";` to include your websites current locale. Use the format: `language_TERRITORY`. For a list of valid locales, visit: [https://fbdevwiki.com/wiki/Locales](https://fbdevwiki.com/wiki/Locales "View a list of valid Facebook locales").
+4.) Update the line `$og_locale = "";` to include your websites current locale. Use the format: `language_TERRITORY`. For a list of valid locales, visit: [http://fbdevwiki.com/wiki/Locales](http://fbdevwiki.com/wiki/Locales "View a list of valid Facebook locales").
 
 5.) Save, and close, the ***'config.php'*** file.
 
@@ -83,4 +83,4 @@ ErrorDocument 500 /error_documents/error500.php
 
 ###########################################################################
 ```
-8.) That's it! Enjoy your new installation of **[&lsquo;Perfect Error Documents&rsquo;](https://www.perfecterrordocs.com "View the 'Perfect Error Documents' home page.") online script**!
+8.) That's it! Enjoy your new installation of **['Perfect Error Documents'](https://www.perfecterrordocs.com "View the 'Perfect Error Documents' home page.") online script**!
