@@ -4,7 +4,7 @@ Perfect Error Documents
 The perfect PHP script for effectively managing most website error documents! 
 
 -----------------------------------------------------------------------
-Script Name: Perfect Error Documents | Version : 1.7.5
+Script Name: Perfect Error Documents | Version : 1.7.7
 -----------------------------------------------------------------------
 
 Author : James Anderson Jr. (Email: james@jamesandersonjr.com; Web: https://card.jamesandersonjr.com)
@@ -22,7 +22,6 @@ Copyright :
 -----------------------------------------------------------------------
 
 Copyright © 2017 James Anderson Jr.
-
 
 This file is part of the "Perfect Error Documents v.1.x.x" online script.
 
@@ -53,7 +52,7 @@ TO INSTALL :
     
 3.) Update the line `$facebook_app_id = "";` to include your Facebook App ID, if you have one. If not, you can get one here: [ https://developers.facebook.com ].
 
-4.) Update the line `$og_locale = "";` to include your websites current locale. Use the format: `language_TERRITORY`. For a list of valid locales, visit: [ http://fbdevwiki.com/wiki/Locales ].
+4.) Update the line `$og_locale = "";` to include your websites current locale. Use the format: `language_TERRITORY`. For a list of valid locales, visit: [ https://fbdevwiki.com/wiki/Locales ].
 
 5.) Save, and close, the 'config.php' file.
 

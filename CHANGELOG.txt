@@ -1,5 +1,25 @@
 -----------------------------------------------------------------------
 Perfect Error Documents - CHANGELOG
+-----------------------------------------------------------------------
+PED v.1.7.7 - 2017-12-07 James Anderson Jr. <james@jamesandersonjr.com>
+-----------------------------------------------------------------------
+
+- Moved all "internal" CSS to a single "external" CSS file
+- Added new file: "includes/ip_info.php"
+- Added new "Structured Data" tags, to 'error [***] pages: 
+  'actionStatus', 'error', & 'recipient'
+- Renamed PHP variable '$http_Ref_Address' to '$http_ref_addr'
+- Updated version number to PED 1.7.7
+
+-----------------------------------------------------------------------
+PED v.1.7.6 - 2017-12-01 James Anderson Jr. <james@jamesandersonjr.com>
+-----------------------------------------------------------------------
+
+- Added new "Structured Data" tags: 'about', 'inLanguage', & 'agent'
+- Added meta-tag: author
+- Added bot-specific meta-tags (for constancy): 
+  googlebot(Google), slurp(Yahoo!), msnbot(Bing), teoma(Ask.com)
+- Updated version number to PED 1.7.6
 
 -----------------------------------------------------------------------
 PED v.1.7.5 - 2017-11-22 James Anderson Jr. <james@jamesandersonjr.com>
