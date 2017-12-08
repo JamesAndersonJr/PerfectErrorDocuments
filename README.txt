@@ -71,22 +71,22 @@ TO INSTALL :
 
 #######################---Specify error documents---#######################
 
-# 401-Authorization Required Error
+# Error - [401] Unauthorized
  
 ErrorDocument 401 /error_documents/error401.php
 
-# 403-Forbidden Error
+# Error - [403] Forbidden
  
 ErrorDocument 403 /error_documents/error403.php
 
-# 404-File Not Found Error
+# Error - [404] Not Found
  
 ErrorDocument 404 /error_documents/error404.php
 
-# 500-Internal Server Error
+# Error - [500] Internal Server Error
  
 ErrorDocument 500 /error_documents/error500.php
 
-#######################################################################
+###########################################################################
 
  9.) That's it! Enjoy your new installation of 'Perfect Error Documents' online script!
