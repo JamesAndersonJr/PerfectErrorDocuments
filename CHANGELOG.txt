@@ -1,6 +1,22 @@
 -----------------------------------------------------------------------
 Perfect Error Documents - CHANGELOG
 -----------------------------------------------------------------------
+-----------------------------------------------------------------------
+PED v.1.7.8 - 2018-09-24 James Anderson Jr. <james@jamesandersonjr.com>
+-----------------------------------------------------------------------
+
+- Added 'script_author' PHP variable, to 'config/config.php'
+- Added 'last_mod_date' [date/time] variables, to 'config/config.php'
+- Added 'Twitter Card' support
+- Added 'web_author' meta tag, to all visible PHP pages
+- Added meta property 'og:updated_time', to all visible PHP pages
+- Removed 'googlebot', and 'teoma' meta tags, in favor of 'robots' tag
+- Renamed 'css/error_pages.css' to 'css/error_docs.css'
+- Minified '.js' and '.css' assets
+- Updated version number to PED 1.7.8
+- Updated documentation (README.md & README.txt)
+
+-----------------------------------------------------------------------
 PED v.1.7.7 - 2017-12-07 James Anderson Jr. <james@jamesandersonjr.com>
 -----------------------------------------------------------------------
 

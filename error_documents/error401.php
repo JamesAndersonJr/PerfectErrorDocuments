@@ -11,7 +11,7 @@ if (!session_id())
 
 if ( ( file_exists(dirname(__FILE__)."/includes/domain_info.php") ) && ( file_exists(dirname(__FILE__)."/includes/ip_info.php") ) && ( file_exists(dirname(__FILE__)."/config/config.php") ) )
 	{
-		/* Include required domain-related information, and variables. [BEGIN] */ 
+		/* Include required domain-related information, and variables. [BEGIN] */
 
 		require_once(dirname(__FILE__)."/includes/domain_info.php");
 
@@ -108,11 +108,10 @@ if ( file_exists(dirname(__FILE__)."/includes/royalty.php") )
 <meta name="description" content="<?php echo $meta_Tag_Description; ?>">
 <meta name="keywords" content="<?php echo $meta_Tag_Key_Words; ?>">
 <meta name="author" content="<?php echo $script_name; ?>">
+<meta name="web_author" content ="<?php echo $script_author; ?>">
 <meta name="robots" content="noindex,nofollow">
-<meta name="googlebot" content="noindex, nofollow"> <!-- For 'Google' bot -->
-<meta name="slurp" content="noindex, nofollow"> <!-- For 'Yahoo!' bot -->
-<meta name="msnbot" content="noindex, nofollow"> <!-- For 'Bing' bot -->
-<meta name="teoma" content="noindex, nofollow"> <!-- For 'Ask.com' bot -->
+<meta name="slurp" content="noindex,nofollow"> <!-- For 'Yahoo!' bot -->
+<meta name="msnbot" content="noindex,nofollow"> <!-- For 'Bing' bot -->
 
 <meta name="viewport" content="width=device-width, initial-scale=0.8">
 
@@ -178,15 +177,26 @@ if (function_exists('doesFileExistAtURL'))
 <meta property="og:rich_attachment" content="true">
 <meta property="og:type" content="website">
 <meta property="og:ttl" content="604800">
+<meta property="og:updated_time" content="<?php echo $last_mod_date_iso_8601; ?>">
 <meta property="og:locale" content="<?php echo $og_locale; ?>">
 <meta property="fb:app_id" content="<?php echo $facebook_app_id; ?>">
 <meta property="fb:pages" content="<?php echo $facebook_page_id; ?>">
 
 <!-- Facebook / Open Graph Tags [END] -->
 
-<link rel="stylesheet" href="/error_documents/css/error_pages.css" media="all">
+<!-- Twitter Card Tags [BEGIN] -->
 
-<script src="/error_documents/js/viewport_fix.js"></script>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@<?php echo $twitter_usrn; ?>">
+<meta name="twitter:title" content="<?php echo $meta_Tag_Site_Name; ?>">
+<meta name="twitter:description" content="<?php echo $meta_Tag_Description; ?>">
+<meta name="twitter:image" content="<?php echo $meta_Tag_Site_Image; ?>">
+
+<!-- Twitter Card Tags [END] -->
+
+<link rel="stylesheet" href="/error_documents/css/error_docs.min.css" media="all">
+
+<script src="/error_documents/js/viewport_fix.min.js"></script>
 
 <noscript><meta http-equiv="refresh" content="10; url=/error_documents/javascript-test.php"></noscript>
 
