@@ -12,7 +12,7 @@ $script_name = "Perfect Error Documents";
 
 /* Script Version. */
 
-$script_version = "1.7.8";
+$script_version = "1.8.0";
 
 /* Get 'Last Modification' Date/Time. [BEGIN] */
 
