@@ -1,6 +1,7 @@
 ﻿@-ms-viewport
 	{
 		width:device-width;
+		zoom: 0.8;
 	}
 
 html
@@ -222,7 +223,6 @@ button, input[type="button"], input[type="submit"], input[type="reset"]
 		font-size:0.928em !important;
 		font-weight:normal !important;
 		line-height:normal !important;
-		text-decoration:none !important;
 	}
 
 button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover, button:focus, input[type="button"]:focus, input[type="submit"]:focus, input[type="reset"]:focus
