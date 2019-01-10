@@ -4,16 +4,16 @@
 
 /* This function [BELOW] returns just the domain name (SLD + TLD) (without any sub-domain, or 3LD) of a valid URL string (e.g. 'https://testing.multiple.subdomain.google.co.uk' returns just 'google.co.uk'). [BEGIN] */
 
-function getDomain($url) 
+function getDomain($url)
 	{
-		$pieces = parse_url($url);	
+		$pieces = parse_url($url);
 		$domain = isset($pieces['host']) ? $pieces['host'] : '';
 		
-		if (preg_match('/(?P<domain>[a-z0-9][a-z0-9\-]{1,63}\.[a-z\.]{2,6})$/i', $domain, $regs)) 
+		if (preg_match('/(?P<domain>[a-z0-9][a-z0-9\-]{1,63}\.[a-z\.]{2,6})$/i', $domain, $regs))
 			{
 				return $regs['domain'];
 			};
-			
+		
 		return false;
 	};
 
@@ -23,7 +23,7 @@ function getDomain($url)
 
 $protocol = "//";
 
-if ((!empty($_SERVER['HTTPS'])) && ($_SERVER['HTTPS'] != 'off')) 
+if ((!empty($_SERVER['HTTPS'])) && ($_SERVER['HTTPS'] != 'off'))
 	{
 		/* SSL/TLS Detected. Use secure protocol. */
 
@@ -44,7 +44,7 @@ $server_url = getDomain($protocol.$server_name);
 
 if (($server_url == "")||($server_url == false))
 	{
-		$server_url = $server_name; 
+		$server_url = $server_name;
 	};
 
 $sub_domain = preg_replace("/\.$/","",(str_replace($server_url, "", $server_name)));

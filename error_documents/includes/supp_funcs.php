@@ -24,52 +24,52 @@ function callErrorPage($httpStatusCode)
 					return false;
 			};
 			
-			if (!empty($validHTTPStatusCode))
-				{
-					if ( file_exists(dirname(__FILE__).'/../error'.$validHTTPStatusCode.'.php') )
-						{
-							if (!headers_sent())
-								{
-									/* Redirect user to error document. [BEGIN] */
-									
-									header('Location: /error_documents/error'.$validHTTPStatusCode.'.php');
-									exit(0);
+		if (!empty($validHTTPStatusCode))
+			{
+				if ( file_exists(dirname(__FILE__).'/../error'.$validHTTPStatusCode.'.php') )
+					{
+						if (!headers_sent())
+							{
+								/* Redirect user to error document. [BEGIN] */
 
-									/* Redirect user to error document. [END] */
-								}
-							else
-								{	
-									/* Include error document contents, and exit. [BEGIN] */
+								header('Location: /error_documents/error'.$validHTTPStatusCode.'.php');
+								exit(0);
 
-									include_once(dirname(__FILE__).'/../error'.$validHTTPStatusCode.'.php');		
-									exit(0);
+								/* Redirect user to error document. [END] */
+							}
+						else
+							{
+								/* Include error document contents, and exit. [BEGIN] */
 
-									/* Include error document contents, and exit. [BEGIN] */
-								};
-						}
-					else
-						{
-							/* Else, report missing file, and exit. [BEGIN] */
+								include_once(dirname(__FILE__).'/../error'.$validHTTPStatusCode.'.php');
+								exit(0);
 
-							$missing_file_line_num = intval(__LINE__) - 25;
+								/* Include error document contents, and exit. [BEGIN] */
+							};
+					}
+				else
+					{
+						/* Else, report missing file, and exit. [BEGIN] */
 
-							error_log("A file is missing on line (".$missing_file_line_num.") of file: ".__FILE__.".", 0);
+						$missing_file_line_num = intval(__LINE__) - 25;
 
-							exit(0);
+						error_log("A file is missing on line (".$missing_file_line_num.") of file: ".__FILE__.".", 0);
 
-							/* Else, report missing file, and exit. [END] */
-						};
-				}
-			else
-				{
-					/* The caller passed an invalid/unsupported HTTP status code ($HTTPStatusCode) into the function, as an argument, so we're not going to process it. [BEGIN] */
-					
-					return false;
-					
-					/* The caller passed an invalid/unsupported HTTP status code ($HTTPStatusCode) into the function, as an argument, so we're not going to process it. [END] */
-				};
+						exit(0);
+
+						/* Else, report missing file, and exit. [END] */
+					};
+			}
+		else
+			{
+				/* The caller passed an invalid/unsupported HTTP status code ($HTTPStatusCode) into the function, as an argument, so we're not going to process it. [BEGIN] */
+
+				return false;
+
+				/* The caller passed an invalid/unsupported HTTP status code ($HTTPStatusCode) into the function, as an argument, so we're not going to process it. [END] */
+			};
 	};
 
 /* Some additional, supplementary, supporting functions to better utilize the 'Perfect Error Documents' online script. [END] */
-	
+
 ?>

@@ -2,7 +2,7 @@
 
 /* If session is not started yet, start session now. */
 
-if (!session_id()) 
+if (!session_id())
 	{
 		session_start();
 	};
@@ -15,45 +15,45 @@ if ( ( file_exists(dirname(__FILE__)."/includes/domain_info.php") ) && ( file_ex
 
 		require_once(dirname(__FILE__)."/includes/domain_info.php");
 
-		/* Include required domain-related information, and variables. [END] */ 
-		
-		/* Include required IP-related information, and variables. [BEGIN] */ 
+		/* Include required domain-related information, and variables. [END] */
+
+		/* Include required IP-related information, and variables. [BEGIN] */
 
 		require_once(dirname(__FILE__)."/includes/ip_info.php");
 
-		/* Include required IP-related information, and variables. [END] */ 
+		/* Include required IP-related information, and variables. [END] */
 
-		/* Include required configuration file. [BEGIN] */ 
+		/* Include required configuration file. [BEGIN] */
 
 		require_once(dirname(__FILE__)."/config/config.php");
 
-		/* Include required configuration file. [END] */ 
+		/* Include required configuration file. [END] */
 	}
 else
 	{
 		/* Else, stop all subsequent code execution, and exit. */
-		
+
 		exit(0);
 	};
-	
+
 /* A function to test if a file exist at a remote URL (PHP's integrated function 'file_exists()' only works on server paths, on your own server. This one works on remote URL's). [BEGIN] */
 
 function doesFileExistAtURL( $fileURL )
 	{
 		$getFileHeaders = @get_headers($fileURL);
 		
-		if (preg_match("|200|", $getFileHeaders[0])) 
+		if (preg_match("|200|", $getFileHeaders[0]))
 			{
-				/* The file exists. So, return 'true'. */	
+				/* The file exists. So, return 'true'. */
 				return true;
-			} 
-		else 
+			}
+		else
 			{
-				/* The file doesn't exist. So, return 'false'. */	
+				/* The file doesn't exist. So, return 'false'. */
 				return false;
 			};
 	};
-	
+
 /* A function to test if a file exist at a remote URL (PHP's integrated function 'file_exists()' only works on server paths, on your own server. This one works on remote URL's). [END] */
 
 /* Save [ Location ] info into PHP session variables, to recall later, if necessary. [BEGIN] */
@@ -209,19 +209,19 @@ if (function_exists('doesFileExistAtURL'))
 	<div class="sub_container_div">
 
 		<div class="dialog">
-		
+
 		<!--[if lte IE 7]>
 		<br>
 		<![endif]-->
 
 		<h1>The page you were looking for doesn&#8217;t exist.</h1>
-		
+
 		<p>You may have mistyped the address, or the page may have moved.</p>
-		
+
 		<div id="google_translate_element"></div>
-		
+
 		<script>
-		
+
 		function googleTranslateElementInit()
 			{
 				new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
@@ -230,19 +230,19 @@ if (function_exists('doesFileExistAtURL'))
 		</script>
 
 		<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-		
+
 		</div>
-		
+
 		<p>
 		If you do nothing, you will be redirected<br>
-		to the site&#8217;s <a href="/" target="_self">home page</a>,
+		to the site&#8217;s <a href="/" target="_self">home page</a>, 
 		in (<input type="text" name="sec" id="sec" value="30" class="no_select sec_counter" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.
 		</p>
 
 	</div>
 
 </div>
-	
+
 <script>
 
 /* Redirect Timer script. [BEGIN] */
@@ -260,22 +260,22 @@ var count = 30;
 function timer()
 	{
 		count = count - 1;
-		
+
 		if (count < 0)
 			{
 				/* The counter has ended. Clear the interval, and redirect the page. */
 				clearInterval(counter);
 				location.href = '/';
-				
+
 				return;
 			};
 
 		/* Display the number of seconds here. */
-		document.getElementById('sec').value = count; 
+		document.getElementById('sec').value = count;
 	};
 
 /* The 'timer' function code. [END] */
-	
+
 /* Start Redirect Timer. [BEGIN] */
 
 var counter = setInterval(timer, 1000); /* 1000 will run it every 1 second. */
@@ -285,6 +285,6 @@ var counter = setInterval(timer, 1000); /* 1000 will run it every 1 second. */
 /* Redirect Timer script. [END] */
 
 </script>
-	
+
 </body>
 </html>

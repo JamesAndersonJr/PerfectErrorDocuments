@@ -12,7 +12,7 @@ $script_name = "Perfect Error Documents";
 
 /* Script Version. */
 
-$script_version = "1.8.0";
+$script_version = "1.8.1";
 
 /* Get 'Last Modification' Date/Time. [BEGIN] */
 
@@ -105,7 +105,7 @@ if (empty($locale))
 	{
 		$locale = $script_dflt_locale;
 	};
-	
+
 $og_locale = str_replace("-", "_", $locale);
 
 /* If locale not entered, default to 'en_US' locale. [END] */

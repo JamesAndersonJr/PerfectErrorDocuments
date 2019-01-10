@@ -2,7 +2,7 @@
 
 /* If session is not started yet, start session now. */
 
-if (!session_id()) 
+if (!session_id())
 	{
 		session_start();
 	};
@@ -15,45 +15,45 @@ if ( ( file_exists(dirname(__FILE__)."/includes/domain_info.php") ) && ( file_ex
 
 		require_once(dirname(__FILE__)."/includes/domain_info.php");
 
-		/* Include required domain-related information, and variables. [END] */ 
-		
-		/* Include required IP-related information, and variables. [BEGIN] */ 
+		/* Include required domain-related information, and variables. [END] */
+
+		/* Include required IP-related information, and variables. [BEGIN] */
 
 		require_once(dirname(__FILE__)."/includes/ip_info.php");
 
-		/* Include required IP-related information, and variables. [END] */ 
+		/* Include required IP-related information, and variables. [END] */
 
-		/* Include required configuration file. [BEGIN] */ 
+		/* Include required configuration file. [BEGIN] */
 
 		require_once(dirname(__FILE__)."/config/config.php");
 
-		/* Include required configuration file. [END] */ 
+		/* Include required configuration file. [END] */
 	}
 else
 	{
 		/* Else, stop all subsequent code execution, and exit. */
-		
+
 		exit(0);
 	};
-	
+
 /* A function to test if a file exist at a remote URL (PHP's integrated function 'file_exists()' only works on server paths, on your own server. This one works on remote URL's). [BEGIN] */
 
 function doesFileExistAtURL( $fileURL )
 	{
 		$getFileHeaders = @get_headers($fileURL);
 		
-		if (preg_match("|200|", $getFileHeaders[0])) 
+		if (preg_match("|200|", $getFileHeaders[0]))
 			{
-				/* The file exists. So, return 'true'. */	
+				/* The file exists. So, return 'true'. */
 				return true;
-			} 
-		else 
+			}
+		else
 			{
-				/* The file doesn't exist. So, return 'false'. */	
+				/* The file doesn't exist. So, return 'false'. */
 				return false;
 			};
 	};
-	
+
 /* A function to test if a file exist at a remote URL (PHP's integrated function 'file_exists()' only works on server paths, on your own server. This one works on remote URL's). [END] */
 
 /* Set the referral address that the visitor came from, into a PHP variable, to later use in a JavaScript variable. [BEGIN] */
@@ -325,7 +325,7 @@ var count = 30;
 function timer()
 	{
 		count = count - 1;
-		
+
 		if (count < 0)
 			{
 				/* The counter has ended. Clear the interval, and redirect the page. */
@@ -336,9 +336,9 @@ function timer()
 			};
 
 		/* Display the number of seconds here. */
-		document.getElementById('counter').innerHTML = count; 
+		document.getElementById('counter').innerHTML = count;
 	};
-	
+
 /* The 'timer' function code. [END] */
 	
 /* Start Redirect Timer. [BEGIN] */

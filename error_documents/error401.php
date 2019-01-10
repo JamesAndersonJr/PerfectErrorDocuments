@@ -2,7 +2,7 @@
 
 /* If session is not started yet, start session now. */
 
-if (!session_id()) 
+if (!session_id())
 	{
 		session_start();
 	};
@@ -15,45 +15,45 @@ if ( ( file_exists(dirname(__FILE__)."/includes/domain_info.php") ) && ( file_ex
 
 		require_once(dirname(__FILE__)."/includes/domain_info.php");
 
-		/* Include required domain-related information, and variables. [END] */ 
-		
-		/* Include required IP-related information, and variables. [BEGIN] */ 
+		/* Include required domain-related information, and variables. [END] */
+
+		/* Include required IP-related information, and variables. [BEGIN] */
 
 		require_once(dirname(__FILE__)."/includes/ip_info.php");
 
-		/* Include required IP-related information, and variables. [END] */ 
+		/* Include required IP-related information, and variables. [END] */
 
-		/* Include required configuration file. [BEGIN] */ 
+		/* Include required configuration file. [BEGIN] */
 
 		require_once(dirname(__FILE__)."/config/config.php");
 
-		/* Include required configuration file. [END] */ 
+		/* Include required configuration file. [END] */
 	}
 else
 	{
 		/* Else, stop all subsequent code execution, and exit. */
-		
+
 		exit(0);
 	};
-	
+
 /* A function to test if a file exist at a remote URL (PHP's integrated function 'file_exists()' only works on server paths, on your own server. This one works on remote URL's). [BEGIN] */
 
 function doesFileExistAtURL( $fileURL )
 	{
 		$getFileHeaders = @get_headers($fileURL);
 		
-		if (preg_match("|200|", $getFileHeaders[0])) 
+		if (preg_match("|200|", $getFileHeaders[0]))
 			{
-				/* The file exists. So, return 'true'. */	
+				/* The file exists. So, return 'true'. */
 				return true;
-			} 
-		else 
+			}
+		else
 			{
-				/* The file doesn't exist. So, return 'false'. */	
+				/* The file doesn't exist. So, return 'false'. */
 				return false;
 			};
 	};
-	
+
 /* A function to test if a file exist at a remote URL (PHP's integrated function 'file_exists()' only works on server paths, on your own server. This one works on remote URL's). [END] */
 
 /* Save [ Location ] info into PHP session variables, to recall later, if necessary. [BEGIN] */
@@ -141,18 +141,18 @@ if ($protocol == "https://")
 	{
 ?>
 <meta property="og:image:secure_url" content="<?php echo preg_replace("/^http:/i", "https:", $meta_Tag_Site_Image); ?>">
-<?php 
+<?php
 	};
 
 if (function_exists('doesFileExistAtURL'))
 	{
 		if (doesFileExistAtURL( $meta_Tag_Site_Image ))
 			{
-				$file_info = finfo_open();		
-				$meta_Tag_Site_Image_MIME_Type = finfo_buffer($file_info, $meta_Tag_Site_Image, FILEINFO_MIME_TYPE);		
+				$file_info = finfo_open();
+				$meta_Tag_Site_Image_MIME_Type = finfo_buffer($file_info, $meta_Tag_Site_Image, FILEINFO_MIME_TYPE);
 				$meta_Tag_Site_Image_Info_Array = getimagesize($meta_Tag_Site_Image);
 				list($meta_Tag_Site_Image_Width, $meta_Tag_Site_Image_Height) = $meta_Tag_Site_Image_Info_Array;
-
+				
 				if ((!empty($meta_Tag_Site_Image_Width)) && (!empty($meta_Tag_Site_Image_Height)))
 					{
 ?>
@@ -215,24 +215,24 @@ if (function_exists('doesFileExistAtURL'))
 			<![endif]-->
 
 			<h1>Authorization Required</h1>
-			
+
 			<p>This server could not verify that you are authorized to access the document requested. Either you supplied the wrong credentials (e.g., a bad password), or your browser doesn't understand how to supply the credentials required.</p>
-			
+
 			<div id="google_translate_element"></div>
-			
+
 			<script>
-			
-			function googleTranslateElementInit() 
+
+			function googleTranslateElementInit()
 				{
 					new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
 				};
-		
+
 			</script>
-			
+
 			<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-			
+
 		</div>
-		
+
 		<p>
 		If you do nothing, you will be redirected<br>
 		to the site&#8217;s <a href="/" target="_self">home page</a>, 
@@ -242,7 +242,7 @@ if (function_exists('doesFileExistAtURL'))
 	</div>
 
 </div>
-	
+
 <script>
 
 /* Redirect Timer script. [BEGIN] */
@@ -271,7 +271,7 @@ function timer()
 			};
 
 		/* Display the number of seconds here. */
-		document.getElementById('sec').value = count; 
+		document.getElementById('sec').value = count;
 	};
 
 /* The 'timer' function code. [END] */
@@ -285,6 +285,6 @@ var counter = setInterval(timer, 1000); /* 1000 will run it every 1 second. */
 /* Redirect Timer script. [END] */
 
 </script>
-	
+
 </body>
 </html>

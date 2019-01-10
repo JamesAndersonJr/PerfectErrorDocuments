@@ -2,6 +2,14 @@
 Perfect Error Documents - CHANGELOG
 -----------------------------------------------------------------------
 -----------------------------------------------------------------------
+PED v.1.8.1 - 2019-01-10 James Anderson Jr. <james@jamesandersonjr.com>
+-----------------------------------------------------------------------
+
+- Optimized 'index.php' for better error reporting
+- Optimized and trimmed all files, by removing extraneous white-spaces
+- Updated Version Number
+
+-----------------------------------------------------------------------
 PED v.1.8.0 - 2019-01-08 James Anderson Jr. <james@jamesandersonjr.com>
 -----------------------------------------------------------------------
 
