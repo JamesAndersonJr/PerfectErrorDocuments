@@ -273,29 +273,29 @@ function returnToPreviousPage()
 		<h1 id="heading">JavaScript is Disabled in Your Web Browser.</h1>
 
 		<p id="message" style="line-height:150%">
-		For full functionality of this website, it is necessary to 
+		For full functionality of this website, it is necessary to
 		<br>
 		<a href="https://www.enable-javascript.com" target="_blank">Enable JavaScript in your Web Browser</a>.
 		</p>
-		
+
 		<div id="google_translate_element"></div>
-		
+
 		<script>
-		
-		function googleTranslateElementInit() 
+
+		function googleTranslateElementInit()
 			{
 				new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
 			};
-		
+
 		</script>
-		
+
 		<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 		<script>document.write("<br>");</script>
-		
+
 		<span id="action_buttons"><button onclick="JavaScript:window.location.replace(window.location.href);">Re-Test</button></span>
-		
+
 		</div>
-		
+
 	</div>
 
 </div>
@@ -340,7 +340,7 @@ function timer()
 	};
 
 /* The 'timer' function code. [END] */
-	
+
 /* Start Redirect Timer. [BEGIN] */
 
 var counter = setInterval(timer, 1000); /* 1000 will run it every 1 second. */
