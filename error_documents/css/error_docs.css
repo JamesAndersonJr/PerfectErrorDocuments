@@ -82,8 +82,8 @@ p
 
 .sub_container_div
 	{	
-		-moz-box-sizing:border-box;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 		
 		display:table;
@@ -239,8 +239,8 @@ button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type
 
 button:active, input[type="button"]:active, input[type="submit"]:active, input[type="reset"]:active
 	{
-		-moz-box-shadow:inset 0px 1px 2px rgba(205,205,205,1);
 		-webkit-box-shadow:inset 0px 1px 2px rgba(205,205,205,1);
+		-moz-box-shadow:inset 0px 1px 2px rgba(205,205,205,1);
 		-khtml-box-shadow:inset 0px 1px 2px rgba(205,205,205,1);
 		box-shadow:inset 0px 1px 2px rgba(205,205,205,1);
 		
