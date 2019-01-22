@@ -75,11 +75,11 @@ else
 
 /* Preliminary Meta-Data [BEGIN] */
 
-$meta_Tag_Site_Name = "JavaScript Disabled";
+$meta_Tag_Site_Name = "A Simple JavaScript Test";
 
 $meta_Tag_Description = "A simple test to verify if JavaScript is enabled in your web browser.";
 
-$meta_Tag_Site_Image = $current_Website_Domain_Name."/error_documents/php/open_graph_image.php";
+$meta_Tag_Site_Image = $current_Website_FQDN."/error_documents/php/open_graph_image.php";
 
 $meta_Tag_Key_Words = "JavaScript, script, test, analysis, assess, assessment, evaluate, evaluation, verify, verification, confirm, confirmation, check, web browser, enabled, disabled, support, supported, unsupported, query, inquiry, probe, feature, try, trial";
 
@@ -112,11 +112,11 @@ else
 
 <title><?php echo $meta_Tag_Site_Name; ?></title>
 
-<link rel="canonical" href="<?php echo $current_Webpage_Canonical_URL_Address; ?>">
+<link rel="canonical" href="<?php echo $current_Web_Page_Canonical_URL_Addr; ?>">
 
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
-<script>document.title = "JavaScript Enabled";</script>
+<script>document.title += " - JavaScript is Enabled.";</script>
 
 <meta name="description" content="<?php echo $meta_Tag_Description; ?>">
 <meta name="keywords" content="<?php echo $meta_Tag_Key_Words; ?>">
@@ -133,7 +133,7 @@ else
 <meta itemprop="name" content="<?php echo $meta_Tag_Site_Name; ?>">
 <meta itemprop="image" content="<?php echo $meta_Tag_Site_Image; ?>">
 <meta itemprop="description" content="<?php echo $meta_Tag_Description; ?>">
-<meta itemprop="url" content="<?php echo $current_Webpage_Canonical_URL_Address; ?>">
+<meta itemprop="url" content="<?php echo $current_Web_Page_Canonical_URL_Addr; ?>">
 <meta itemprop="inLanguage" content="<?php echo str_replace("_", "-", $og_locale); ?>">
 <meta itemprop="agent" content="<?php echo $script_name; ?> v.<?php echo $script_version; ?>">
 
@@ -180,7 +180,7 @@ if (function_exists('doesFileExistAtURL'))
 ?>
 <meta property="og:image:alt" content="<?php echo $meta_Tag_Site_Name; ?>">
 <meta property="og:description" content="<?php echo $meta_Tag_Description; ?>">
-<meta property="og:url" content="<?php echo $current_Webpage_Canonical_URL_Address; ?>">
+<meta property="og:url" content="<?php echo $current_Web_Page_Canonical_URL_Addr; ?>">
 <meta property="og:see_also" content="<?php echo $script_website; ?>">
 <meta property="og:rich_attachment" content="true">
 <meta property="og:type" content="website">

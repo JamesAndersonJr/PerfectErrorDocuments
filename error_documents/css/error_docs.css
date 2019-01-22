@@ -1,7 +1,7 @@
 ﻿@-ms-viewport
 	{
 		width:device-width;
-		zoom: 0.8;
+		zoom:0.8;
 	}
 
 html
@@ -198,14 +198,14 @@ button, input[type="button"], input[type="submit"], input[type="reset"]
 		
 		padding:8px 14px 9px 14px !important;
 		
-		-moz-box-shadow:0px 1px 2px rgba(159,159,159,0.5);
 		-webkit-box-shadow:0px 1px 2px rgba(159,159,159,0.5);
 		-khtml-box-shadow:0px 1px 2px rgba(159,159,159,0.5);
+		-moz-box-shadow:0px 1px 2px rgba(159,159,159,0.5);
 		box-shadow:0px 1px 2px rgba(159,159,159,0.5);
 
 		-webkit-border-radius:2px;
-		-moz-border-radius:2px;
 		-khtml-border-radius:2px;
+		-moz-border-radius:2px;
 		border-radius:2px;
 		
 		border:1px solid #BCBCBC;
@@ -240,8 +240,8 @@ button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type
 button:active, input[type="button"]:active, input[type="submit"]:active, input[type="reset"]:active
 	{
 		-webkit-box-shadow:inset 0px 1px 2px rgba(205,205,205,1);
-		-moz-box-shadow:inset 0px 1px 2px rgba(205,205,205,1);
 		-khtml-box-shadow:inset 0px 1px 2px rgba(205,205,205,1);
+		-moz-box-shadow:inset 0px 1px 2px rgba(205,205,205,1);
 		box-shadow:inset 0px 1px 2px rgba(205,205,205,1);
 		
 		background:#E0E0E0;

@@ -1,0 +1,40 @@
+# ################################################################### #
+# Disable directory browsing.:
+# ################################################################### #
+
+Options -Indexes
+
+# ################################################################### #
+# Hide directory contents:
+# ################################################################### #
+
+IndexIgnore *
+
+# ################################################################### #
+# Protect [ .htaccess ], and all [ error_log ] files, from public view:
+# ################################################################### #
+
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+<Files error_log>
+order allow,deny
+deny from all
+</Files>
+
+# ################################################################### #
+# Protect other sensitive files, and directories, from public view:
+# ################################################################### #
+
+<Files README.txt>
+order allow,deny
+deny from all
+</Files>
+
+RedirectMatch 403 ^.*\/config\/.*$
+RedirectMatch 403 ^.*\/docs\/.*$
+RedirectMatch 403 ^.*\/includes\/.*$
+
+# ################################################################### #

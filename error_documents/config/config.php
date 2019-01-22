@@ -12,7 +12,7 @@ $script_name = "Perfect Error Documents";
 
 /* Script Version. */
 
-$script_version = "1.8.1";
+$script_version = "2.0.0";
 
 /* Get 'Last Modification' Date/Time. [BEGIN] */
 
@@ -52,7 +52,7 @@ $facebook_app_id = ""; /* If you leave this blank, the script will default to it
 
 $facebook_page_id = ""; /* If you leave this blank, the script will default to its own Facebook 'Page ID'. */
 
-/* Enter your Twitter username below. */
+/* Enter your Twitter username below. Remember: DO NOT include the '@' symbol, as it will be added by the script, automatically. */
 
 $twitter_usrn = ""; /* If you leave this blank, the script will default to its own Twitter username. */
 
@@ -93,6 +93,11 @@ $script_twitter_usrn = "PerfErrorDocs";
 if (empty($twitter_usrn))
 	{
 		$twitter_usrn = $script_twitter_usrn;
+	};
+	
+if ((!empty($twitter_usrn))&&($twitter_usrn[0]=='@'))
+	{
+		$twitter_usrn = ltrim($twitter_usrn, '@');
 	};
 
 /* If Twitter username not entered, default to the script's own Twitter username. [END] */

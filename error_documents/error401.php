@@ -58,11 +58,11 @@ function doesFileExistAtURL( $fileURL )
 
 /* Save [ Location ] info into PHP session variables, to recall later, if necessary. [BEGIN] */
 
-$_SESSION["origDomain"] = $current_Website_Domain_Name;
+$_SESSION["origDomain"] = $current_Website_FQDN;
 
 $_SESSION["origPath"] = $current_path;
 
-$_SESSION["origURL"] = $current_Webpage_Complete_URL_Address;
+$_SESSION["origURL"] = $current_Web_Page_Complete_URL_Addr;
 
 /* Save [ Location ] info into PHP session variables, to recall later, if necessary. [END] */
 
@@ -72,7 +72,7 @@ $meta_Tag_Site_Name = "Error - [401] Unauthorized";
 
 $meta_Tag_Description = "Authorization is required to access this resource.";
 
-$meta_Tag_Site_Image = $current_Website_Domain_Name."/error_documents/php/open_graph_image.php";
+$meta_Tag_Site_Image = $current_Website_FQDN."/error_documents/php/open_graph_image.php";
 
 $meta_Tag_Key_Words = "error, error 401, exception, authorization, required, unauthorized, authorize, authenticate, credentials, access, entry, denied, blocked, forbidden, disallowed, prohibited, banned, barred, refused, off-limits, rejected, withheld, inhibited, not allowed, inaccessible, private, exclusive, confidential, login";
 
@@ -101,7 +101,7 @@ if ( file_exists(dirname(__FILE__)."/includes/royalty.php") )
 
 <title><?php echo $meta_Tag_Site_Name; ?></title>
 
-<link rel="canonical" href="<?php echo $current_Webpage_Canonical_URL_Address; ?>">
+<link rel="canonical" href="<?php echo $current_Web_Page_Canonical_URL_Addr; ?>">
 
 <link rel="shortcut icon" type="image/x-icon" href="/error_documents/favicon.ico">
 
@@ -121,7 +121,7 @@ if ( file_exists(dirname(__FILE__)."/includes/royalty.php") )
 <meta itemprop="image" content="<?php echo $meta_Tag_Site_Image; ?>">
 <meta itemprop="description" content="<?php echo $meta_Tag_Description; ?>">
 <meta itemprop="about" content="<?php echo $meta_Tag_Description; ?>">
-<meta itemprop="url" content="<?php echo $current_Webpage_Canonical_URL_Address; ?>">
+<meta itemprop="url" content="<?php echo $current_Web_Page_Canonical_URL_Addr; ?>">
 <meta itemprop="inLanguage" content="<?php echo str_replace("_", "-", $og_locale); ?>">
 <meta itemprop="agent" content="<?php echo $script_name; ?> v.<?php echo $script_version; ?>">
 <meta itemprop="actionStatus" content="FailedActionStatus">
@@ -172,7 +172,7 @@ if (function_exists('doesFileExistAtURL'))
 ?>
 <meta property="og:image:alt" content="<?php echo $meta_Tag_Site_Name; ?>">
 <meta property="og:description" content="<?php echo $meta_Tag_Description; ?>">
-<meta property="og:url" content="<?php echo $current_Webpage_Canonical_URL_Address; ?>">
+<meta property="og:url" content="<?php echo $current_Web_Page_Canonical_URL_Addr; ?>">
 <meta property="og:see_also" content="<?php echo $script_website; ?>">
 <meta property="og:rich_attachment" content="true">
 <meta property="og:type" content="website">
