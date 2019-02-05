@@ -1,6 +1,22 @@
 -----------------------------------------------------------------------
-Perfect Error Documents - CHANGELOG
+Perfect Error Documents (PED) - CHANGELOG
 -----------------------------------------------------------------------
+PED v.2.1.0 - 2019-02-05 James Anderson Jr. <james@jamesandersonjr.com>
+-----------------------------------------------------------------------
+
+- Improved code consistency: 
+  'snake_cased' all PHP variables and 'camelCased' all PHP functions
+- *NEW* Added new non-conflicting CSS class name [ bttn ]
+- Renamed (abbreviated) some CSS classes
+- Renamed (abbreviated) some PHP variables
+- Condensed and improved the 'supp_funcs.php' file in 'includes' folder
+- Clarified comments in the 'domain_info.php' file in 'includes' folder
+- *NEW* Added more 'clauses' to the License Agreement
+- *NEW* Added 'contact emails' to the License Agreement
+- Fixed some grammatical errors in the License Agreement
+- Other minor bug fixes, and improvements
+- Updated 'Minor' version number
+
 -----------------------------------------------------------------------
 PED v.2.0.0 - 2019-01-22 James Anderson Jr. <james@jamesandersonjr.com>
 -----------------------------------------------------------------------

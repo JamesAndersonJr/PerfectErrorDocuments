@@ -38,11 +38,11 @@ else
 
 /* A function to test if a file exist at a remote URL (PHP's integrated function 'file_exists()' only works on server paths, on your own server. This one works on remote URL's). [BEGIN] */
 
-function doesFileExistAtURL( $fileURL )
+function doesFileExistAtURL( $file_url )
 	{
-		$getFileHeaders = @get_headers($fileURL);
-		
-		if (preg_match("|200|", $getFileHeaders[0]))
+		$get_file_headers = @get_headers($file_url);
+
+		if (preg_match("|200|", $get_file_headers[0]))
 			{
 				/* The file exists. So, return 'true'. */
 				return true;
@@ -58,23 +58,23 @@ function doesFileExistAtURL( $fileURL )
 
 /* Save [ Location ] info into PHP session variables, to recall later, if necessary. [BEGIN] */
 
-$_SESSION["origDomain"] = $current_Website_FQDN;
+$_SESSION["orig_domain"] = $cur_website_fqdn;
 
-$_SESSION["origPath"] = $current_path;
+$_SESSION["orig_path"] = $cur_path;
 
-$_SESSION["origURL"] = $current_Web_Page_Complete_URL_Addr;
+$_SESSION["orig_url"] = $cur_web_page_cmpl_url_addr;
 
 /* Save [ Location ] info into PHP session variables, to recall later, if necessary. [END] */
 
 /* Preliminary Meta-Data [BEGIN] */
 
-$meta_Tag_Site_Name = "Error - [401] Unauthorized";
+$meta_tag_site_name = "Error - [401] Unauthorized";
 
-$meta_Tag_Description = "Authorization is required to access this resource.";
+$meta_tag_description = "Authorization is required to access this resource.";
 
-$meta_Tag_Site_Image = $current_Website_FQDN."/error_documents/php/open_graph_image.php";
+$meta_tag_site_image = $cur_website_fqdn."/error_documents/php/open_graph_image.php";
 
-$meta_Tag_Key_Words = "error, error 401, exception, authorization, required, unauthorized, authorize, authenticate, credentials, access, entry, denied, blocked, forbidden, disallowed, prohibited, banned, barred, refused, off-limits, rejected, withheld, inhibited, not allowed, inaccessible, private, exclusive, confidential, login";
+$meta_tag_key_words = "error, error 401, exception, authorization, required, unauthorized, authorize, authenticate, credentials, access, entry, denied, blocked, forbidden, disallowed, prohibited, banned, barred, refused, off-limits, rejected, withheld, inhibited, not allowed, inaccessible, private, exclusive, confidential, login";
 
 /* Preliminary Meta-Data [END] */
 
@@ -99,14 +99,14 @@ if ( file_exists(dirname(__FILE__)."/includes/royalty.php") )
 
 ?>
 
-<title><?php echo $meta_Tag_Site_Name; ?></title>
+<title><?php echo $meta_tag_site_name; ?></title>
 
-<link rel="canonical" href="<?php echo $current_Web_Page_Canonical_URL_Addr; ?>">
+<link rel="canonical" href="<?php echo $cur_web_page_canonical_url_addr; ?>">
 
 <link rel="shortcut icon" type="image/x-icon" href="/error_documents/favicon.ico">
 
-<meta name="description" content="<?php echo $meta_Tag_Description; ?>">
-<meta name="keywords" content="<?php echo $meta_Tag_Key_Words; ?>">
+<meta name="description" content="<?php echo $meta_tag_description; ?>">
+<meta name="keywords" content="<?php echo $meta_tag_key_words; ?>">
 <meta name="author" content="<?php echo $script_name; ?>">
 <meta name="web_author" content ="<?php echo $script_author; ?>">
 <meta name="robots" content="noindex,nofollow">
@@ -117,62 +117,62 @@ if ( file_exists(dirname(__FILE__)."/includes/royalty.php") )
 
 <!-- Google Plus Metadata (i.e. "Structured Data") Tags [BEGIN] -->
 
-<meta itemprop="name" content="<?php echo $meta_Tag_Site_Name; ?>">
-<meta itemprop="image" content="<?php echo $meta_Tag_Site_Image; ?>">
-<meta itemprop="description" content="<?php echo $meta_Tag_Description; ?>">
-<meta itemprop="about" content="<?php echo $meta_Tag_Description; ?>">
-<meta itemprop="url" content="<?php echo $current_Web_Page_Canonical_URL_Addr; ?>">
+<meta itemprop="name" content="<?php echo $meta_tag_site_name; ?>">
+<meta itemprop="image" content="<?php echo $meta_tag_site_image; ?>">
+<meta itemprop="description" content="<?php echo $meta_tag_description; ?>">
+<meta itemprop="about" content="<?php echo $meta_tag_description; ?>">
+<meta itemprop="url" content="<?php echo $cur_web_page_canonical_url_addr; ?>">
 <meta itemprop="inLanguage" content="<?php echo str_replace("_", "-", $og_locale); ?>">
 <meta itemprop="agent" content="<?php echo $script_name; ?> v.<?php echo $script_version; ?>">
 <meta itemprop="actionStatus" content="FailedActionStatus">
-<meta itemprop="error" content="<?php echo substr($meta_Tag_Site_Name,8); ?>">
+<meta itemprop="error" content="<?php echo substr($meta_tag_site_name,8); ?>">
 <meta itemprop="recipient" content="<?php echo $client_ip; ?>">
 
 <!-- Google Plus Metadata (i.e. "Structured Data") Tags [END] -->
 
 <!-- Facebook / Open Graph Tags [BEGIN] -->
 
-<meta property="og:title" content="<?php echo $meta_Tag_Site_Name; ?>">
-<meta property="og:image" content="<?php echo $meta_Tag_Site_Image; ?>">
-<meta property="og:image:url" content="<?php echo $meta_Tag_Site_Image; ?>">
+<meta property="og:title" content="<?php echo $meta_tag_site_name; ?>">
+<meta property="og:image" content="<?php echo $meta_tag_site_image; ?>">
+<meta property="og:image:url" content="<?php echo $meta_tag_site_image; ?>">
 <?php
 
 if ($protocol == "https://")
 	{
 ?>
-<meta property="og:image:secure_url" content="<?php echo preg_replace("/^http:/i", "https:", $meta_Tag_Site_Image); ?>">
+<meta property="og:image:secure_url" content="<?php echo preg_replace("/^http:/i", "https:", $meta_tag_site_image); ?>">
 <?php
 	};
 
 if (function_exists('doesFileExistAtURL'))
 	{
-		if (doesFileExistAtURL( $meta_Tag_Site_Image ))
+		if (doesFileExistAtURL( $meta_tag_site_image ))
 			{
 				$file_info = finfo_open();
-				$meta_Tag_Site_Image_MIME_Type = finfo_buffer($file_info, $meta_Tag_Site_Image, FILEINFO_MIME_TYPE);
-				$meta_Tag_Site_Image_Info_Array = getimagesize($meta_Tag_Site_Image);
-				list($meta_Tag_Site_Image_Width, $meta_Tag_Site_Image_Height) = $meta_Tag_Site_Image_Info_Array;
-				
-				if ((!empty($meta_Tag_Site_Image_Width)) && (!empty($meta_Tag_Site_Image_Height)))
+				$meta_tag_site_image_mime_type = finfo_buffer($file_info, $meta_tag_site_image, FILEINFO_MIME_TYPE);
+				$meta_tag_site_image_info_array = getimagesize($meta_tag_site_image);
+				list($meta_tag_site_image_width, $meta_tag_site_image_height) = $meta_tag_site_image_info_array;
+
+				if ((!empty($meta_tag_site_image_width)) && (!empty($meta_tag_site_image_height)))
 					{
 ?>
-<meta property="og:image:width" content="<?php echo $meta_Tag_Site_Image_Width; ?>">
-<meta property="og:image:height" content="<?php echo $meta_Tag_Site_Image_Height; ?>">
+<meta property="og:image:width" content="<?php echo $meta_tag_site_image_width; ?>">
+<meta property="og:image:height" content="<?php echo $meta_tag_site_image_height; ?>">
 <?php
 					};
 
-				if (!empty($meta_Tag_Site_Image_MIME_Type))
+				if (!empty($meta_tag_site_image_mime_type))
 					{
 ?>
-<meta property="og:image:type" content="<?php echo $meta_Tag_Site_Image_MIME_Type; ?>">
+<meta property="og:image:type" content="<?php echo $meta_tag_site_image_mime_type; ?>">
 <?php
 					};
 			};
 	};
 ?>
-<meta property="og:image:alt" content="<?php echo $meta_Tag_Site_Name; ?>">
-<meta property="og:description" content="<?php echo $meta_Tag_Description; ?>">
-<meta property="og:url" content="<?php echo $current_Web_Page_Canonical_URL_Addr; ?>">
+<meta property="og:image:alt" content="<?php echo $meta_tag_site_name; ?>">
+<meta property="og:description" content="<?php echo $meta_tag_description; ?>">
+<meta property="og:url" content="<?php echo $cur_web_page_canonical_url_addr; ?>">
 <meta property="og:see_also" content="<?php echo $script_website; ?>">
 <meta property="og:rich_attachment" content="true">
 <meta property="og:type" content="website">
@@ -188,9 +188,9 @@ if (function_exists('doesFileExistAtURL'))
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@<?php echo $twitter_usrn; ?>">
-<meta name="twitter:title" content="<?php echo $meta_Tag_Site_Name; ?>">
-<meta name="twitter:description" content="<?php echo $meta_Tag_Description; ?>">
-<meta name="twitter:image" content="<?php echo $meta_Tag_Site_Image; ?>">
+<meta name="twitter:title" content="<?php echo $meta_tag_site_name; ?>">
+<meta name="twitter:description" content="<?php echo $meta_tag_description; ?>">
+<meta name="twitter:image" content="<?php echo $meta_tag_site_image; ?>">
 
 <!-- Twitter Card Tags [END] -->
 
@@ -204,9 +204,9 @@ if (function_exists('doesFileExistAtURL'))
 
 <body>
 
-<div class="main_container_div">
+<div class="main_cont_div">
 
-	<div class="sub_container_div">
+	<div class="sub_cont_div">
 
 		<div class="dialog">
 
@@ -236,7 +236,7 @@ if (function_exists('doesFileExistAtURL'))
 		<p>
 		If you do nothing, you will be redirected<br>
 		to the site&#8217;s <a href="/" target="_self">home page</a>, 
-		in (<input type="text" name="sec" id="sec" value="30" class="no_select sec_counter" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.
+		in (<input type="text" name="sec" id="sec" value="30" class="no_sel sec_ctr" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.
 		</p>
 
 	</div>
@@ -266,7 +266,7 @@ function timer()
 				/* The counter has ended. Clear the interval, and redirect the page. */
 				clearInterval(counter);
 				location.href = '/';
-				
+
 				return;
 			};
 
@@ -275,7 +275,7 @@ function timer()
 	};
 
 /* The 'timer' function code. [END] */
-	
+
 /* Start Redirect Timer. [BEGIN] */
 
 var counter = setInterval(timer, 1000); /* 1000 will run it every 1 second. */
