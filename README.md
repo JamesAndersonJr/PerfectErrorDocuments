@@ -1,11 +1,9 @@
-Perfect Error Documents
-=======================================================================
+# Perfect Error Documents #
+- - - -
 
-The perfect PHP script for effectively managing most website error documents!
+*“The perfect PHP script for effectively managing most website error documents!”*
 
------------------------------------------------------------------------
-Script Name : Perfect Error Documents | Version : 2.0.0
------------------------------------------------------------------------
+## Script Name : Perfect Error Documents | Version : 2.1.0 ##
 
 Author : James Anderson Jr. (Email: [james@jamesandersonjr.com](https://www.jamesandersonjr.com/contact-james.php "Contact the Author via Email"); Web : [https://card.jamesandersonjr.com](https://card.jamesandersonjr.com "View the Author’s Website"))
 
@@ -15,11 +13,10 @@ Download Address : [https://www.perfecterrordocs.com/download/](https://www.perf
 
 License Address : [https://www.perfecterrordocs.com/license/](https://www.perfecterrordocs.com/license/ "View the Perfect Error Documents &#010;License Agreement")
 
-Donation Address : [https://www.perfecterrordocs.com/donate/](https://www.perfecterrordocs.com/donate/ "Make a Donation Toward the Development &#010;of Perfect Error Documents")
+Demo Address : [https://www.perfecterrordocs.com/demo/](https://www.perfecterrordocs.com/demo/ "Try the Perfect Error Documents &#010;Live Interactive Demo.")
 
------------------------------------------------------------------------
-Copyright :
------------------------------------------------------------------------
+- - - -
+## Copyright : ##
 
 Copyright © 2019 James Anderson Jr.
 
@@ -29,11 +26,10 @@ This file is part of the **“Perfect Error Documents v.2.x.x” online script**
 
 You should have received a PDF copy of the license agreement, along with your download of the **“PED” online script**. If not, please visit: [ [https://www.perfecterrordocs.com/license/](https://www.perfecterrordocs.com/license/ "View the Perfect Error Documents &#010;License Agreement") ], for your free copy.
 
-For support, and all other inquiries, please feel free to email us at: **support [at] perfecterrordocs [dot] com**.
+For support, and all other inquiries, please feel free to email us at: **cs [at] perfecterrordocs [dot] com**.
 
------------------------------------------------------------------------
-SYSTEM REQUIREMENTS :
------------------------------------------------------------------------
+- - - -
+## System Requirements : ##
 
 **Web Server :** Apache 2.x hosted on UNIX/Linux
 
@@ -41,13 +37,10 @@ SYSTEM REQUIREMENTS :
 
 **Database :** *Not Required*
 
------------------------------------------------------------------------
-TO INSTALL :
------------------------------------------------------------------------
+- - - -
+## To Install : ##
 
- 1.	Unzip the downloaded [***‘PerfectErrorDocuments.zip’***](https://www.perfecterrordocs.com/download/ "Download the ‘PerfectErrorDocuments.zip’ &#010; Web Package From PED’s Official Website") ([***‘PerfectErrorDocuments-master.zip’***](https://github.com/JamesAndersonJr/PerfectErrorDocuments/archive/master.zip "Download the ‘PerfectErrorDocuments-master.zip’ &#010; Web Package Directly From GitHub") on **GitHub**) 
-web package contents into an off-line repository of your website, with the ***‘error_documents’*** folder being a ***direct*** sub-directory of the root of your website’s tree.
-(e.g. ***‘/public_html/error_documents/’*** )
+ 1.	Unzip the downloaded [***‘PerfectErrorDocuments.zip’***](https://www.perfecterrordocs.com/download/ "Download the ‘PerfectErrorDocuments.zip’ &#010; Web Package From PED’s Official Website") ([***‘PerfectErrorDocuments-master.zip’***](https://github.com/JamesAndersonJr/PerfectErrorDocuments/archive/master.zip "Download the ‘PerfectErrorDocuments-master.zip’ &#010; Web Package Directly From GitHub") on **GitHub**) web package contents into an off-line repository of your website, with the ***‘error_documents’*** folder being a ***direct*** sub-directory of the root of your website’s tree. (e.g. ***‘/public_html/error_documents/’*** )
 
  2. Open ***‘config.php’*** located inside ***‘/error_documents/config/’*** folder, with your favorite HTML/PHP code editor ([**Notepad++**](https://notepad-plus-plus.org "Get Notepad++") is highly recommended).
 
@@ -75,8 +68,7 @@ web package contents into an off-line repository of your website, with the ***�
 
  >***Side Note:*** *| ALL of the social media account PHP variables, such as `$facebook_app_id`, `$facebook_page_id`, and `$twitter_usrn` will gracefully fallback to PED's own default social media account information, if you do not enter any overriding values of your own (So, if you skip steps (4-6), and you decide to leave one, or more, of them blank, it won't break anything).*
 
- 7. Locate, and update line | **61** |, as shown below, to include your websites current locale. Use the format: `'language_TERRITORY'`. For a list of valid locales, visit:
-[ [https://fbdevwiki.com/wiki/Locales](https://fbdevwiki.com/wiki/Locales "View a List of Valid Locales") ].
+ 7. Locate, and update line | **61** |, as shown below, to include your websites current locale. Use the format: `'language_TERRITORY'`. For a list of valid locales, visit: [ [https://fbdevwiki.com/wiki/Locales](https://fbdevwiki.com/wiki/Locales "View a List of Valid Locales") ].
 
   **61** |`$locale = "";`
 
@@ -114,17 +106,15 @@ That’s it! Your new installation of the **[‘PED’](https://www.perfecterror
 
 Congratulations on obtaining, and installing your *personal* copy of the **[‘PED’](https://www.perfecterrordocs.com "View Perfect Error Document’s &#010;Official Website") online script**.&#128079;
 
------------------------------------------------------------------------
-Support :
------------------------------------------------------------------------
+- - - -
+## Support : ##
 
->&#128161; ***Remember:*** *| For support, and all other inquiries, please feel free to email us 24/7 at: support&nbsp;[at]&nbsp;perfecterrordocs&nbsp;[dot]&nbsp;com.*
+>&#128161; ***Remember:*** *| For support, and all other inquiries, please feel free to email us 24/7 at: cs&nbsp;[at]&nbsp;perfecterrordocs&nbsp;[dot]&nbsp;com.*
 
------------------------------------------------------------------------
-Donations :
------------------------------------------------------------------------
+- - - -
+## Donations : ##
 
->&#128161; ***Remember:*** *|  100% voluntary donations are currently being accepted through our [Official Website](https://www.perfecterrordocs.com/ "View Perfect Error Document’s &#010;Official Website") at [ [https://www.perfecterrordocs.com/donate/](https://www.perfecterrordocs.com/donate/ "Make a Donation Toward the Development &#010;of Perfect Error Documents") ]. We would surely appreciate your support! *&#10084;
+>&#128161; ***Remember:***  | 100% voluntary donations are currently being accepted through our [Official Website](https://www.perfecterrordocs.com/ "View Perfect Error Document’s &#010;Official Website") at [ [https://www.perfecterrordocs.com/donate/](https://www.perfecterrordocs.com/donate/ "Make a Donation Toward the Development &#010;of Perfect Error Documents") ]. We would surely appreciate your support! &#10084;
 
 ### Thank You for choosing “PED!” &#10084;
 #### We look forward to serving you!
