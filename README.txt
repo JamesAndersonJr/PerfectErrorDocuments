@@ -15,7 +15,7 @@ Download Address : [ https://www.perfecterrordocs.com/download/ ]
 
 License Address : [ https://www.perfecterrordocs.com/license/ ]
 
-Demo Address : [ https://www.perfecterrordocs.com/demo/ ]
+Donation Address : [ https://www.perfecterrordocs.com/donate/ ]
 
 -----------------------------------------------------------------------
 Copyright :
