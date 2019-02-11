@@ -1,150 +1,45 @@
-﻿LICENSE AGREEMENT
+LICENSE AGREEMENT
 =======================================================================
 -----------------------------------------------------------------------
 Agreement Compliance
 -----------------------------------------------------------------------
 
-Please read this license agreement carefully. This is a legally binding 
-agreement between James Anderson Jr. (the “original author”, “author”, 
-and “licensor”), and you (“you”, “your”), acting as an individual, or 
-if applicable, on behalf of another individual or entity, under lawful 
-authorization.
+Please read, and peruse this license agreement carefully. This is a legally binding agreement between James Anderson Jr. (the “original author”, “author” and “licensor”), and you (“you”, “your”), acting as an individual or, if applicable, on behalf of another individual, or entity under lawful authorization.
 
-By you downloading and continuing to use the “Perfect Error Documents” 
-(“PED”) online script (this “web application”), you agree to comply 
-with, and be bound by, the terms and conditions (“terms”) set forth in 
-this license agreement (“agreement”), and to the extent that you are 
-acting on behalf of another individual or entity, that you have the 
-lawful authority to bind such individual or entity, under the terms 
-of this agreement. If you do not agree with ALL of the terms and 
-conditions of this license agreement, please, do not purchase, 
-download, install, and/or use this web application. You have not become 
-a licensee of this web application, and you are not authorized to 
-install and/or use, this web application, unless you agree to, and 
-continually comply with, the terms and conditions set forth in this 
-license agreement.
+By you downloading and continuing to use the “Perfect Error Documents” (“PED”) online script (this “web application”), you agree to comply with, and be bound by, the terms and conditions (“terms”) of this license agreement (“agreement”) and, to the extent that you are acting on behalf of another individual or entity, that you have the lawful authority to bind such individual, or entity, under the terms of this agreement. If you do not agree with ALL of the terms and conditions of this license agreement, please, do not purchase, download, install, or use this web application. You have not become a licensee of, and you are not authorized to install and/or use this web application, unless you agree to, and continually comply with, the terms and conditions set forth in this license agreement.
 
 -----------------------------------------------------------------------
 Redistribution & Use
 -----------------------------------------------------------------------
 
-Redistribution and use, of this web application, in all forms, with, 
-or without, modification, is permitted, provided that the following 
-conditions are met:
+Redistribution and use of this web application in all forms, with or without modification, are permitted provided that the following conditions are met:
 
-* You must NOT remove, or obscure, the discreet royalty-attribution 
-  statements, and/or backlinks, included as HTML comments, in the 
-  source-code of the PHP pages included in this web application.
-
-* Redistributions, in any, and all, forms, must be accompanied by 
-  information on how to obtain complete source-code for this web 
-  application, and any accompanying application that uses this web 
-  application. The source-code must either be included in the 
-  distribution, or be available for no more than the cost of 
-  distribution, plus a nominal fee, and must be freely redistributable 
-  under reasonable conditions. For an executable file, complete 
-  source-code means the source-code for all modules it contains. 
-  It does not include source-code for modules or files that typically 
-  accompany the major components of the operating system on which the 
-  file runs.
-
-* Neither the name of this web application, nor the name(s) or 
-  likeness(es) of its author(s), contributor(s), or licensor(s) may be 
-  used to endorse, and/or promote products derived from this web 
-  application, without explicit prior written consent.
+* You must NOT remove or obscure the discreet royalty-attribution statements and/or backlinks included as HTML comments in the source-code of the PHP pages, included in this web application.
+* Redistributions in any and all forms must be accompanied by information on how to obtain complete source code for this web application and any accompanying application that uses this web application. The source code must either be included in the distribution or be available for no more than the cost of distribution plus a nominal fee, and must be freely redistributable under reasonable conditions. For an executable file, complete source code means the source code for all modules it contains. It does not include source code for modules or files that typically accompany the major components of the operating system on which the file runs.
+* Neither the name of this web application nor the name(s) of its author(s), contributors or licensor(s) may be used to endorse or promote products derived from this web application without specific prior written permission.
 
 -----------------------------------------------------------------------
 Disclaimer and Limitation of Liability
 -----------------------------------------------------------------------
 
-THIS WEB APPLICATION, THE “PERFECT ERROR DOCUMENTS” (“PED”) ONLINE 
-SCRIPT, USUALLY AVAILABLE (WITHOUT ANY CERTAINTIES OR GUARANTEES) 
-ONLINE AT THE PERFECTERRORDOCS.COM WEBSITE, IS PROVIDED “AS IS”, AND 
-ANY EXPRESSED, OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, 
-THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR 
-PURPOSE, OR NON-INFRINGEMENT, ARE EXPLICITLY DISCLAIMED. IN NO EVENT 
-SHALL JAMES ANDERSON JR. (THE WEB APPLICATIONS AUTHOR, AND CURRENT 
-RIGHTS BEARER), HIS AGENTS, OR ANY OF HIS CONTRIBUTORS, OR LICENSORS 
-BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
-CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
-SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR 
-BUSINESS INTERRUPTION) HOWEVER CAUSED, AND ON ANY THEORY OF LIABILITY, 
-WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE, 
-OR OTHERWISE) ARISING, IN ANY WAY, OUT OF THE USE OF THIS WEB 
-APPLICATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+THIS WEB APPLICATION, THE “PERFECT ERROR DOCUMENTS” (“PED”) ONLINE SCRIPT, USUALLY AVAILABLE (WITHOUT ANY CERTAINTIES OR GUARANTEES) ONLINE AT THE PERFECTERRORDOCS.COM WEBSITE, IS PROVIDED “AS IS”, AND ANY EXPRESSED, OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT, ARE EXPLICITLY DISCLAIMED. IN NO EVENT SHALL JAMES ANDERSON JR. (THE WEB APPLICATION’S AUTHOR, AND CURRENT RIGHTS BEARER), HIS AGENTS, OR ANY OF HIS CONTRIBUTORS, OR LICENSORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED, AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE, OR OTHERWISE) ARISING, IN ANY WAY, OUT OF THE USE OF THIS WEB APPLICATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-Without limiting the foregoing, James Anderson Jr. and any, and all, 
-of his agents, contributors, licensors, and authorized assignees make 
-no warranty that: 
+Without limiting the foregoing, James Anderson Jr. and any, and all, of his agents, contributors, licensors, and authorized assignees make no warranty that: 
 
 * this web application will meet your requirements.
-
 * this web application will be error-free, and/or bug-free.
-
-* the results that may be obtained from the use of this web 
-  application, will be effective, accurate, or reliable.
-
+* the results that may be obtained from the use of this web application, will be effective, accurate, or reliable.
 * the quality of this web application will meet your expectations.
+* any errors, or bugs in the web application, obtained from the PERFECTERRORDOCS.COM website, or the GitHub project page will be corrected.
 
-* any errors, or bugs in the web application, obtained from the 
-  PERFECTERRORDOCS.COM website, or the “PED” GitHub project page 
-  will be corrected.
+James Anderson Jr., and any and all of his agents, contributors, licensors, and authorized assignees assume no responsibility any for errors, or omissions in the web application, or in any documentation, that may be made available, in the future, or at present, from the PERFECTERRORDOCS.COM website or the GitHub project page. 
 
-James Anderson Jr., and any and all of his agents, contributors, 
-licensors, and authorized assignees assume no responsibility for any 
-errors, or omissions in the web application, or in any documentation, 
-that may be made available, in the future, or at present, from the 
-PERFECTERRORDOCS.COM website or the “PED” GitHub project page.
-
-The use of any web application, downloaded through the 
-PERFECTERRORDOCS.COM website, is done at your own discretion, and 
-risk, and with total agreement that you will be solely responsible for 
-any damage to your computer(s), server(s), and/or network(s), or loss 
-of data, that results from such activities. No advice, or information, 
-whether oral, or written, obtained by you, from the 
-PERFECTERRORDOCS.COM website, or James Anderson Jr., and/or his 
-agents, contributors, licensors and authorized assignees shall 
-create any warranty, for any product, purchased, or downloaded, 
-from the PERFECTERRORDOCS.COM website.
-
------------------------------------------------------------------------
-Modifications, Revisions and Amendments
------------------------------------------------------------------------
-
-James Anderson Jr. (the “licensor”, “author”, and “current rights 
-bearer” of this web application) reserves the right to change, modify, 
-revise, alter, and/or amend this agreement, in whole, or in part, at 
-any time, and for any reason.
-
-However, without limiting the foregoing, there shall be only 
-(1) official license agreement per version release of this web 
-application. Should the latest version of this license agreement be 
-changed, modified, revised, altered, and/or amended in the future, 
-after you have already acquired your copy of this web application, you 
-shall only be required to agree to, be bound by, and continually 
-comply with, the version of the license agreement originally 
-distributed with your copy of this web application. You shall NOT be 
-bound by the terms of a later version of this license agreement unless 
-you acquire a copy of this web application regulated under that 
-agreement.
-
------------------------------------------------------------------------
-Questions & Inquiries
------------------------------------------------------------------------
-
-Please forward all questions, inquires, and feedback to the proper 24/7 
-email account, as outlined below:
-
-General Inquiries:			info@perfecterrordocs.com
-
-Sales & Customer Support:		cs@perfecterrordocs.com
-
-Feedback & Comments:			cfb@perfecterrordocs.com
+The use of any web application, downloaded through this website, is done at your own discretion, and risk, and with total agreement that you will be solely responsible for any damage to your computer(s), server(s), and/or network(s), or loss of data, that results from such activities. No advice, or information, whether oral, or written, obtained by you, from the PERFECTERRORDOCS.COM website, or James Anderson Jr., and/or his agents, contributors, licensors and authorized assignees shall create any warranty, for any product, purchased, or downloaded, from this website.
 
 -----------------------------------------------------------------------
 
 Copyright © 2019 James Anderson Jr.
 
-Support Inquires: cs@perfecterrordocs.com
+Support Inquires: support@perfecterrordocs.com
 
 -----------------------------------------------------------------------

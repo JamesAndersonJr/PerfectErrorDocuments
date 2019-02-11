@@ -38,11 +38,11 @@ else
 
 /* A function to test if a file exist at a remote URL (PHP's integrated function 'file_exists()' only works on server paths, on your own server. This one works on remote URL's). [BEGIN] */
 
-function doesFileExistAtURL( $file_url )
+function doesFileExistAtURL( $fileURL )
 	{
-		$get_file_headers = @get_headers($file_url);
-
-		if (preg_match("|200|", $get_file_headers[0]))
+		$getFileHeaders = @get_headers($fileURL);
+		
+		if (preg_match("|200|", $getFileHeaders[0]))
 			{
 				/* The file exists. So, return 'true'. */
 				return true;
@@ -58,9 +58,9 @@ function doesFileExistAtURL( $file_url )
 
 /* Set the referral address that the visitor came from, into a PHP variable, to later use in a JavaScript variable. [BEGIN] */
 
-if (isset($_SESSION["orig_url"]))
+if (isset($_SESSION["origURL"]))
 	{
-		$http_ref_addr = $_SESSION["orig_url"];
+		$http_ref_addr = $_SESSION["origURL"];
 	}
 elseif (isset($_SERVER['HTTP_REFERER']))
 	{
@@ -75,13 +75,13 @@ else
 
 /* Preliminary Meta-Data [BEGIN] */
 
-$meta_tag_site_name = "A Simple JavaScript Test";
+$meta_Tag_Site_Name = "A Simple JavaScript Test";
 
-$meta_tag_description = "A simple test to verify if JavaScript is enabled in your web browser.";
+$meta_Tag_Description = "A simple test to verify if JavaScript is enabled in your web browser.";
 
-$meta_tag_site_image = $cur_website_fqdn."/error_documents/php/open_graph_image.php";
+$meta_Tag_Site_Image = $current_Website_FQDN."/error_documents/php/open_graph_image.php";
 
-$meta_tag_key_words = "JavaScript, script, test, analysis, assess, assessment, evaluate, evaluation, verify, verification, confirm, confirmation, check, web browser, enabled, disabled, support, supported, unsupported, query, inquiry, probe, feature, try, trial";
+$meta_Tag_Key_Words = "JavaScript, script, test, analysis, assess, assessment, evaluate, evaluation, verify, verification, confirm, confirmation, check, web browser, enabled, disabled, support, supported, unsupported, query, inquiry, probe, feature, try, trial";
 
 /* Preliminary Meta-Data [END] */
 
@@ -110,16 +110,16 @@ else
 
 ?>
 
-<title><?php echo $meta_tag_site_name; ?></title>
+<title><?php echo $meta_Tag_Site_Name; ?></title>
 
-<link rel="canonical" href="<?php echo $cur_web_page_canonical_url_addr; ?>">
+<link rel="canonical" href="<?php echo $current_Web_Page_Canonical_URL_Addr; ?>">
 
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
 <script>document.title += " - JavaScript is Enabled.";</script>
 
-<meta name="description" content="<?php echo $meta_tag_description; ?>">
-<meta name="keywords" content="<?php echo $meta_tag_key_words; ?>">
+<meta name="description" content="<?php echo $meta_Tag_Description; ?>">
+<meta name="keywords" content="<?php echo $meta_Tag_Key_Words; ?>">
 <meta name="author" content="<?php echo $script_name; ?>">
 <meta name="web_author" content ="<?php echo $script_author; ?>">
 <meta name="robots" content="noindex,nofollow">
@@ -128,59 +128,59 @@ else
 
 <meta name="viewport" content="width=device-width, initial-scale=0.8">
 
-<!-- Google Search Metadata (i.e. "Structured Data") Tags [BEGIN] -->
+<!-- Google Plus Metadata (i.e. "Structured Data") Tags [BEGIN] -->
 
-<meta itemprop="name" content="<?php echo $meta_tag_site_name; ?>">
-<meta itemprop="image" content="<?php echo $meta_tag_site_image; ?>">
-<meta itemprop="description" content="<?php echo $meta_tag_description; ?>">
-<meta itemprop="url" content="<?php echo $cur_web_page_canonical_url_addr; ?>">
+<meta itemprop="name" content="<?php echo $meta_Tag_Site_Name; ?>">
+<meta itemprop="image" content="<?php echo $meta_Tag_Site_Image; ?>">
+<meta itemprop="description" content="<?php echo $meta_Tag_Description; ?>">
+<meta itemprop="url" content="<?php echo $current_Web_Page_Canonical_URL_Addr; ?>">
 <meta itemprop="inLanguage" content="<?php echo str_replace("_", "-", $og_locale); ?>">
 <meta itemprop="agent" content="<?php echo $script_name; ?> v.<?php echo $script_version; ?>">
 
-<!-- Google Search Metadata (i.e. "Structured Data") Tags [END] -->
+<!-- Google Plus Metadata (i.e. "Structured Data") Tags [END] -->
 
 <!-- Facebook / Open Graph Tags [BEGIN] -->
 
-<meta property="og:title" content="<?php echo $meta_tag_site_name; ?>">
-<meta property="og:image" content="<?php echo $meta_tag_site_image; ?>">
-<meta property="og:image:url" content="<?php echo $meta_tag_site_image; ?>">
+<meta property="og:title" content="<?php echo $meta_Tag_Site_Name; ?>">
+<meta property="og:image" content="<?php echo $meta_Tag_Site_Image; ?>">
+<meta property="og:image:url" content="<?php echo $meta_Tag_Site_Image; ?>">
 <?php
 
 if ($protocol == "https://")
 	{
 ?>
-<meta property="og:image:secure_url" content="<?php echo preg_replace("/^http:/i", "https:", $meta_tag_site_image); ?>">
+<meta property="og:image:secure_url" content="<?php echo preg_replace("/^http:/i", "https:", $meta_Tag_Site_Image); ?>">
 <?php 
 	};
 
 if (function_exists('doesFileExistAtURL'))
 	{
-		if (doesFileExistAtURL( $meta_tag_site_image ))
+		if (doesFileExistAtURL( $meta_Tag_Site_Image ))
 			{
 				$file_info = finfo_open();
-				$meta_tag_site_image_mime_type = finfo_buffer($file_info, $meta_tag_site_image, FILEINFO_MIME_TYPE);
-				$meta_tag_site_image_info_array = getimagesize($meta_tag_site_image);	
-				list($meta_tag_site_image_width, $meta_tag_site_image_height) = $meta_tag_site_image_info_array;
+				$meta_Tag_Site_Image_MIME_Type = finfo_buffer($file_info, $meta_Tag_Site_Image, FILEINFO_MIME_TYPE);
+				$meta_Tag_Site_Image_Info_Array = getimagesize($meta_Tag_Site_Image);	
+				list($meta_Tag_Site_Image_Width, $meta_Tag_Site_Image_Height) = $meta_Tag_Site_Image_Info_Array;
 
-				if ((!empty($meta_tag_site_image_width)) && (!empty($meta_tag_site_image_height)))
+				if ((!empty($meta_Tag_Site_Image_Width)) && (!empty($meta_Tag_Site_Image_Height)))
 					{
 ?>
-<meta property="og:image:width" content="<?php echo $meta_tag_site_image_width; ?>">
-<meta property="og:image:height" content="<?php echo $meta_tag_site_image_height; ?>">
+<meta property="og:image:width" content="<?php echo $meta_Tag_Site_Image_Width; ?>">
+<meta property="og:image:height" content="<?php echo $meta_Tag_Site_Image_Height; ?>">
 <?php				};
 
-				if (!empty($meta_tag_site_image_mime_type)) 
+				if (!empty($meta_Tag_Site_Image_MIME_Type)) 
 					{
 ?>
-<meta property="og:image:type" content="<?php echo $meta_tag_site_image_mime_type; ?>">
+<meta property="og:image:type" content="<?php echo $meta_Tag_Site_Image_MIME_Type; ?>">
 <?php
 					};
 			};
 	};
 ?>
-<meta property="og:image:alt" content="<?php echo $meta_tag_site_name; ?>">
-<meta property="og:description" content="<?php echo $meta_tag_description; ?>">
-<meta property="og:url" content="<?php echo $cur_web_page_canonical_url_addr; ?>">
+<meta property="og:image:alt" content="<?php echo $meta_Tag_Site_Name; ?>">
+<meta property="og:description" content="<?php echo $meta_Tag_Description; ?>">
+<meta property="og:url" content="<?php echo $current_Web_Page_Canonical_URL_Addr; ?>">
 <meta property="og:see_also" content="<?php echo $script_website; ?>">
 <meta property="og:rich_attachment" content="true">
 <meta property="og:type" content="website">
@@ -196,9 +196,9 @@ if (function_exists('doesFileExistAtURL'))
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@<?php echo $twitter_usrn; ?>">
-<meta name="twitter:title" content="<?php echo $meta_tag_site_name; ?>">
-<meta name="twitter:description" content="<?php echo $meta_tag_description; ?>">
-<meta name="twitter:image" content="<?php echo $meta_tag_site_image; ?>">
+<meta name="twitter:title" content="<?php echo $meta_Tag_Site_Name; ?>">
+<meta name="twitter:description" content="<?php echo $meta_Tag_Description; ?>">
+<meta name="twitter:image" content="<?php echo $meta_Tag_Site_Image; ?>">
 
 <!-- Twitter Card Tags [END] -->
 
@@ -260,9 +260,9 @@ function returnToPreviousPage()
 
 <body>
 
-<div class="main_cont_div">
+<div class="main_container_div">
 
-	<div class="sub_cont_div">
+	<div class="sub_container_div">
 
 		<div class="dialog">
 
@@ -292,7 +292,7 @@ function returnToPreviousPage()
 		<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 		<script>document.write("<br>");</script>
 
-		<span id="action_buttons"><button class="bttn" onclick="JavaScript:window.location.replace(window.location.href);">Re-Test</button></span>
+		<span id="action_buttons"><button onclick="JavaScript:window.location.replace(window.location.href);">Re-Test</button></span>
 
 		</div>
 

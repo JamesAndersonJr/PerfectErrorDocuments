@@ -12,7 +12,7 @@ $script_name = "Perfect Error Documents";
 
 /* Script Version. */
 
-$script_version = "2.1.0";
+$script_version = "2.0.0";
 
 /* Get 'Last Modification' Date/Time. [BEGIN] */
 
@@ -32,7 +32,7 @@ $script_website = "https://www.perfecterrordocs.com"; /* Don't worry, this is NO
 
 /* Script Support Email Address. */
 
-$script_support_email = "cs@perfecterrordocs.com"; /* The scripts 'support' email address. Used only for user reference, and to create the obfuscated 'support' email address. */
+$script_support_email = "support@perfecterrordocs.com"; /* The scripts 'support' email address. Used only for user reference, and to create the obfuscated 'support' email address. */
 
 /* Script [ obfuscated ] Support Email Address. */
 
@@ -94,7 +94,7 @@ if (empty($twitter_usrn))
 	{
 		$twitter_usrn = $script_twitter_usrn;
 	};
-
+	
 if ((!empty($twitter_usrn))&&($twitter_usrn[0]=='@'))
 	{
 		$twitter_usrn = ltrim($twitter_usrn, '@');
