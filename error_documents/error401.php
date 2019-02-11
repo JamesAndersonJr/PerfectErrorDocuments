@@ -115,7 +115,7 @@ if ( file_exists(dirname(__FILE__)."/includes/royalty.php") )
 
 <meta name="viewport" content="width=device-width, initial-scale=0.8">
 
-<!-- Google Plus Metadata (i.e. "Structured Data") Tags [BEGIN] -->
+<!-- Google Search Metadata (i.e. "Structured Data") Tags [BEGIN] -->
 
 <meta itemprop="name" content="<?php echo $meta_tag_site_name; ?>">
 <meta itemprop="image" content="<?php echo $meta_tag_site_image; ?>">
@@ -128,7 +128,7 @@ if ( file_exists(dirname(__FILE__)."/includes/royalty.php") )
 <meta itemprop="error" content="<?php echo substr($meta_tag_site_name,8); ?>">
 <meta itemprop="recipient" content="<?php echo $client_ip; ?>">
 
-<!-- Google Plus Metadata (i.e. "Structured Data") Tags [END] -->
+<!-- Google Search Metadata (i.e. "Structured Data") Tags [END] -->
 
 <!-- Facebook / Open Graph Tags [BEGIN] -->
 

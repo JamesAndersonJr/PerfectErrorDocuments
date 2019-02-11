@@ -128,7 +128,7 @@ else
 
 <meta name="viewport" content="width=device-width, initial-scale=0.8">
 
-<!-- Google Plus Metadata (i.e. "Structured Data") Tags [BEGIN] -->
+<!-- Google Search Metadata (i.e. "Structured Data") Tags [BEGIN] -->
 
 <meta itemprop="name" content="<?php echo $meta_tag_site_name; ?>">
 <meta itemprop="image" content="<?php echo $meta_tag_site_image; ?>">
@@ -137,7 +137,7 @@ else
 <meta itemprop="inLanguage" content="<?php echo str_replace("_", "-", $og_locale); ?>">
 <meta itemprop="agent" content="<?php echo $script_name; ?> v.<?php echo $script_version; ?>">
 
-<!-- Google Plus Metadata (i.e. "Structured Data") Tags [END] -->
+<!-- Google Search Metadata (i.e. "Structured Data") Tags [END] -->
 
 <!-- Facebook / Open Graph Tags [BEGIN] -->
 
