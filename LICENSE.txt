@@ -1,4 +1,4 @@
-LICENSE AGREEMENT
+﻿LICENSE AGREEMENT
 =======================================================================
 -----------------------------------------------------------------------
 Agreement Compliance
@@ -135,7 +135,7 @@ Questions & Inquiries
 Please forward all questions, inquires, and feedback to the proper 24/7 
 email account, as outlined below:
 
-General Inquiries:				info@perfecterrordocs.com
+General Inquiries:			info@perfecterrordocs.com
 
 Sales & Customer Support:		cs@perfecterrordocs.com
 
