@@ -1,6 +1,31 @@
 -----------------------------------------------------------------------
 Perfect Error Documents (PED) - CHANGELOG
 -----------------------------------------------------------------------
+PED v.3.0.0 - 2020-01-07 James Anderson Jr. <james@jamesandersonjr.com>
+-----------------------------------------------------------------------
+
+- Improved abbreviations of PHP variable names in the following files: 
+  'error401.php', 'error403.php','error404.php', 'error500.php',
+  'javascript-test.php', 'config.php', 'domain_info.php', 
+  'ip_info.php', 'royalty.php', 'supp_funcs.php'
+- Improved abbreviations of JS variable names in the following files:
+  'viewport_fix.js', 'viewport_fix.min.js', 'javascript-test.php'
+- Changed file name 'open_graph_image.php', to 'og_img.php'
+- Added additional CSS classes to:'error_docs.css', 'error_docs.min.css'
+- Corrected sentence structure errors in code comments
+- Corrected grammatical and punctuation errors in code comments
+- Added 'cur_url_f_pth' PHP variable to 'includes/domain_info.php'
+- Added 'cur_url_f_dir' PHP variable to 'includes/domain_info.php'
+- Fixed MIME detection of PHP-based Open Graph image
+- Condensed, simplified, and improved JS on main error documents pages
+- Fixed Google translated text not properly retaining capitalization
+- Other minor bug fixes, and improvements
+- Updated 'Installation_Guide.pdf'
+- Updated 'License_Agreement.pdf'
+- Updated 'Major' version number
+- Re-Released [Retroactively] under the MIT License
+
+-----------------------------------------------------------------------
 PED v.2.1.0 - 2019-02-05 James Anderson Jr. <james@jamesandersonjr.com>
 -----------------------------------------------------------------------
 

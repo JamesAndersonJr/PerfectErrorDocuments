@@ -4,7 +4,7 @@ Perfect Error Documents
 The perfect PHP script for effectively managing most website error documents!
 
 -----------------------------------------------------------------------
-Script Name : Perfect Error Documents | Version : 2.1.0
+Script Name : Perfect Error Documents | Version : 3.0.0
 -----------------------------------------------------------------------
 
 Author : James Anderson Jr. (Email: [ james@jamesandersonjr.com ] | Web: [ https://card.jamesandersonjr.com ])
@@ -23,7 +23,7 @@ Copyright :
 
 Copyright © 2019 James Anderson Jr.
 
-This file is part of the "Perfect Error Documents v.2.x.x" online script.
+This file is part of the "Perfect Error Documents v.3.x.x" online script.
 
 "Perfect Error Documents" ("PED") online script is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the full "PED" license agreement at [ https://www.perfecterrordocs.com/license/ ].
 
@@ -35,9 +35,9 @@ For support, and all other inquiries, please feel free to email us at: cs [at] p
 SYSTEM REQUIREMENTS :
 -----------------------------------------------------------------------
 
-Web Server: Apache 2.x hosted on UNIX/Linux
+Web Server: Apache 2.x (or later) hosted on UNIX/Linux
 
-PHP: PHP 5.4.x or Later
+PHP: PHP 5.4.x (or later)
 
 Database: *Not Required*
 
@@ -55,31 +55,31 @@ TO INSTALL :
 
  3. Locate, and update line | 47 |, as shown below, to the actual location of your webmasters contact page.
 
-	47 | $webmaster_link = "/contact_webmaster.php";
+	47 | $wbmstr_lnk = '/contact_webmaster.php';
 
-	(e.g. $webmaster_link = "/contact_wm.php";)
+	(e.g. $wbmstr_lnk = '/contact_wm.php';)
 
 	* Side Note: | This can be a relative URL, a root-relative URL (as shown above), an absolute URL, or a 'MailTo:' email link. Just make sure it points to the correct location of your webmasters contact info.
 
  4. Locate, and update line | 51 |, as shown below, to include your 'Facebook App ID', if you have a 'Facebook App'. If not, you can create one here: [ https://developers.facebook.com ].
 
-	51 | $facebook_app_id = "";
+	51 | $fb_app_id = '';
 
  5. Locate, and update line | 53 |, as shown below, to include your 'Facebook Page ID', if you have a 'Facebook Page'. If not, you can create one here: [ https://www.facebook.com/pages/creation/ ].
 
-	53 | $facebook_page_id = "";
+	53 | $fb_pg_id = '';
 
 	* Side Note: | You must be signed into an active Facebook (see: [ https://www.facebook.com ]) account, in order to create a new 'Facebook App', or a new 'Facebook Page'.
 
  6. Locate, and update line | 57 |, as shown below, to include your 'Twitter' (see: [ https://twitter.com ]) username, if you have a 'Twitter' account for your website. If not, you can create one here: [ https://twitter.com/signup ].
 
-	57 | $twitter_usrn = "";
+	57 | $twtr_usrn = '';
 
-	* Side Note: | ALL of the social media account PHP variables, such as '$facebook_app_id', '$facebook_page_id', and '$twitter_usrn' will gracefully fallback to PED's own default social media account information, if you do not enter any overriding values of your own (So, if you skip steps (4-6), and you decide to leave one, or more, of them blank, it won't break anything).
+	* Side Note: | ALL of the social media account PHP variables, such as '$fb_app_id', '$fb_pg_id', and '$twtr_usrn' will gracefully fallback to PED's own default social media account information, if you do not enter any overriding values of your own (So, if you skip steps (4-6), and you decide to leave one, or more, of them blank, it won't break anything).
 
  7. Locate, and update line | 61 |, as shown below, to include your websites current locale. Use the format: 'language_TERRITORY'. For a list of valid locales, visit: [ https://fbdevwiki.com/wiki/Locales ].
 
-	61 | $locale = "";
+	61 | $locale = '';
 
  8. Save, and close, the 'config.php' file.
 

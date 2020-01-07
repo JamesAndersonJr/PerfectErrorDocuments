@@ -4,15 +4,15 @@
 
 /* Script Author. */
 
-$script_author = "James Anderson Jr. | Web Profile: https://card.jamesandersonjr.com";
+$scr_au = 'James Anderson Jr. | Web Profile: https://card.jamesandersonjr.com';
 
 /* Script Name. */
 
-$script_name = "Perfect Error Documents";
+$scr_nm = 'Perfect Error Documents';
 
 /* Script Version. */
 
-$script_version = "2.1.0";
+$scr_ver = '3.0.0';
 
 /* Get 'Last Modification' Date/Time. [BEGIN] */
 
@@ -28,90 +28,90 @@ $last_mod_date = strval($last_mod_date->format('l, F d, Y h:i:s A T')); /* Get t
 
 /* Script Website. */
 
-$script_website = "https://www.perfecterrordocs.com"; /* Don't worry, this is NOT used to "phone home"! It is only referenced in royalty attribution links. */
+$scr_site = 'https://www.perfecterrordocs.com'; /* Don't worry, this is NOT used to "phone home"! It is only referenced in royalty attribution links. */
 
 /* Script Support Email Address. */
 
-$script_support_email = "cs@perfecterrordocs.com"; /* The scripts 'support' email address. Used only for user reference, and to create the obfuscated 'support' email address. */
+$scr_sprt_eml = 'cs@perfecterrordocs.com'; /* The scripts 'support' email address. Used only for user reference, and to create the obfuscated 'support' email address. */
 
 /* Script [ obfuscated ] Support Email Address. */
 
-$script_obfus_support_email = str_replace("."," [dot] ",str_replace("@"," [at] ",$script_support_email));
+$scr_obfus_sprt_eml = str_replace('.',' [dot] ',str_replace('@',' [at] ',$scr_sprt_eml));
 
 /* Script Properties - DO NOT EDIT [ABOVE] */
 
 /* Edit [BELOW], if necessary, to customize the script. */
 
-/* Enter your webmasters contact URL address below. It can be a relative URL, an absolute URL, or a 'MailTo:' email link (e.g. $webmaster_link = "/contact_webmaster.php";). */
+/* Enter your webmaster's contact URL address below. It can be a relative URL, an absolute URL, or a 'MailTo:' email link (e.g. $wbmstr_lnk = '/contact_webmaster.php';). */
 
-$webmaster_link = "/contact_webmaster.php";
+$wbmstr_lnk = '/contact_webmaster.php';
 
 /* Enter your Facebook 'App ID' & 'Page ID' below. Visit: https://developers.facebook.com , for an new app ID, if you don't already have one. */
 
-$facebook_app_id = ""; /* If you leave this blank, the script will default to its own Facebook 'App ID'. */
+$fb_app_id = ''; /* If you leave this blank, the script will fallback to a default Facebook 'App ID'. */
 
-$facebook_page_id = ""; /* If you leave this blank, the script will default to its own Facebook 'Page ID'. */
+$fb_pg_id = ''; /* If you leave this blank, the script will fallback to a default Facebook 'Page ID'. */
 
 /* Enter your Twitter username below. Remember: DO NOT include the '@' symbol, as it will be added by the script, automatically. */
 
-$twitter_usrn = ""; /* If you leave this blank, the script will default to its own Twitter username. */
+$twtr_usrn = ''; /* If you leave this blank, the script will fallback to a default Twitter username. */
 
 /* Enter your locale below, in the format: 'language_TERRITORY'. For a list of valid locales, visit: https://fbdevwiki.com/wiki/Locales */
 
-$locale = ""; /* If you leave this blank, the script will default to 'en_US' locale. */
+$locale = ''; /* If you leave this blank, the script will fallback to the default 'en_US' locale. */
 
 /* Edit [ABOVE], if necessary, to customize the script. */
 
 /* Script Conditional Statements - DO NOT EDIT [BELOW] */
 
-/* If Facebook 'App ID' not entered, default to the script's own Facebook 'App ID'. [BEGIN] */
+/* If Facebook 'App ID' not entered, fallback to the default Facebook 'App ID' of the script. [BEGIN] */
 
-$script_facebook_app_id = "1421670971246284";
+$scr_fb_app_id = '1421670971246284';
 
-if (empty($facebook_app_id))
+if (empty($fb_app_id))
 	{
-		$facebook_app_id = $script_facebook_app_id;
+		$fb_app_id = $scr_fb_app_id;
 	};
 
-/* If Facebook 'App ID' not entered, default to the script's own Facebook 'App ID'. [END] */
+/* If Facebook 'App ID' not entered, fallback to the default Facebook 'App ID' of the script. [END] */
 
-/* If Facebook 'Page ID' not entered, default to the script's own Facebook 'Page ID'. [BEGIN] */
+/* If Facebook 'Page ID' not entered, fallback to the default Facebook 'Page ID' of the script. [BEGIN] */
 
-$script_facebook_page_id = "775281312545105";
+$scr_fb_pg_id = '775281312545105';
 
-if (empty($facebook_page_id))
+if (empty($fb_pg_id))
 	{
-		$facebook_page_id = $script_facebook_page_id;
+		$fb_pg_id = $scr_fb_pg_id;
 	};
 
-/* If Facebook 'Page ID' not entered, default to the script's own Facebook 'Page ID'. [END] */
+/* If Facebook 'Page ID' not entered, fallback to the default Facebook 'Page ID' of the script. [END] */
 
-/* If Twitter username not entered, default to the script's own Twitter username. [BEGIN] */
+/* If Twitter username not entered, fallback to the default Twitter username of the script. [BEGIN] */
 
-$script_twitter_usrn = "PerfErrorDocs";
+$scr_twtr_usrn = 'PerfErrorDocs';
 
-if (empty($twitter_usrn))
+if (empty($twtr_usrn))
 	{
-		$twitter_usrn = $script_twitter_usrn;
+		$twtr_usrn = $scr_twtr_usrn;
 	};
 
-if ((!empty($twitter_usrn))&&($twitter_usrn[0]=='@'))
+if ((!empty($twtr_usrn))&&($twtr_usrn[0]=='@'))
 	{
-		$twitter_usrn = ltrim($twitter_usrn, '@');
+		$twtr_usrn = ltrim($twtr_usrn, '@');
 	};
 
-/* If Twitter username not entered, default to the script's own Twitter username. [END] */
+/* If Twitter username not entered, fallback to the default Twitter username of the script. [END] */
 
 /* If locale not entered, default to 'en_US' locale. [BEGIN] */
 
-$script_dflt_locale = "en_US";
+$scr_dflt_locale = 'en_US';
 
 if (empty($locale))
 	{
-		$locale = $script_dflt_locale;
+		$locale = $scr_dflt_locale;
 	};
 
-$og_locale = str_replace("-", "_", $locale);
+$og_locale = str_replace('-', '_', $locale);
 
 /* If locale not entered, default to 'en_US' locale. [END] */
 

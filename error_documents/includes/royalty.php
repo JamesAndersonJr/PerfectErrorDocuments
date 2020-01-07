@@ -1,18 +1,18 @@
 <!--
 
-This web-page is part of the '<?php echo $script_name; ?>' version <?php echo $script_version; ?> online script.
+This web-page is part of the '<?php echo $scr_nm; ?>' version <?php echo $scr_ver; ?> online script.
 
-A free copy of the '<?php echo $script_name; ?>' online script can be found here: [ <?php echo $script_website; ?>/download/ ].
+A free copy of the '<?php echo $scr_nm; ?>' online script can be found here: [ <?php echo $scr_site; ?>/download/ ].
 
-You may make a voluntary donation for the developer(s) of the script here: [ <?php echo $script_website; ?>/donate/ ].
+You may make a voluntary donation for the developer(s) of the script here: [ <?php echo $scr_site; ?>/donate/ ].
 
-For more information, documentation, and additional download links to all future versions of this script, please visit us at: [ <?php echo $script_website; ?> ].
+For more information, documentation, and additional download links to all future versions of this script, please visit us at: [ <?php echo $scr_site; ?> ].
 
-'<?php echo $script_name; ?>' online script is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+'<?php echo $scr_nm; ?>' online script is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
 
-See the full license agreement at: [ <?php echo $script_website; ?>/license/ ]. You should have received a PDF copy of the license agreement, along with your download of '<?php echo $script_name; ?>' online script.
+See the full license agreement at: [ <?php echo $scr_site; ?>/license/ ]. You should have received a PDF copy of the license agreement, along with your download of the '<?php echo $scr_nm; ?>' online script.
 
-If not, please visit: [ <?php echo $script_website; ?>/license/ ], for your free copy. For support, and all other general inquiries, please feel free to email us at: <?php echo $script_obfus_support_email; ?>.
+If not, please visit: [ <?php echo $scr_site; ?>/license/ ], for your free copy. For support, and all other general inquiries, please feel free to email us at: <?php echo $scr_obfus_sprt_eml; ?>.
 
 Thank You!
 
