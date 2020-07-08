@@ -114,11 +114,11 @@ if (file_exists(dirname(__FILE__).'/includes/royalty.php'))
 <meta name="keywords" content="<?php echo $meta_tag_pg_kywrds; ?>">
 <meta name="author" content="<?php echo $scr_nm; ?>">
 <meta name="web_author" content ="<?php echo $scr_au; ?>">
-<meta name="robots" content="noindex,nofollow">
-<meta name="slurp" content="noindex,nofollow"> <!-- For 'Yahoo!' bot -->
-<meta name="msnbot" content="noindex,nofollow"> <!-- For 'Bing' bot -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="slurp" content="noindex, nofollow"> <!-- For 'Yahoo!' bot -->
+<meta name="msnbot" content="noindex, nofollow"> <!-- For 'Bing' bot -->
 
-<meta name="viewport" content="width=device-width, initial-scale=0.8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Google Search Metadata (i.e. "Structured Data") Tags [BEGIN] -->
 
@@ -241,7 +241,7 @@ if (function_exists('doesFileExistAtURL'))
 		<p>
 		<span class="txt_trsfm_cap_forc">If</span> you do nothing, you will be redirected
 		<br>
-		to the <a href="/" target="_self">home page</a> of this site, in (<input type="text" name="sec" id="sec" value="30" class="no_sel sec_ctr" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.
+		to the <a href="/" target="_self">home page</a> of this site, <span class="no_wrap">in (<input type="text" name="sec" id="sec" value="30" class="no_sel sec_ctr" maxlength="2" onfocus="blur();" readonly="readonly">) seconds.</span>
 		</p>
 
 	</div>

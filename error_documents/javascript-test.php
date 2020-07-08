@@ -127,11 +127,11 @@ else
 <meta name="keywords" content="<?php echo $meta_tag_pg_kywrds; ?>">
 <meta name="author" content="<?php echo $scr_nm; ?>">
 <meta name="web_author" content ="<?php echo $scr_au; ?>">
-<meta name="robots" content="noindex,nofollow">
+<meta name="robots" content="noindex, nofollow">
 <meta name="slurp" content="noindex, nofollow"> <!-- For 'Yahoo!' bot -->
 <meta name="msnbot" content="noindex, nofollow"> <!-- For 'Bing' bot -->
 
-<meta name="viewport" content="width=device-width, initial-scale=0.8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Google Search Metadata (i.e. "Structured Data") Tags [BEGIN] -->
 
@@ -277,7 +277,7 @@ function rtnToPrevPg()
 
 		<h1 id="hdg"><span class="txt_trsfm_cap_forc">JavaScript</span> is <span class="txt_trsfm_cap_forc">Disabled</span> in <span class="txt_trsfm_cap_forc">Your Web Browser</span>.</h1>
 
-		<p id="msg" style="line-height:150%">
+		<p id="msg">
 		<span class="txt_trsfm_cap_forc">For</span> full functionality of this website, it is necessary to
 		<br>
 		<a href="https://www.enable-javascript.com" target="_blank"><span class="txt_trsfm_cap_forc">Enable JavaScript</span> in your <span class="txt_trsfm_cap_forc">Web Browser</span></a>.
@@ -309,7 +309,7 @@ function rtnToPrevPg()
 
 document.getElementById('hdg').innerHTML = '<span style="color:#39BF45 !important;"><span class="txt_trsfm_cap_forc">JavaScript</span> is <span class="txt_trsfm_cap_forc">Enabled</span> in <span class="txt_trsfm_cap_forc">Your Web Browser</span>.</span>';
 document.getElementById('msg').innerHTML = '<span class="txt_trsfm_cap_forc">Congratulations!</span> <span class="txt_trsfm_cap_forc">JavaScript</span> is enabled, and working properly in your web browser.';
-document.getElementById('act_bttns').innerHTML = '<button class="bttn" onclick="rtnToPrevPg();"><span class="txt_trsfm_cap_forc">Close</span> this <span class="txt_trsfm_cap_forc">Window</span> ( <span id="ctr"></span> )</button>';
+document.getElementById('act_bttns').innerHTML = '<button class="bttn" onclick="rtnToPrevPg();"><span class="txt_trsfm_cap_forc">Close</span> this <span class="txt_trsfm_cap_forc">Window</span> <span class="no_wrap">(&#8202;<span id="ctr"></span>&#8202;)</span></button>';
 
 </script>
 

@@ -3,7 +3,7 @@
 
 *“The perfect PHP script for effectively managing most website error documents!”*
 
-## Script Name : Perfect Error Documents | Version : 3.0.0 ##
+## Script Name : Perfect Error Documents | Version : 4.0.0 ##
 
 Author : James Anderson Jr. (Email: [james@jamesandersonjr.com](https://www.jamesandersonjr.com/contact-james.php "Contact the Author via Email"); Web : [https://card.jamesandersonjr.com](https://card.jamesandersonjr.com "View the Author’s Website"))
 
@@ -20,7 +20,7 @@ Demo Address : [https://www.perfecterrordocs.com/demo/](https://www.perfecterror
 
 Copyright © 2020 James Anderson Jr.
 
-This file is part of the **“Perfect Error Documents v.3.x.x” online script**.
+This file is part of the **“Perfect Error Documents v.4.x.x” online script**.
 
 **“Perfect Error Documents” (“PED”) online script** is distributed in the hope that it will be useful, but **WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE**. See the full “PED” license agreement at [ [https://www.perfecterrordocs.com/license/](https://www.perfecterrordocs.com/license/ "View the Perfect Error Documents &#010;License Agreement") ].
 

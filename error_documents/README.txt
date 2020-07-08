@@ -4,7 +4,7 @@ SCRIPT PROFILE:
 
 Script: 'Perfect Error Documents' Online Script
 
-Version: 3.0.0
+Version: 4.0.0
 
 Website: https://www.perfecterrordocs.com
 

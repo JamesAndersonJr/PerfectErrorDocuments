@@ -12,7 +12,7 @@ $scr_nm = 'Perfect Error Documents';
 
 /* Script Version. */
 
-$scr_ver = '3.0.0';
+$scr_ver = '4.0.0';
 
 /* Get 'Last Modification' Date/Time. [BEGIN] */
 
