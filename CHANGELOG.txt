@@ -1,21 +1,51 @@
 -----------------------------------------------------------------------
 Perfect Error Documents (PED) - CHANGELOG
 -----------------------------------------------------------------------
-PED v.3.0.0 - 2020-01-07 James Anderson Jr. <james@jamesandersonjr.com>
+PED v.5.0.0: 2024-05-28 James Anderson Jr. <james@perfecterrordocs.com>
+-----------------------------------------------------------------------
+
+- Updated and modernized image assets
+- Fixed blurry 'G' logo on high resolution displays, via CSS overriding
+- Fixed critical bug in function 'doesFileExistAtURL(...)'
+- Added directives to '.htaccess' to 'auto-redirect' incorrect requests
+- Added '$redir_dly_secs' variable, to centrally control redirect delay
+- Royalty statement can now be toggled off via '$shw_roy_stmt'(Boolean)
+- Improved metadata variables and constants names for better uniformity
+- Improved metadata (e.g., 'title', 'descr', etc.) info to optimize SEO
+- Improved CSS minification
+- Renamed 'Installation_Guide.pdf' to 'installation-guide.pdf'
+- Renamed 'License_Agreement.pdf' to 'license-agreement.pdf'
+- Updated 'installation-guide.pdf' & 'license-agreement.pdf'
+- Updated 'README.txt'
+- Various minor QOL improvements
+- Updated 'Major' version number
+
+-----------------------------------------------------------------------
+PED v.4.0.0: 2020-07-07 James Anderson Jr. <james@perfecterrordocs.com>
+-----------------------------------------------------------------------
+
+- Improved legibility of text, and fixed various other styling issues
+- Other unspecified bug fixes, and improvements
+- Updated 'Installation_Guide.pdf'
+- Updated 'License_Agreement.pdf'
+- Updated 'Major' version number
+
+-----------------------------------------------------------------------
+PED v.3.0.0: 2020-01-07 James Anderson Jr. <james@perfecterrordocs.com>
 -----------------------------------------------------------------------
 
 - Improved abbreviations of PHP variable names in the following files: 
   'error401.php', 'error403.php','error404.php', 'error500.php',
-  'javascript-test.php', 'config.php', 'domain_info.php', 
-  'ip_info.php', 'royalty.php', 'supp_funcs.php'
+  'javascript-test.php', 'config.php', 'domain-info.php', 
+  'ip-info.php', 'royalty.php', 'supp-funcs.php'
 - Improved abbreviations of JS variable names in the following files:
-  'viewport_fix.js', 'viewport_fix.min.js', 'javascript-test.php'
+  'viewport-fix.js', 'viewport-fix.min.js', 'javascript-test.php'
 - Changed file name 'open_graph_image.php', to 'og_img.php'
-- Added additional CSS classes to:'error_docs.css', 'error_docs.min.css'
+- Added additional CSS classes to:'error-docs.css', 'error-docs.min.css'
 - Corrected sentence structure errors in code comments
 - Corrected grammatical and punctuation errors in code comments
-- Added 'cur_url_f_pth' PHP variable to 'includes/domain_info.php'
-- Added 'cur_url_f_dir' PHP variable to 'includes/domain_info.php'
+- Added 'cur_url_f_pth' PHP variable to 'includes/domain-info.php'
+- Added 'cur_url_f_dir' PHP variable to 'includes/domain-info.php'
 - Fixed MIME detection of PHP-based Open Graph image
 - Condensed, simplified, and improved JS on main error documents pages
 - Fixed Google translated text not properly retaining capitalization
@@ -26,7 +56,7 @@ PED v.3.0.0 - 2020-01-07 James Anderson Jr. <james@jamesandersonjr.com>
 - Re-Released [Retroactively] under the MIT License
 
 -----------------------------------------------------------------------
-PED v.2.1.0 - 2019-02-05 James Anderson Jr. <james@jamesandersonjr.com>
+PED v.2.1.0: 2019-02-05 James Anderson Jr. <james@perfecterrordocs.com>
 -----------------------------------------------------------------------
 
 - Improved code consistency: 
@@ -34,8 +64,8 @@ PED v.2.1.0 - 2019-02-05 James Anderson Jr. <james@jamesandersonjr.com>
 - *NEW* Added new non-conflicting CSS class name [ bttn ]
 - Renamed (abbreviated) some CSS classes
 - Renamed (abbreviated) some PHP variables
-- Condensed and improved the 'supp_funcs.php' file in 'includes' folder
-- Clarified comments in the 'domain_info.php' file in 'includes' folder
+- Condensed and improved the 'supp-funcs.php' file in 'includes' folder
+- Clarified comments in the 'domain-info.php' file in 'includes' folder
 - *NEW* Added more 'clauses' to the License Agreement
 - *NEW* Added 'contact emails' to the License Agreement
 - Fixed some grammatical errors in the License Agreement
@@ -43,11 +73,11 @@ PED v.2.1.0 - 2019-02-05 James Anderson Jr. <james@jamesandersonjr.com>
 - Updated 'Minor' version number
 
 -----------------------------------------------------------------------
-PED v.2.0.0 - 2019-01-22 James Anderson Jr. <james@jamesandersonjr.com>
+PED v.2.0.0: 2019-01-22 James Anderson Jr. <james@perfecterrordocs.com>
 -----------------------------------------------------------------------
 
 - CSS reorganization
-- Changed PHP variable names in '/includes/domain_info.php'
+- Changed PHP variable names in '/includes/domain-info.php'
 - Updated PHP variable names in the following files: 
   'error401.php', 'error403.php','error404.php', 'error500.php', and
   'javascript-test.php'
@@ -64,7 +94,7 @@ PED v.2.0.0 - 2019-01-22 James Anderson Jr. <james@jamesandersonjr.com>
 - Updated 'Major' version number
 
 -----------------------------------------------------------------------
-PED v.1.8.1 - 2019-01-15 James Anderson Jr. <james@jamesandersonjr.com>
+PED v.1.8.1: 2019-01-15 James Anderson Jr. <james@perfecterrordocs.com>
 -----------------------------------------------------------------------
 
 - Optimized 'index.php' for better error reporting
@@ -72,7 +102,7 @@ PED v.1.8.1 - 2019-01-15 James Anderson Jr. <james@jamesandersonjr.com>
 - Updated 'Patch' version number
 
 -----------------------------------------------------------------------
-PED v.1.8.0 - 2019-01-08 James Anderson Jr. <james@jamesandersonjr.com>
+PED v.1.8.0: 2019-01-08 James Anderson Jr. <james@perfecterrordocs.com>
 -----------------------------------------------------------------------
 
 - Optimized and minified external CSS
@@ -81,7 +111,7 @@ PED v.1.8.0 - 2019-01-08 James Anderson Jr. <james@jamesandersonjr.com>
 - Updated 'Minor' version number
 
 -----------------------------------------------------------------------
-PED v.1.7.8 - 2018-09-25 James Anderson Jr. <james@jamesandersonjr.com>
+PED v.1.7.8: 2018-09-25 James Anderson Jr. <james@perfecterrordocs.com>
 -----------------------------------------------------------------------
 
 - Added 'script_author' PHP variable, to 'config/config.php'
@@ -90,17 +120,17 @@ PED v.1.7.8 - 2018-09-25 James Anderson Jr. <james@jamesandersonjr.com>
 - Added 'web_author' meta tag, to all visible PHP pages
 - Added meta property 'og:updated_time', to all visible PHP pages
 - Removed 'googlebot', and 'teoma' meta tags, in favor of 'robots' tag
-- Renamed 'css/error_pages.css' to 'css/error_docs.css'
+- Renamed 'css/error_pages.css' to 'css/error-docs.css'
 - Minified '.js' and '.css' assets
 - Updated documentation (README.md & README.txt)
 - Updated 'Patch' version number
 
 -----------------------------------------------------------------------
-PED v.1.7.7 - 2017-12-12 James Anderson Jr. <james@jamesandersonjr.com>
+PED v.1.7.7: 2017-12-12 James Anderson Jr. <james@perfecterrordocs.com>
 -----------------------------------------------------------------------
 
 - Moved all "internal" CSS to a single "external" CSS file
-- Added new file: "includes/ip_info.php"
+- Added new file: "includes/ip-info.php"
 - Added new "Structured Data" tags, to 'error [***] pages: 
   'actionStatus', 'error', & 'recipient'
   Added new 'Open Graph' tags, to all pages:
@@ -110,7 +140,7 @@ PED v.1.7.7 - 2017-12-12 James Anderson Jr. <james@jamesandersonjr.com>
 - Updated 'Patch' version number
 
 -----------------------------------------------------------------------
-PED v.1.7.6 - 2017-12-05 James Anderson Jr. <james@jamesandersonjr.com>
+PED v.1.7.6: 2017-12-05 James Anderson Jr. <james@perfecterrordocs.com>
 -----------------------------------------------------------------------
 
 - Added new "Structured Data" tags: 'about', 'inLanguage', & 'agent'
@@ -121,7 +151,7 @@ PED v.1.7.6 - 2017-12-05 James Anderson Jr. <james@jamesandersonjr.com>
 - Updated 'Patch' version number
 
 -----------------------------------------------------------------------
-PED v.1.7.5 - 2017-11-21 James Anderson Jr. <james@jamesandersonjr.com>
+PED v.1.7.5: 2017-11-21 James Anderson Jr. <james@perfecterrordocs.com>
 -----------------------------------------------------------------------
 
 - Changed "schema.org" type from 'Action', to 'InformAction'
@@ -132,7 +162,7 @@ PED v.1.7.5 - 2017-11-21 James Anderson Jr. <james@jamesandersonjr.com>
 - Updated 'Patch' version number
 
 -----------------------------------------------------------------------
-PED v.1.7.4 - 2017-06-27 James Anderson Jr. <james@jamesandersonjr.com>
+PED v.1.7.4: 2017-06-27 James Anderson Jr. <james@perfecterrordocs.com>
 -----------------------------------------------------------------------
 
 - Added "og:image:url" for redundancy
@@ -142,7 +172,7 @@ PED v.1.7.4 - 2017-06-27 James Anderson Jr. <james@jamesandersonjr.com>
 - Updated 'Patch' version number
 
 -----------------------------------------------------------------------
-PED v.1.7.3 - 2017-06-20 James Anderson Jr. <james@jamesandersonjr.com>
+PED v.1.7.3: 2017-06-20 James Anderson Jr. <james@perfecterrordocs.com>
 -----------------------------------------------------------------------
 
 - Added itemprop="url" property to Google "Structured-Data" tags
@@ -150,7 +180,7 @@ PED v.1.7.3 - 2017-06-20 James Anderson Jr. <james@jamesandersonjr.com>
 - Updated 'Patch' version number
 
 -----------------------------------------------------------------------
-PED v.1.7.2 - 2017-06-06 James Anderson Jr. <james@jamesandersonjr.com>
+PED v.1.7.2: 2017-06-06 James Anderson Jr. <james@perfecterrordocs.com>
 -----------------------------------------------------------------------
 
 - Removed unnecessary image files (replaced with script-embedded Base64)
@@ -164,14 +194,14 @@ PED v.1.7.2 - 2017-06-06 James Anderson Jr. <james@jamesandersonjr.com>
 - Updated 'Patch' version number
 
 -----------------------------------------------------------------------
-PED v.1.7.1 - 2017-05-30 James Anderson Jr. <james@jamesandersonjr.com>
+PED v.1.7.1: 2017-05-30 James Anderson Jr. <james@perfecterrordocs.com>
 -----------------------------------------------------------------------
 
 - Minor bug fixes, and improvements
 - Updated 'Patch' version number
 
 -----------------------------------------------------------------------
-PED v.1.7.0 - 2017-05-02 James Anderson Jr. <james@jamesandersonjr.com>
+PED v.1.7.0: 2017-05-02 James Anderson Jr. <james@perfecterrordocs.com>
 -----------------------------------------------------------------------
 
 - Improved mobile device support

@@ -1,0 +1,50 @@
+# ################################################################### #
+# Turn on 'mod_rewrite':
+# ################################################################### #
+
+RewriteEngine On
+RewriteBase /
+
+# ################################################################### #
+# Disable directory browsing.:
+# ################################################################### #
+
+Options -Indexes
+
+# ################################################################### #
+# Hide directory contents:
+# ################################################################### #
+
+IndexIgnore *
+
+# ################################################################### #
+# Protect [ .htaccess ], and all [ error_log ] files, from public view:
+# ################################################################### #
+
+<FilesMatch "(?i)(\.htaccess|error_log)$">
+deny from all
+</FilesMatch>
+
+# ################################################################### #
+# Protect other sensitive files, and directories, from public view:
+# ################################################################### #
+
+<FilesMatch "(README\.txt)$">
+deny from all
+</FilesMatch>
+
+RedirectMatch 403 ^.*\/config\/.*$
+RedirectMatch 403 ^.*\/docs\/.*$
+RedirectMatch 403 ^.*\/includes\/.*$
+
+# ################################################################### #
+# Auto-Redirect incorrect requests:
+# ################################################################### #
+
+RewriteRule ^((error(\_|\-)401\.php)|(error(\_|\-)?401))$ error-documents/error401.php [NE,R=301,L]
+RewriteRule ^((error(\_|\-)403\.php)|(error(\_|\-)?403))$ error-documents/error403.php [NE,R=301,L]
+RewriteRule ^((error(\_|\-)404\.php)|(error(\_|\-)?404))$ error-documents/error404.php [NE,R=301,L]
+RewriteRule ^((error(\_|\-)500\.php)|(error(\_|\-)?500))$ error-documents/error500.php [NE,R=301,L]
+RewriteRule ^((test(\_|\-)(javascript|js)(\.php)?)|((javascript|js)(\_|\-)test)|(js(\_|\-)test\.php))$ error-documents/javascript-test.php [NE,R=301,L]
+
+# ################################################################### #

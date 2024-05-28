@@ -4,17 +4,17 @@ SCRIPT PROFILE:
 
 Script: 'Perfect Error Documents' Online Script
 
-Version: 3.0.0
+Version: 5.0.0
 
 Website: https://www.perfecterrordocs.com
 
 Downloads: https://www.perfecterrordocs.com/download/
 
-Author: James Anderson Jr. | https://card.jamesandersonjr.com
+Author: James Anderson Jr. | https://www.jamesandersonjr.com
 
 Documentation: Please see '/docs/' folder.
 
-Support: cs@perfecterrordocs.com
+Support: 'PED Customer Support' <cs@perfecterrordocs.com>
 
 -------------------------------------------------------------
-Copyright © 2020 James Anderson Jr.
+Copyright © 2024 James Anderson Jr.

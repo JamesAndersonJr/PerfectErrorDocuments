@@ -1,7 +1,7 @@
 LICENSE AGREEMENT (MIT)
 =======================================================================
 
-Copyright © 2020 James Anderson Jr. | https://www.jamesandersonjr.com
+Copyright © 2024 James Anderson Jr. | https://www.jamesandersonjr.com
 
 Permission is hereby granted, free of charge, to any person obtaining a 
 copy of this software and associated documentation files 
@@ -26,5 +26,5 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 Questions & Inquiries
 -----------------------------------------------------------------------
 
-Support Inquires: cs@perfecterrordocs.com
+Support Inquires: PED Customer Support <cs@perfecterrordocs.com>
 -----------------------------------------------------------------------
