@@ -29,7 +29,6 @@ function callErrorPage($http_status_code)
 		else /* The error page that handles that HTTP status code is not present on the server, where it should be, so report the missing file, and exit. */
 			{
 				$missing_file_line_num = intval(__LINE__) - 15;
-
 				error_log('A file is missing on line ('.$missing_file_line_num.') of file: '.__FILE__.'.', 0);
 			};
 
@@ -108,64 +107,70 @@ if (!function_exists('doesFileExistAtURL'))
 	{
 		function doesFileExistAtURL($file_url)
 			{
-				$hdrs = get_headers($file_url); /* Use 'get_headers' first, as it's much faster than cURL. */
-
-				if ((stripos($hdrs[0], '301 Moved Permanently') !== false) || (stripos($hdrs[0], '302 Moved Temporarily') !== false)) /* If '301 Moved Permanently' or '302 Moved Temporarily' is found in $hdrs[0], then... */
+				if (get_headers($file_url))
 					{
-						$ch = curl_init();
+						$hdrs = get_headers($file_url); /* Use 'get_headers' first, as it's much faster than cURL. */
 
-						curl_setopt($ch, CURLOPT_URL, $file_url);
-						curl_setopt($ch, CURLOPT_AUTOREFERER, true);
-						curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-						curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0); /* Don't Verify Host SSL. */
-						curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0); /* Don't Verify Peer SSL. */
-						curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-						curl_setopt($ch, CURLOPT_MAXREDIRS, 4);
-						curl_setopt($ch, CURLOPT_HEADER, true);
-						curl_setopt($ch, CURLOPT_NOBODY, true);
-
-						$resp_cont = curl_exec($ch);
-						$cont_type = curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
-						$resp_code = curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
-						$finl_dest = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
-
-						curl_close($ch);
-
-						/* Check the response code. */
-
-						if (preg_match('/^2\d{2}$/', trim(strval($resp_code)))) /* If the response code is any number in the range of 200 - 299, then... */
+						if ((stripos($hdrs[0], '301 Moved Permanently') !== false) || (stripos($hdrs[0], '302 Moved Temporarily') !== false)) /* If '301 Moved Permanently' or '302 Moved Temporarily' is found in $hdrs[0], then... */
 							{
-								if (pathinfo($file_url, PATHINFO_EXTENSION)) /* If the originally requested file has an extension, then... */
+								$ch = curl_init();
+
+								curl_setopt($ch, CURLOPT_URL, $file_url);
+								curl_setopt($ch, CURLOPT_AUTOREFERER, true);
+								curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+								curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0); /* Don't Verify Host SSL. */
+								curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0); /* Don't Verify Peer SSL. */
+								curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+								curl_setopt($ch, CURLOPT_MAXREDIRS, 4);
+								curl_setopt($ch, CURLOPT_HEADER, true);
+								curl_setopt($ch, CURLOPT_NOBODY, true);
+
+								$resp_cont = curl_exec($ch);
+								$cont_type = curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
+								$resp_code = curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
+								$finl_dest = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
+
+								curl_close($ch);
+
+								/* Check the response code. */
+
+								if (preg_match('/^2\d{2}$/', trim(strval($resp_code)))) /* If the response code is any number in the range of 200 - 299, then... */
 									{
-										$file_url_ext = pathinfo($file_url, PATHINFO_EXTENSION);
-
-										$ignr_ext_arr = array('php'); /* Build the ignored file extensions array. */
-
-										if (!in_array(strtolower($file_url_ext), $ignr_ext_arr)) /* If the file extension of originally requested file is not in the ignored file extensions array, then... */
+										if (pathinfo($file_url, PATHINFO_EXTENSION)) /* If the originally requested file has an extension, then... */
 											{
-												$expt_cont_type = strval(getMimeTypeFromFileNameOnly(pathinfo($file_url, PATHINFO_BASENAME))); /* Declare the 'expected' content type (e.g., 'image/png') from the base-name (e.g., 'example.png') of the originally requested file. */
+												$file_url_ext = pathinfo($file_url, PATHINFO_EXTENSION);
+												$ignr_ext_arr = array('php'); /* Build the ignored file extensions array. */
 
-												if (strpos(strval($cont_type), $expt_cont_type) === false) /* If the $expt_cont_type [ String ] is not a sub-string of the $cont_type [ String ], then... */
+												if (!in_array(strtolower($file_url_ext), $ignr_ext_arr)) /* If the file extension of originally requested file is not in the ignored file extensions array, then... */
 													{
-														return false; /* Return false, because the content-type of the content that was actually served, is not the originally expected content type. So, no further checking is necessary. */
+														$expt_cont_type = strval(getMimeTypeFromFileNameOnly(pathinfo($file_url, PATHINFO_BASENAME))); /* Declare the 'expected' content type (e.g., 'image/png') from the base-name (e.g., 'example.png') of the originally requested file. */
+
+														if (strpos(strval($cont_type), $expt_cont_type) === false) /* If the $expt_cont_type [ String ] is not a sub-string of the $cont_type [ String ], then... */
+															{
+																return false; /* Return false, because the content-type of the content that was actually served, is not the originally expected content type. So, no further checking is necessary. */
+															};
 													};
 											};
-									};
 
-								return true; /* Return true. */
+										return true; /* Return true. */
+									}
+								else
+									{
+										return false; /* Else, return false. */
+									};
+							}
+						elseif (stripos($hdrs[0], '404 Not Found') !== false) /* Else, If '404 Not Found' is found in $hdrs[0], then... */
+							{
+								return false;
 							}
 						else
 							{
-								return false; /* Else, return false. */
+								return true;
 							};
-					}
-				elseif (stripos($hdrs[0], '404 Not Found') !== false) /* Else, If '404 Not Found' is found in $hdrs[0], then... */
-					{
-						return false;
 					}
 				else
 					{
-						return true;
+						return false;
 					};
 			};
 	};
