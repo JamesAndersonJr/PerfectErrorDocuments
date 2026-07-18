@@ -1,6 +1,21 @@
 -----------------------------------------------------------------------
 Perfect Error Documents (PED) - CHANGELOG
 -----------------------------------------------------------------------
+PED v.5.1.0: 2026-07-14 James Anderson Jr. <james@perfecterrordocs.com>
+-----------------------------------------------------------------------
+
+- Fixed (2) bugs in file 'domain-info.php'
+- Fixed regression in supp-funcs.php
+- Rewrote function 'doesFileExistAtURL(...)'
+- Fixed a typo in 'error404.php'
+- Various minor QOL improvements
+- Updated 'Minor' version number
+- Updated 'README.txt' & 'README.md'
+- Updated 'installation-guide.pdf' & 'license-agreement.pdf'
+- Updated 'CHANGELOG.txt' (this document)
+- Update the official PED website with the latest PED version
+
+-----------------------------------------------------------------------
 PED v.5.0.0: 2024-05-28 James Anderson Jr. <james@perfecterrordocs.com>
 -----------------------------------------------------------------------
 

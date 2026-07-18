@@ -101,80 +101,85 @@ if (!function_exists('getMimeTypeFromFileNameOnly'))
 
 /* Function returns the MIME type of a file, based solely on its extension (i.e., without actually attempting to request the contents of the file from any source, or even attempting to verify that the file actually exists). [END] */
 
-/* Function tests if a file exists at a remote URL. PHP’s integrated function ‘file_exists()’ only works on local server paths (i.e., on your own server). This function works on most remote URLs. [BEGIN] */
+$fke_usr_agnts_arr = array
+	(
+		'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+		'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36',
+		'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36',
+		'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+		'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+		'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36'
+	);
+
+/* Function tests if a file exists at a remote URL using cURL. PHP’s integrated function ‘file_exists()’ only works on local server paths (i.e., on your own server). This function should work on most remote URLs. [BEGIN] */
 
 if (!function_exists('doesFileExistAtURL'))
 	{
 		function doesFileExistAtURL($file_url)
 			{
-				if (get_headers($file_url))
+				global $fke_usr_agnts_arr;
+
+				if (!extension_loaded('curl'))
 					{
-						$hdrs = get_headers($file_url); /* Use 'get_headers' first, as it's much faster than cURL. */
-
-						if ((stripos($hdrs[0], '301 Moved Permanently') !== false) || (stripos($hdrs[0], '302 Moved Temporarily') !== false)) /* If '301 Moved Permanently' or '302 Moved Temporarily' is found in $hdrs[0], then... */
-							{
-								$ch = curl_init();
-
-								curl_setopt($ch, CURLOPT_URL, $file_url);
-								curl_setopt($ch, CURLOPT_AUTOREFERER, true);
-								curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-								curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0); /* Don't Verify Host SSL. */
-								curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0); /* Don't Verify Peer SSL. */
-								curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-								curl_setopt($ch, CURLOPT_MAXREDIRS, 4);
-								curl_setopt($ch, CURLOPT_HEADER, true);
-								curl_setopt($ch, CURLOPT_NOBODY, true);
-
-								$resp_cont = curl_exec($ch);
-								$cont_type = curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
-								$resp_code = curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
-								$finl_dest = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
-
-								curl_close($ch);
-
-								/* Check the response code. */
-
-								if (preg_match('/^2\d{2}$/', trim(strval($resp_code)))) /* If the response code is any number in the range of 200 - 299, then... */
-									{
-										if (pathinfo($file_url, PATHINFO_EXTENSION)) /* If the originally requested file has an extension, then... */
-											{
-												$file_url_ext = pathinfo($file_url, PATHINFO_EXTENSION);
-												$ignr_ext_arr = array('php'); /* Build the ignored file extensions array. */
-
-												if (!in_array(strtolower($file_url_ext), $ignr_ext_arr)) /* If the file extension of originally requested file is not in the ignored file extensions array, then... */
-													{
-														$expt_cont_type = strval(getMimeTypeFromFileNameOnly(pathinfo($file_url, PATHINFO_BASENAME))); /* Declare the 'expected' content type (e.g., 'image/png') from the base-name (e.g., 'example.png') of the originally requested file. */
-
-														if (strpos(strval($cont_type), $expt_cont_type) === false) /* If the $expt_cont_type [ String ] is not a sub-string of the $cont_type [ String ], then... */
-															{
-																return false; /* Return false, because the content-type of the content that was actually served, is not the originally expected content type. So, no further checking is necessary. */
-															};
-													};
-											};
-
-										return true; /* Return true. */
-									}
-								else
-									{
-										return false; /* Else, return false. */
-									};
-							}
-						elseif (stripos($hdrs[0], '404 Not Found') !== false) /* Else, If '404 Not Found' is found in $hdrs[0], then... */
-							{
-								return false;
-							}
-						else
-							{
-								return true;
-							};
-					}
-				else
-					{
+						error_log('cURL extension is not loaded in PHP.');
 						return false;
 					};
+
+				$timeout = 10;
+				$usr_agnts = $fke_usr_agnts_arr;
+				$user_agent = (!empty($usr_agnts)) ? $usr_agnts[array_rand($usr_agnts)] : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)';
+
+				$ch = curl_init();
+
+				curl_setopt_array($ch,
+					[
+						CURLOPT_URL => $file_url,
+						CURLOPT_NOBODY => true,           /* Send a HEAD request to only get headers, not the body. */
+						CURLOPT_RETURNTRANSFER => true,   /* Return the response instead of outputting it. */
+						CURLOPT_FOLLOWLOCATION => true,   /* Automatically follow redirects (301, 302, etc.). */
+						CURLOPT_MAXREDIRS => 5,           /* Limit redirects to prevent infinite loops. */
+						CURLOPT_TIMEOUT => $timeout,      
+						CURLOPT_USERAGENT => $user_agent, 
+						CURLOPT_SSL_VERIFYPEER => false,   /* Enforce SSL verification. */
+						CURLOPT_SSL_VERIFYHOST => false
+					]);
+
+				$response = curl_exec($ch);
+
+				if ($response === false)
+					{
+						error_log('cURL Error for URL: ' . $file_url . ' - Reason: ' . curl_error($ch));
+						curl_close($ch);
+						return false;
+					};
+
+				$http_status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+				$final_url = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL); /* Grabs the final URL after all redirects. */
+
+				curl_close($ch);
+
+				if ($http_status_code >= 200 && $http_status_code < 300)
+					{
+						/* Check MIME type, if function exists */
+						if (function_exists('getMimeTypeFromFileNameOnly'))
+							{
+								$expected_mime_type = getMimeTypeFromFileNameOnly(pathinfo($file_url, PATHINFO_BASENAME));
+								$final_mime_type = getMimeTypeFromFileNameOnly(pathinfo($final_url, PATHINFO_BASENAME));
+
+								if (($expected_mime_type && $final_mime_type) && ($expected_mime_type !== $final_mime_type))
+									{
+										return false; /* MIME type mismatch. */
+									};
+							};
+
+						return true; /* File exists, is accessible, and MIME type matches. */
+					};
+
+
+				return false; /* Handle 404s and other error codes. */
 			};
 	};
 
-/* Function tests if a file exists at a remote URL. PHP’s integrated function ‘file_exists()’ only works on local server paths (i.e., on your own server). This function works on most remote URLs. [END] */
+/* Function tests if a file exists at a remote URL using cURL. PHP’s integrated function ‘file_exists()’ only works on local server paths (i.e., on your own server). This function should work on most remote URLs. [END] */
 
 ?>

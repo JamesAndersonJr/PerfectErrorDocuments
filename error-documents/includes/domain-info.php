@@ -79,9 +79,9 @@ $cur_pg_no_qs_url_addr = strtok($cur_pg_cmpl_url_addr, '?');
 
 /* Get the canonical URL address to the current web page, on the Internet (e.g., used at [ https://sub.example.com/index.php?abc=123 ], would return [ https://sub.example.com?abc=123 ]). Allows for, and retains 'non-index' pages such as [ https://sub.example.com/page.php?abc=123 ]. [BEGIN] */
 
-$cur_pg_canon_url_addr = preg_replace('/((\\index)\.[a-z]+)$/', '', $cur_pg_cmpl_url_addr); /* Removes any known [ default directory index ] page path of the URL address, but NOT other [ ordinary ] page paths. */
+$cur_pg_canon_url_addr = preg_replace('/(?<=^|\/)index\.[a-z]+(?=[?#]|$)/i', '', $cur_pg_cmpl_url_addr); /* Removes any known [ default directory index ] page path of the URL address, but NOT other [ ordinary ] page paths. */
 
-$cur_pg_canon_url_addr = rtrim($cur_pg_canon_url_addr, '/'); /* Removes any trailing forward slash ('/') from the end of the URL. */
+$cur_pg_canon_url_addr = rtrim($cur_pg_canon_url_addr ?? '', '/'); /* Removes any trailing forward slash ('/') from the end of the URL. */
 
 /* Get the canonical URL address to the current web page, on the Internet (e.g., used at [ https://sub.example.com/index.php?abc=123 ], would return [ https://sub.example.com?abc=123 ]). Allows for, and retains 'non-index' pages such as [ https://sub.example.com/page.php?abc=123 ]. [END] */
 

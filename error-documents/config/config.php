@@ -6,7 +6,7 @@ $scr_au = 'James Anderson Jr. | Web Profile: https://card.jamesandersonjr.com | 
 
 $scr_nm = 'Perfect Error Documents'; /* Script Name. */
 
-$scr_ver = '5.0.0'; /* Script Version. */
+$scr_ver = '5.1.0'; /* Script Version. */
 
 $scr_site = 'https://www.perfecterrordocs.com'; /* Script Website. Note: Don't worry, this is NOT used to "phone home"! It is only referenced in royalty attribution links. */
 

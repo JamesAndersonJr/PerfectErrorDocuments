@@ -1,7 +1,7 @@
 LICENSE AGREEMENT (MIT)
 =======================================================================
 
-Copyright © 2024 James Anderson Jr. | https://www.jamesandersonjr.com
+Copyright © 2026 James Anderson Jr. | https://www.jamesandersonjr.com
 
 Permission is hereby granted, free of charge, to any person obtaining a 
 copy of this software and associated documentation files 

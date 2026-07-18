@@ -4,7 +4,7 @@ SCRIPT PROFILE:
 
 Script: 'Perfect Error Documents' Online Script
 
-Version: 5.0.0
+Version: 5.1.0
 
 Website: https://www.perfecterrordocs.com
 
@@ -17,4 +17,4 @@ Documentation: Please see '/docs/' folder.
 Support: 'PED Customer Support' <cs@perfecterrordocs.com>
 
 -------------------------------------------------------------
-Copyright © 2024 James Anderson Jr.
+Copyright © 2026 James Anderson Jr.

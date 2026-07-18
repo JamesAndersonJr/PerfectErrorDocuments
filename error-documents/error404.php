@@ -10,11 +10,8 @@ if (!session_id()) /* If session is not started yet, then... */
 if ((file_exists(dirname(__FILE__).'/includes/domain-info.php')) && (file_exists(dirname(__FILE__).'/includes/ip-info.php')) && (file_exists(dirname(__FILE__).'/includes/supp-funcs.php')) && (file_exists(dirname(__FILE__).'/config/config.php'))) /* If necessary prerequisite files exist, then... */
 	{
 		require_once(dirname(__FILE__).'/includes/domain-info.php'); /* Include required domain-related information, and variables. */
-
 		require_once(dirname(__FILE__).'/includes/ip-info.php'); /* Include required IP-related information, and variables. */
-
 		require_once(dirname(__FILE__).'/includes/supp-funcs.php'); /* required Include supplementary functions. */
-
 		require_once(dirname(__FILE__).'/config/config.php'); /* Include required configuration file. */
 	}
 else /* Else... */
@@ -36,7 +33,7 @@ $_SESSION['orig_url'] = $cur_pg_cmpl_url_addr;
 
 $meta_pg_title = 'Error (404) - Not Found';
 
-$meta_pg_descr = '“Not Found” Error (403). The requested resource could not be found. Please verify the URL or contact the webmaster for broken link resolution.';
+$meta_pg_descr = '“Not Found” Error (404). The requested resource could not be found. Please verify the URL or contact the webmaster for broken link resolution.';
 
 $meta_pg_image = $cur_site_fqdn.'/error-documents/images/err-og-img.png';
 
@@ -117,11 +114,15 @@ if ($prot == 'https://')
 <?php
 	};
 
-if (function_exists('doesFileExistAtURL'))
+if (doesFileExistAtURL($meta_pg_image))
 	{
-		if (doesFileExistAtURL($meta_pg_image))
+		$context_opts_arr = array('ssl' => array('verify_peer' => false,'verify_peer_name' => false,));
+
+		$img_data = @file_get_contents($meta_pg_image, false, stream_context_create($context_opts_arr));
+
+		if ($img_data !== false)
 			{
-				$meta_pg_image_info_arr = getimagesize($meta_pg_image);
+				$meta_pg_image_info_arr = getimagesizefromstring($img_data);
 				$meta_pg_image_mime_typ = @$meta_pg_image_info_arr['mime'];
 
 				list($meta_pg_image_wdt, $meta_pg_image_hgt) = $meta_pg_image_info_arr;
@@ -218,7 +219,6 @@ function cntDwnTmr() /* Declare the count-down timer ('cntDwnTmr') function. */
 			{
 				clearInterval(clk); /* Clear the interval assigned to the clock ('clk') variable below. */
 				location.href = '/'; /* Now attempt to redirect the page. */
-
 				return; /* Terminate the function execution here so as never to erroneously display a value less than zero (0) on the page. */
 			};
 
